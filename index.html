@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-	<!--TODO lint markup https://developers.facebook.com/tools/debug/og/object/-->
-	<!--TODO lint markup https://cards-dev.twitter.com/validator-->
+	<!--TODO https://developers.facebook.com/tools/debug/og/object/-->
+	<!--TODO https://cards-dev.twitter.com/validator-->
+	<!--TODO http://www.google.com/webmasters/tools/richsnippets-->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@webuniverseio" />
 	<!--TODO or page url-->
@@ -37,14 +38,14 @@
 
 	<link rel="stylesheet" href="static/dest/css/main.css">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage" typicalAgeRange="17-">
 <!--TODO HEXO http://davidwalsh.name/canonical-link-rel-->
 <!--TODO add schema markup-->
 <div id="page__wrapper">
 	<div id="page__layout-base">
 		<header id="page__header">
 			<a href="/">
-				<h1 class="logo">
+				<h1 class="logo" itemprop="name">
 					Web
 					<span class="logo__universe">Universe</span>
 				</h1>
@@ -80,108 +81,67 @@
 					<section>
 						<h2 class="a11y__element">Archive</h2>
 
-						<div class="list">
-							<div class="archive list__item--hrDashes">
+						<div class="list" itemscope itemtype="http://schema.org/Blog">
+							<div class="archive list__item--hrDashes" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 								<div class="column">
 									<h3
-										class="archive__title"><a href="#" class="archive__link">Synchronous /
+										class="archive__title"><a href="#" class="archive__link" itemprop="name">Synchronous /
 										asynchronous javascript with 'co'.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
+									<span class="datetime">10 September, 2014</span>
+									<meta itemprop="datePublished" content="2011-05-08T19:30"/>
 								</div>
-								<div class="column archive__description">ES6 generators wrapper which help you to
+								<div class="column archive__description" itemprop="description articleBody">ES6 generators wrapper which help you to
 									write<br> async code in synchronous manner.</div>
 							</div>
-							<div class="archive list__item--hrDashes">
+							<div class="archive list__item--hrDashes" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Unit testing.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
+									<h3 class="archive__title"><a href="#" class="archive__link" itemprop="name">Unit testing.</a></h3>
+									<span class="datetime">10 September, 2014</span>
+									<meta itemprop="datePublished" content="2011-05-08T19:30"/>
 								</div>
-								<div class="column archive__description">Karma - Jasmine integration with coverage
+								<div class="column archive__description" itemprop="description articleBody">Karma - Jasmine integration with coverage
 								reports.<br> CI testing over browserstack.</div>
 							</div>
-							<div class="archive list__item--hrDashes">
+							<div class="archive list__item--hrDashes" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 								<div class="column">
 									<h3
-										class="archive__title"><a href="#" class="archive__link">Scalable
+										class="archive__title"><a href="#" class="archive__link" itemprop="name">Scalable
 										javascript application architecture</a></h3>
-									<span class="archive__data">10 September, 2014</span>
+									<span class="datetime">10 September, 2014</span>
+									<meta itemprop="datePublished" content="2011-05-08T19:30"/>
 								</div>
-								<div class="column archive__description">AMD modules in common js manner /
+								<div class="column archive__description" itemprop="description articleBody">AMD modules in common js manner /
 									refactoring<br> / large scale applications</div>
-							</div>
-							<div class="archive list__item--hrDashes">
-								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Lorem ipsum
-										dolor sit.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
-								</div>
-								<div class="column archive__description">Short description</div>
-							</div>
-							<div class="archive list__item--hrDashes">
-								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Lorem ipsum
-										dolor sit.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
-								</div>
-								<div class="column archive__description">Short description</div>
-							</div>
-							<div class="archive list__item--hrDashes">
-								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Lorem ipsum
-										dolor sit.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
-								</div>
-								<div class="column archive__description">Short description</div>
-							</div>
-							<div class="archive list__item--hrDashes">
-								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Lorem ipsum
-										dolor sit.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
-								</div>
-								<div class="column archive__description">Short description</div>
-							</div>
-							<div class="archive list__item--hrDashes">
-								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Lorem ipsum
-										dolor sit.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
-								</div>
-								<div class="column archive__description">Short description</div>
-							</div>
-							<div class="archive list__item--hrDashes">
-								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Lorem ipsum
-										dolor sit.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
-								</div>
-								<div class="column archive__description">Short description</div>
-							</div>
-							<div class="archive list__item--hrDashes">
-								<div class="column">
-									<h3 class="archive__title"><a href="#" class="archive__link">Lorem ipsum
-										dolor sit.</a></h3>
-									<span class="archive__data">10 September, 2014</span>
-								</div>
-								<div class="column archive__description">Short description</div>
 							</div>
 						</div>
 					</section>
-					<!--<article>
-						<h2>Lorem ipsum dolor.</h2>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
-						expedita
-						mollitia rem! Cum dolorem fuga laborum mollitia quasi quidem quo suscipit, veritatis vero!
-						Distinctio labore laboriosam unde.
-					</article>-->
+					<hr />
+					<div itemscope itemtype="http://schema.org/Article">
+						<article class="content-entry" itemprop="articleBody">
+							<h2 itemprop="name">Lorem ipsum dolor.</h2>
+							<span class="datetime">10 September, 2014</span>
+							<meta itemprop="datePublished" content="2011-05-08T19:30"/>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
+								expedita
+								mollitia rem! Cum dolorem fuga laborum mollitia quasi quidem quo suscipit, veritatis
+								vero!
+								Distinctio labore laboriosam unde.
+							</p>
+							<!--TODO: add discus-->
+						</article>
+					</div>
 				</main>
 				<footer id="page__footer">
 					All content, unless otherwise indicated,
 					<span class="nowrap">
-						is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY
+						is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license">CC BY
 						4.0</a>.
 					</span><br>
-					<a href="#">Sergey Zarouski</a> &copy; 2014.
+					<span itemscope itemtype="http://schema.org/Person" itemprop="author">
+						<a href="#" itemprop="url">
+							<span itemprop="name">Sergey Zarouski</span></a>
+					</span>
+					&copy; <span itemprop="copyrightYear">2014</span>.
 				</footer>
 			</div>
 		</div>
