@@ -1,0 +1,123 @@
+@import "compass";
+
+@mixin grid-global-settings($settings) {
+	@each $property, $value in $settings {
+		@include sgs-change($property, $value);
+	}
+}
+
+@mixin grid-breakpoint($value) {
+	@include breakpoint($value) {
+		@content;
+	}
+}
+
+@mixin grid-debug(
+	$columns: null,
+	$gutter: null,
+	$gutter-style: null,
+	$color: null
+) {
+	@include background-grid(
+		$columns,
+		$gutter,
+		$gutter-style,
+		$color
+	);
+}
+
+@mixin grid-clearfix() {
+	@include pie-clearfix();
+}
+
+@mixin make-separators($num, $spans: false, $locations: false) {
+	$spanTo: 0;
+	@for $i from 1 through $num {
+		$span: $i;
+
+		@if ($spans) {
+			$span: $spanTo + nth($spans, $i);
+			$spanTo: $span;
+		}
+		$offset: column-span($span, 1) + gutter-span() / 2;
+
+		@if ($spans != false and $locations != false) {
+			$colILoc: nth($locations, $i);
+			$colISpan: nth($spans, $i);
+			$colNEnd: $colISpan + $colILoc - 1;
+			$gap: (nth($locations, $i + 1) - $colNEnd) / 2;
+			$offset: column-span(nth($locations, $i + 1), 1) - column-span(1, 1) - ((1 + $gap) * gutter-span() + $gap * column-span(1, 1)) / 2;
+		}
+
+		> .separator:nth-child(#{$i}) {
+			left: $offset;
+		}
+	}
+}
+
+//TODO: make grid
+
+@mixin make-columns($params) {
+	$number: map_get($params, 'number');
+	$layout: map_get($params, 'layout') or sgs-get('grids');
+	$gutter: map_get($params, 'gutter') or sgs-get(gutters);
+	$spans: map_get($params, 'spans') or false;
+	$locations: map_get($params, 'locations') or false;
+	$start: map_get($params, 'start') or 1;
+	$debug: map_get($params, 'debug') or false;
+
+	@if ($spans and $number != length($spans)) {
+		@error "$num != length($spans), should be equal! #{$number}, #{$spans}";
+	}
+	@if ($locations and $number != length($locations)) {
+		@error "$num != length($locs), should be equal! #{$number}, #{$locations}";
+	}
+
+	@if ($debug) {
+		@include grid-debug($layout, $gutter);
+	}
+
+	$j: 1;
+	$k: 1;
+	$prevSpan: 0;
+	$position: 1;
+	
+	@for $i from $start through ($number + $start - 1) {
+		$span: 1;
+		@if ($spans) {
+			$span: nth($spans, $j);
+			$j: $j + 1;
+		}
+		@if ($locations) {
+			$pos: nth($locations, $k);
+			$k: $k + 1;
+		} @else {
+			$position: $position + $prevSpan;
+		}
+		$prevSpan: $span;
+		> .column:nth-child(#{$number}n+#{$i}) {
+			@include grid-span($span, $position, $layout, $gutter);
+		}
+	}
+
+	> .column:nth-child(#{$number}n+#{$number + $start}) {
+		clear: both;
+	}
+}
+
+@mixin make-columns-layout($num, $layout, $gutter: sgs-get(gutters), $spans: false, $locations: false, $separators: 0) {
+	@if ($spans and $num != length($spans)) {
+		@error "$num != length($spans), should be equal! #{$num}, #{$spans}";
+	}
+	$start: 1;
+	@if ($separators != 0) {
+		$start: $start + $separators;
+	}
+	@include layout($layout, $gutter) {
+		@if ($separators != 0) {
+			@include make-separators($separators, $spans: $spans, $locations: $locations);
+		}
+		@include make-columns($num, $layout, $gutter: $gutter, $spans: $spans, $locations: $locations, $start: $start);
+		@content;
+	}
+}

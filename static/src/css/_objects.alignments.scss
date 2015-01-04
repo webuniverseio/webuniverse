@@ -1,0 +1,14 @@
+$side-indent: 10px !default;
+.align-center {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+.align-left {
+	margin-right: $side-indent;
+	float: left;
+}
+.align-right {
+	margin-left: $side-indent;
+	float: right;
+}

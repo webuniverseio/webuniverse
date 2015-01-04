@@ -1,0 +1,61 @@
+@import "tools.functions";
+
+$line-color: #aaa !default;
+$list-disable-style-type: true !default;
+$list-enable-hr-dots: false !default;
+$list-enable-hr-dashes: false !default;
+$list-enable-hr-lines: false !default;
+$list-enable-vr-lines: false !default;
+
+%with-hr-style {
+	margin-top: 1em;
+	padding-top: 1em;
+	&:first-child {
+		margin-top: 0;
+		border-top: 0;
+		padding-top: 0;
+	}
+}
+
+.list {
+	@if ($list-disable-style-type) {
+		list-style-type: none;
+	}
+
+	.content-entry p + & {
+		margin-top: 1em;
+	}
+}
+
+#{extendClass('.list__item')} {
+	margin-top: 1em;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+@if ($list-enable-hr-dots) {
+	.list__item--hrDots {
+		@extend %with-hr-style;
+		border-top: 1px dotted $line-color;
+	}
+}
+@if ($list-enable-hr-dashes) {
+	.list__item--hrDashes {
+		@extend %with-hr-style;
+		border-top: 1px dashed $line-color;
+	}
+}
+@if ($list-enable-hr-lines) {
+	.list__item--hrLines {
+		@extend %with-hr-style;
+		border-top: 1px solid $line-color;
+	}
+}
+@if ($list-enable-vr-lines) {
+	.list__item--vrLines {
+		border-left: 1px solid $line-color;
+		&:first-child {
+			border-left: 0;
+		}
+	}
+}

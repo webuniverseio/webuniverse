@@ -1,0 +1,24 @@
+$noscript-color: #000 !default;
+$noscript-color--alternative: #f00 !default;
+$noscript-backgroundColor: #ffffe1 !default;
+$noscript-border--bottom: 1px solid #aca899 !default;
+$noscript-zIndex: 300 !default;
+
+.noscript {
+	position: fixed;
+	z-index: $noscript-zIndex;
+	top: 0;
+	left: 0;
+	border-bottom: $noscript-border--bottom;
+	padding: 5px;
+	width: 100%;
+	background-color: $noscript-backgroundColor;
+	color: $noscript-color;
+	font-size: 12px;
+	text-align: center;
+
+	.noscript-text--alternative {
+		color: $noscript-color--alternative;
+		text-decoration: underline;
+	}
+}

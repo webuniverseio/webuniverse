@@ -1,0 +1,31 @@
+@mixin logoCircleAnimationProperties($color: #68afff) {
+	border-color: $color;
+	box-shadow: 0 0 10px $color, inset 0 0 20px $color;
+}
+
+@keyframes logoCircleColor {
+	0% {
+		@include logoCircleAnimationProperties();
+	}
+	14% {
+		@include logoCircleAnimationProperties(#f00);
+	}
+	28% {
+		@include logoCircleAnimationProperties(#00ff0a);
+	}
+	42% {
+		@include logoCircleAnimationProperties(#ff0);
+	}
+	57% {
+		@include logoCircleAnimationProperties(#00f6ff);
+	}
+	71% {
+		@include logoCircleAnimationProperties(#fb00ff);
+	}
+	85% {
+		@include logoCircleAnimationProperties(#ff006c);
+	}
+	100% {
+		@include logoCircleAnimationProperties(#68afff);
+	}
+}

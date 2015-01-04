@@ -1,0 +1,75 @@
+.read-more {
+	@extend %decorate-on-hover;
+
+	margin-top: 0.5em;
+	display: inline-block;
+	// .lt-ie8 & {
+	// 	display: inline;
+	// 	zoom: 1;
+	// }
+}
+.read-more-group {
+	margin-top: 0.5em;
+	.read-more {
+		margin-top: 0.2em;
+	}
+}
+
+$control-side-padding: 21px;
+//for optimization purposes added %controlIcon, otherwise styles are copied each time
+%controlIcon {
+	content: '';
+	position: absolute;
+	top: 50%;
+	margin-top: -9px;
+	width: 20px;
+	height: 20px;
+	display: block;
+}
+@mixin newControlWithIcon($control-class, $extend-class, $extend-icon, $icon-padding: 20, $icon-offset: 10px) {
+	.#{$control-class} {
+		@extend .#{$extend-class};
+
+		position: relative;
+		padding-left: $control-side-padding + $icon-padding;
+		&:before {
+			@extend %controlIcon;
+			@extend %#{$extend-icon};
+
+			left: $icon-offset;
+		}
+	}
+}
+
+//Example
+//@include newControlWithIcon('blue-search-read-more', 'read-more', 'blueSearchIcon', 5, 0);
+
+.square-control {
+	padding: 5px 10px;
+	display: inline-block;
+	background-color: $lightBlue;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+.rounded-control {
+	@include background-image(linear-gradient(lighten($lightBlue, 15%), $lightBlue, $lightBlue));
+
+	border: 2px solid darken($lightBlue, 20%);
+	padding: 10px $control-side-padding;
+	display: inline-block;
+	background-color: $lightBlue;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.green-control {
+	@extend .rounded-control;
+	@include background-image(linear-gradient(lighten(saturate($green, 35%), 7%), $green, $green));
+
+	border-color: darken($green, 10%);
+	background-color: $green;
+}

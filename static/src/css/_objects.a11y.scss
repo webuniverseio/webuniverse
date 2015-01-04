@@ -1,0 +1,23 @@
+%a11y-offScreen {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+
+.a11y__element {
+	@extend %a11y-offScreen;
+}
+
+.a11y__skip {
+	@extend %a11y-offScreen;
+
+	&:focus {
+		position: static;
+		width: auto;
+		height: auto;
+	}
+}

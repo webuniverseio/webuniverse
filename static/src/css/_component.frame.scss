@@ -1,0 +1,63 @@
+@import "settings.general";
+@import "settings.colors";
+@import "settings.zIndex";
+
+body:after {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../images/samples/bg2.jpg) 0 0;
+	background-size: cover;
+	content: '';
+}
+
+#page__wrapper {
+	position: relative;
+	z-index: map_get($zIndex, 'pageBox');
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $page-width;
+	height: 100%;
+
+	@media (max-width: $page-width + $page-side-margin * 2) {
+		margin-left: $page-side-margin;
+		margin-right: $page-side-margin;
+	}
+}
+
+#page__layout-base {
+	height: 100%;
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+
+	&:after {
+		height: 50px;
+		display: table-row;
+		content: '';
+	}
+}
+
+@import "component.page-header";
+
+#page-content__wrapper {
+	display: table-row;
+}
+
+#page-content {
+	position: relative;
+	border-radius: $page-content-border-radius;
+	display: table-cell;
+	background-color: $page-content-bg-color;
+	color: $text-color;
+	box-shadow: $page-box-shadow;
+}
+
+.page-content__side-padding {
+	padding: 0 $page-content-side-padding;
+}
+
+@import "component.page-content";
+@import "component.page-footer";

@@ -1,0 +1,37 @@
+@import "tools.text";
+
+.logo {
+	$letter-spacing: 0.28em;
+	position: relative;
+	padding-bottom: 0.1em;
+	display: inline-block;
+	line-height: 1;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: $letter-spacing;
+
+	&:after {
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		border-bottom: 1px solid;
+		width: calc(100% - #{$letter-spacing});
+		content: '';
+	}
+	&:before {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		font-size: 0.7em;
+		content: '..';
+		text-align: center;
+		letter-spacing: 1.15em;
+		text-indent: 1.25em;
+	}
+}
+	.logo__universe {
+		display: block;
+		font-size: 0.15em;
+		letter-spacing: 2em;
+	}

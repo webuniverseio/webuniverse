@@ -1,0 +1,7 @@
+@import "settings.font-icomoon";
+
+%icon-search {
+	@extend .icomoon;
+	@extend .icon-search;
+	color: darken($line-color, 20%);
+}

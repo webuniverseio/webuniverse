@@ -1,0 +1,25 @@
+// default line height for .content-entry,
+// also used if you need to justify inline-block items and hide space from :after
+$line-height: 1.5;
+
+$inuit-base-font-size: 17px;
+$inuit-base-line-height: $inuit-base-font-size * $line-height;
+
+$page-width: 1024px;
+// when viewport width is too small how big should be the paddings?
+$page-side-margin: 15px;
+
+$page-content-bg-color: #fff;
+$page-content-border-radius: 35px;
+$page-box-shadow: 0 0 30px 0 #cff;
+$page-content-side-padding: 20px;
+
+// indent in between sections
+$vertical-indent: 1.5em;
+
+$body-background: #0b1013;
+$body-color: #fff;
+
+$footer-height: 70px;
+$output-styles-decorate-on-hover: true;
+$list-enable-hr-dashes: true;

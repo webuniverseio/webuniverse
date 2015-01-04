@@ -1,0 +1,36 @@
+@import "tools.text";
+@import "settings.zIndex";
+@import "tools.animations";
+
+#page__header {
+	height: 190px;
+	display: table-row;
+	text-align: center;
+
+	&:before {
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		border-radius: 50%;
+		border: 1px solid;
+		@include logoCircleAnimationProperties();
+		margin-left: -70px;
+		width: 140px;
+		height: 140px;
+		display: inline-block;
+		background-color: #000;
+		content: '';
+		animation: logoCircleColor 20s infinite;
+	}
+
+	.logo {
+		margin-top: 35px;
+		z-index: 2;
+		color: #fff;
+		@include font-size(80px, 'none');
+	}
+
+	a {
+		color: #fff;
+	}
+}

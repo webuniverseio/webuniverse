@@ -1,0 +1,25 @@
+//duplicate mixins are required when you need column separators within media-queries
+//see http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_in_directives
+$separator-color: #aaa !default;
+
+@mixin vertical-separator() {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	border-left: 1px solid $separator-color;
+}
+@mixin columns-separator() {
+	position: relative;
+	> .separator {
+		@include vertical-separator;
+	}
+}
+%vertical-separator {
+	@include vertical-separator;
+}
+%columns-separator {
+	position: relative;
+	> .separator {
+		@extend %vertical-separator;
+	}
+}

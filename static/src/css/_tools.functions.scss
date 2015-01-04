@@ -1,0 +1,4 @@
+@function extendClass($class) {
+	$className: str_slice($class, 2);
+	@return '.' + $className + ', [class^="' + $className + '--"], [class*=" ' + $className + '--"]';
+}

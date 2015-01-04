@@ -1,0 +1,41 @@
+@import "settings.breakpoints";
+@import "tools.decorate-on-hover";
+@import "tools.grids";
+@import "objects.layouts";
+.archive {
+	@include grid-breakpoint(map_get($breakpoints, 'archive__single-column')) {
+		@include columns--12__6plus6;
+	}
+	@include grid-clearfix;
+}
+	.archive__title {
+		@extend %delta;
+		display: inline;
+
+		@include grid-breakpoint(max-width map_get($breakpoints, 'archive__single-column')) {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	.archive__link {
+		@extend %decorate-on-hover;
+	}
+
+	.archive__data {
+		font-style: italic;
+		white-space: nowrap;
+	}
+
+	.archive__description {
+		text-align: right;
+
+		@include grid-breakpoint(max-width map_get($breakpoints, 'archive__single-column')) {
+			text-align: left;
+
+			br {
+				display: none;
+			}
+		}
+	}

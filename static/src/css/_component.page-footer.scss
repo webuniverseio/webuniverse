@@ -1,0 +1,18 @@
+@import "settings.general";
+@import "settings.breakpoints";
+@import "tools.text";
+@import "objects.layouts";
+#page__footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	height: $footer-height;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+
+	@include grid-breakpoint(max-width map_get($breakpoints, 'footer__small')) {
+		@include font-size(14px, 1.25);
+	}
+}

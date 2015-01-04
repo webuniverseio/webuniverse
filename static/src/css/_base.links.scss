@@ -1,0 +1,20 @@
+$link-color: #004adf !default;
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:active {
+		outline: none !important;
+	}
+	img {
+		border: 0;
+	}
+}

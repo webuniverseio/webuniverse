@@ -1,0 +1,13 @@
+q:before {
+	content: '\00ab';
+	q:before {
+		content: '\201e';
+	}
+}
+
+q:after {
+	content: '\00bb';
+	q:after {
+		content: '\201c';
+	}
+}

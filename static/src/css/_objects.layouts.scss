@@ -1,0 +1,79 @@
+@import "tools.grids";
+$vertical-indent: 1.5em !default;
+
+@include grid-global-settings((
+	'background grid color': #af9bcc,
+	'debug': true,
+	'grids': 12,
+	'gutters': 1/5
+));
+
+//if columns will form a table-like layout - with rows
+.columns-grid,
+%columns-grid {
+	&:before {
+		content: '';
+		margin-bottom: -$vertical-indent;
+		display: block;
+	}
+	& > .column {
+		margin-top: $vertical-indent;
+	}
+}
+
+// Columns
+// -s3 stands for skip 3 columns
+// f before column widths shows which column will be first in html structure
+// mixins are for in-media usage
+
+@mixin columns--12__6plus6 {
+	@include make-columns((
+		number: 2,
+		layout: (6 6),
+		debug: false
+	));
+}
+
+@mixin columns--12__8plus4 {
+	@include make-columns((
+		number: 2,
+		layout: (8 4),
+		debug: false
+	));
+}
+
+// .columns-a.columns-grid.lt-ie8-clearfix.clear>.column*9{$}
+//.columns-a {
+//	@include grid-breakpoint(760px) {
+//		@include make-columns(3, (1.5 3.1 2.7), 2);
+//		@include grid-debug((1.5 3.1 2.7), 2);
+//	}
+//	@include grid-breakpoint(1024px) {
+//		@include make-columns(5, (5));
+//		@include grid-debug(5);
+//	}
+//	@include grid-breakpoint(1200px) {
+//		@include make-columns(10, (10));
+//		@include grid-debug(10);
+//	}
+//}
+// .columns-b.lt-ie8-clearfix.clear>.separator*2+.column{lorem}*4
+// .columns-b {
+// 	@extend %columns-separator;
+
+// 	@include layout((3 6 3), 1/2) {
+// 		@include background-grid($color: blue);
+// 		@include make-columns(2, $spans: (1 2), $locations: (3 1), $start: 3);
+// 	}
+// 	//@include make-columns-layout(2, (3 6 3), 1/2, $spans: (1 2), $separators: 2);
+// 	// @include make-columns-layout(3, (3 6 3 3), 1, $spans: (1 2 1), $separators: 2) {
+// 	// 	@include background-grid($color: blue);
+// 	// }
+// }
+//
+// .columns-c.lt-ie8-clearfix.clear>.separator*2+.column{lorem}*6
+// .columns-c {
+// 	@extend %columns-separator;
+
+// 	@include make-columns-layout(3, (3 6 3), 1/2, $separators: 2);
+// }

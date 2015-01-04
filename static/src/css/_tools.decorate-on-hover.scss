@@ -1,0 +1,17 @@
+$output-styles-decorate-on-hover: false !default;
+
+%decorate-on-hover {
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+@if($output-styles-decorate-on-hover) {
+	.decorate-on-hover,
+	.decorate-links-on-hover a {
+		@extend %decorate-on-hover;
+	}
+}

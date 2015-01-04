@@ -1,0 +1,37 @@
+@import "settings.font-brand";
+@import "settings.breakpoints";
+@import "objects.layouts";
+@import "base.form-elements";
+
+.search {
+	position: relative;
+	border: 1px solid $form-control-border-color;
+	border-radius: 3px;
+	padding: 1px;
+
+	input#{&}-input {
+		border: 0;
+		padding: 0 4px;
+		width: calc(100% - 1.5em);
+		font-style: italic;
+
+		#page-topBar &::placeholder {
+			letter-spacing: 0.1em;
+		}
+	}
+	&-button {
+		@extend .button--styleLess;
+		@extend %icon-search;
+
+		position: absolute;
+		top: 0.17em;
+		right: 0;
+	}
+
+	@include grid-breakpoint(max-width map_get($breakpoints, 'archive__single-column')) {
+		#page-topBar & {
+			margin: 0.5em auto;
+			width: 75%;
+		}
+	}
+}

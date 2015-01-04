@@ -1,0 +1,8 @@
+[Setup]
+Lang=default
+Group=Git
+NoIcons=1
+SetupType=default
+Components=assoc,assoc_sh
+Tasks=
+PathOption=Cmd

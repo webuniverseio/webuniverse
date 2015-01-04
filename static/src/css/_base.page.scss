@@ -1,0 +1,35 @@
+$main-font: 'Times New Roman', Times, serif !default;
+$vertical-indent: 1.5em !default;
+$line-color: #aaa !default;
+$body-background: false !default;
+$body-color: #000 !default;
+$fill-page-height: true !default;
+
+:focus {
+	outline: 1px dotted;
+}
+
+body {
+	@if ($body-background != false) {
+		background: $body-background;
+		color: $body-color;
+	}
+}
+
+
+body, textarea, input, select {
+	font-family: $main-font;
+}
+
+@if ($fill-page-height) {
+	html,
+	body {
+		height: 100%;
+	}
+}
+
+hr {
+	margin: $vertical-indent 0;
+	border: 0;
+	border-top: 1px solid $line-color;
+}

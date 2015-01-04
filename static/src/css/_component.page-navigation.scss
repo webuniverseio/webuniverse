@@ -1,0 +1,43 @@
+@import "settings.colors";
+@import "settings.breakpoints";
+@import "tools.text";
+@import "objects.layouts";
+.navigation {
+	@include grid-breakpoint(max-width map_get($breakpoints, 'archive__single-column')) {
+		text-align: center;
+	}
+	@include grid-breakpoint(max-width map_get($breakpoints, 'footer__small')) {
+		@include font-size(14px);
+	}
+	position: relative;
+
+	#top-bar & {
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+}
+	.navigation__separator {
+		position: relative;
+		top: 0.15em;
+		border-left: 1px solid darken($line-color, 30%);
+		padding-right: 1px;
+		height: 1em;
+		display: inline-block;
+
+		@include grid-breakpoint(max-width map_get($breakpoints, 'navigation__small')) {
+			#top-bar &:nth-child(6) {
+				height: 0;
+				display: block;
+			}
+		}
+	}
+
+	.navigation__skip:focus {
+		z-index: 2;
+		position: absolute;
+		left: auto;
+		border: 1px solid currentColor;
+		padding: 4px;
+		background-color: #fff;
+	}

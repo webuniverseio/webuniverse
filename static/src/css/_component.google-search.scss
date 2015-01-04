@@ -1,0 +1,30 @@
+.gsc-control-cse {
+	&, * {
+		box-sizing: content-box;
+	}
+
+	table {
+		border-collapse: separate;
+	}
+
+	#top-bar & {
+		position: relative;
+		top: -4px;
+		padding: 0;
+		line-height: 1;
+
+		@include grid-breakpoint(max-width map_get($breakpoints, 'archive__single-column')) {
+			top: 0;
+		}
+	}
+}
+
+.gsc-search-box {
+	#top-bar & {
+		margin-bottom: 0;
+	}
+}
+
+.gsc-completion-container {
+	color: #000;
+}

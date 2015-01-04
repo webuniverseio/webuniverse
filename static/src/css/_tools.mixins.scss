@@ -1,0 +1,34 @@
+$vertical-indent: 1.5em !default;
+
+%section-indent {
+	margin-top: $vertical-indent;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+/* Calculate fluid ratio based on two dimensions (width/height) */
+/* This element will have fluid ratio from 4:1 at 800px to 2:1 at 300px. */
+//@include fluid-ratio(800px 200px, 300px 150px);
+@mixin fluid-ratio($large-size, $small-size) {
+	$width-large: nth($large-size, 1);
+	$width-small: nth($small-size, 1);
+	$height-large: nth($large-size, 2);
+	$height-small: nth($small-size, 2);
+	$slope: ($height-large - $height-small) / ($width-large - $width-small);
+	$height: $height-small - $width-small * $slope;
+
+	padding-top: $slope * 100%;
+	height: $height;
+	background-size: cover;
+	background-position: center;	/* Internet Explorer 7/8 */
+}
+
+@mixin toDataUrl($url, $position:0 0, $repeat: no-repeat, $bgColor: transparent, $full: true) {
+	@if ($full) {
+		background: $bgColor inline-image($url) $position $repeat;
+	} @else {
+		background-image: inline-image($url);
+	}
+}

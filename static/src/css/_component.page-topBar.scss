@@ -1,0 +1,14 @@
+@import "settings.general";
+@import "settings.breakpoints";
+@import "settings.colors";
+@import "objects.layouts";
+#top-bar {
+	@include grid-breakpoint(map_get($breakpoints, 'archive__single-column')) {
+		@include columns--12__8plus4;
+	}
+
+	margin: 0 $page-content-side-padding;
+	border-bottom: 1px solid $line-color;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}

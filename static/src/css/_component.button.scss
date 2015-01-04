@@ -1,0 +1,9 @@
+$button--styleLess: true !default;
+.button {
+	@if($button--styleLess) {
+		&--styleLess {
+			border: 0;
+			background: none;
+		}
+	}
+}
