@@ -6,69 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2a691dc-4a9d-48c8-84fd-da4e551c281c" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\build\grunt-configs\mkdir.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\build\grunt-configs\requirejs.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\build\helpers\BundleProcessor.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\README.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\core.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\flow.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\helper.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\ie6-9.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\libadapter.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\adjust-items-in-a-row.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\crossfader.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\dynamic-template.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\eq-height-columns.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\font-resize.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\geolocation.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\mockJson.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\mp3-player.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\placeholder.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\show-hide-list.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\modules\sortable-list.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\sandbox.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\app\setup.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\TimelineLite.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\TimelineMax.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\TweenLite.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\TweenMax.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\easing\EasePack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\jquery.gsap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\AttrPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\BezierPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\CSSPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\CSSRulePlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\ColorPropsPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\DirectionalRotationPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\EaselPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\KineticPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\RaphaelPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\RoundPropsPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\ScrollToPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\plugins\TextPlugin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\gsap-minified\utils\Draggable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\bak\main.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\debug\clog.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\flowplayer\LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\flowplayer\flowplayer-3.2.11.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\shims\PIE.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\shims\boxsizing.htc" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\shims\es5-shim.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\shims\html5shiv-printshiv.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\shims\json2.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\shims\selectivizr.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\sort-filter\list.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\sz\websites\webuniverse\static\src\js\text-highlight\dohighlight.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Sergey.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Sergey.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/grunt-configs/aliases.js" afterPath="$PROJECT_DIR$/build/grunt-configs/aliases.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/grunt-configs/concurrent.js" afterPath="$PROJECT_DIR$/build/grunt-configs/concurrent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/grunt-configs/jshint.js" afterPath="$PROJECT_DIR$/build/grunt-configs/jshint.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spy.conf.js" afterPath="$PROJECT_DIR$/spy.conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\sz\websites\webuniverse\static\src\js\main.js" afterPath="$PROJECT_DIR$/build/grunt-configs/jscs.js" />
     </list>
     <ignored path="webuniverse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,13 +37,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31354985" vertical-offset="570" max-vertical-offset="5525">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.25643897" vertical-offset="3528" max-vertical-offset="5474">
+              <caret line="174" column="66" selection-start-line="170" selection-start-column="31" selection-end-line="174" selection-end-column="66" />
               <folding>
-                <element signature="e#9585#9852#0" expanded="true" />
-                <element signature="e#9890#10254#0" expanded="true" />
-                <element signature="e#10285#10573#0" expanded="true" />
-                <element signature="e#10371#10411#0" expanded="true" />
+                <element signature="e#9545#9812#0" expanded="true" />
+                <element signature="e#9850#10214#0" expanded="true" />
+                <element signature="e#10245#10533#0" expanded="true" />
+                <element signature="e#10331#10371#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -550,7 +489,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420421258343</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Clean up">
+      <created>1420426071250</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1420426071250</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -657,7 +602,8 @@
     <MESSAGE value="Save status" />
     <MESSAGE value="Added schema markup" />
     <MESSAGE value="Added more schema and additional templates markup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more schema and additional templates markup" />
+    <MESSAGE value="Clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1083,13 +1029,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31354985" vertical-offset="570" max-vertical-offset="5525">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.25643897" vertical-offset="3528" max-vertical-offset="5474">
+          <caret line="174" column="66" selection-start-line="170" selection-start-column="31" selection-end-line="174" selection-end-column="66" />
           <folding>
-            <element signature="e#9585#9852#0" expanded="true" />
-            <element signature="e#9890#10254#0" expanded="true" />
-            <element signature="e#10285#10573#0" expanded="true" />
-            <element signature="e#10371#10411#0" expanded="true" />
+            <element signature="e#9545#9812#0" expanded="true" />
+            <element signature="e#9850#10214#0" expanded="true" />
+            <element signature="e#10245#10533#0" expanded="true" />
+            <element signature="e#10331#10371#0" expanded="true" />
           </folding>
         </state>
       </provider>
