@@ -1,14 +1,21 @@
 //jshint node:true
-//noinspection GjsLint
+// noinspection GjsLint
+/**
+ * @param {Object} $
+ */
 module.exports = function spyOnKarma($) {
 	'use strict';
 
+	/**
+	 * @param {String} url
+	 * @return {Object}
+	 */
 	$.mapper = function mapUrlToConfig(url) {
-		//if (/lodash|graceful-fs/.test(url)) {
-		//	return {
-		//		instrument: false
-		//	};
-		//}
+		// if (/lodash|graceful-fs/.test(url)) {
+		// 	return {
+		// 		instrument: false
+		// 	};
+		// }
 
 		return {
 			instrument: {

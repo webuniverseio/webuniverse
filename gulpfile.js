@@ -1,8 +1,17 @@
+// TODO: review build process
 /*jshint node: true*/
 'use strict';
 
+/**
+ * @namespace GulpBuild
+ */
+
 var gulp = require('gulp');
-gulp.task('css', function () {
+
+/**
+ * @callback GulpBuild~runCss
+ */
+gulp.task('css', function runCss() {
 	var sassOptions = {
 		sourcemap: true,
 		compass: true
@@ -16,7 +25,10 @@ gulp.task('css', function () {
 	var sass = require('gulp-ruby-sass');
 
 	sass('static/src/css', sassOptions)
-		.on('error', function (err) {
+	/**
+	 * @callback GulpBuild~onSCSSError
+	 */
+		.on('error', function onSCSSError(err) {
 			console.log(err.message);
 		})
 		.pipe(autoprefixer({
@@ -29,6 +41,9 @@ gulp.task('css', function () {
 		.pipe(gulp.dest('static/dest/css'));
 });
 
-gulp.task('watch', function () {
+/**
+ * @callback GulpBuild~watchCss
+ */
+gulp.task('watch', function watchCss() {
 	gulp.watch('**/*.scss', ['css']);
 });

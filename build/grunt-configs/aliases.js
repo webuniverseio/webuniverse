@@ -18,7 +18,7 @@ module.exports = function createAliasesExports(grunt) {
 		grunt.task.run('concurrent:stepOne');
 	});
 
-	grunt.registerTask('cleanBuildDestination', ['clean', 'mkdir']);
+	grunt.registerTask('cleanBuildDestination', ['clean']);
 
 	/**
 	 * @callback createAliasesExports~runCss
@@ -29,18 +29,18 @@ module.exports = function createAliasesExports(grunt) {
 	});
 
 	/**
+	 * @callback createAliasesExports~runWatchStartTask
+	 */
+	grunt.registerTask('start-watch', function runWatchStartTask() {
+		grunt.task.run('default');
+		grunt.task.run('concurrent:watch');
+	});
+
+	/**
 	 * @callback createAliasesExports~runCssWatch
 	 */
 	grunt.registerTask('cssWatch', function runCssWatch() {
 		shell.exec('gulp watch');
 		shellHandler.throwIfHasErrors('error lunching gulp watch');
-	});
-
-	/**
-	 * @callback createAliasesExports~runWatchStartTask
-	 */
-	grunt.registerTask('watch-start', function runWatchStartTask() {
-		grunt.task.run('default');
-		grunt.task.run('concurrent:watch');
 	});
 };

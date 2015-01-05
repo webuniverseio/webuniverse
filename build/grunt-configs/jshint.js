@@ -12,11 +12,10 @@ module.exports = function createJsHintExports(grunt) {
             jshintrc: true
         },
 
-        shared: {
+        all: {
             src: [
-                'Assets/Shared/JS/src/**/*.js',
-                'Assets/Scripts/**/*.js',
-                __filename
+                'build/**/*.js',
+                '*.js'
             ],
             nonull: true
         }

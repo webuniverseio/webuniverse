@@ -14,12 +14,14 @@ module.exports = function createConcurrentExports(grunt) {
     var stepOneTasks = [
         'css',
         'copy',
-        'jsdoc'
+        'jsdoc',
+        'jshint',
+        'jscs'
     ];
 
     var watchTasks = [
-        'cssWatch',
-        'watch'
+        // 'watch',
+        'cssWatch'
     ];
 
     return {
