@@ -25,6 +25,9 @@
       <option name="myIgnoreUnusedFunctionParameters" value="true" />
     </inspection_tool>
     <inspection_tool class="Jscs" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="RequiredAttributes" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myAdditionalRequiredHtmlAttributes" value="property" />
+    </inspection_tool>
     <inspection_tool class="SassScssResolvedByNameOnly" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <scope name="scss resolved by name" level="INFO" enabled="false" />
     </inspection_tool>

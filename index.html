@@ -3,12 +3,15 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 	<!--TODO https://developers.facebook.com/tools/debug/og/object/-->
 	<!--TODO https://cards-dev.twitter.com/validator-->
-	<!--TODO http://www.google.com/webmasters/tools/richsnippets-->
+	<!--TODO icons-->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@webuniverseio" />
 	<!--TODO or page url-->
 	<meta property="og:url" content="http://webuniverse.io/" />
 	<meta name="twitter:url" content="http://webuniverse.io/" />
+	<!--TODO also check domain SEO-->
+	<!--TODO HEXO http://davidwalsh.name/canonical-link-rel-->
+	<link rel="canonical" href="http://webuniverse.io/" />
 	<!--TODO or page title-->
 	<meta property="og:title" content="Web Universe" />
 	<meta name="twitter:title" content="Web Universe" />
@@ -25,7 +28,7 @@
 	<!--TODO or page image-->
 	<meta property="og:image" content="http://webuniverse.io/static/dest/images/misc/webuniverse.png"/>
 	<meta name="twitter:image" content="http://webuniverse.io/static/dest/images/misc/webuniverse.png" />
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta charset="UTF-8" />
 	<!--[if lte IE 8]>
@@ -38,12 +41,11 @@
 
 	<link rel="stylesheet" href="static/dest/css/main.css">
 </head>
-<body itemscope itemtype="http://schema.org/WebPage" typicalAgeRange="17-">
-<!--TODO HEXO http://davidwalsh.name/canonical-link-rel-->
-<!--TODO add schema markup-->
+<body itemscope itemtype="http://schema.org/WebPage">
+<meta itemprop="typicalAgeRange" content="17-" />
 <div id="page__wrapper">
 	<div id="page__layout-base">
-		<header id="page__header">
+		<header id="page__header" role="banner">
 			<a href="/">
 				<h1 class="logo" itemprop="name">
 					Web
@@ -54,13 +56,21 @@
 		<div id="page-content__wrapper">
 			<div id="page-content">
 				<div id="top-bar" class="ov-h">
-					<nav class="navigation decorate-links-on-hover column">
+					<nav class="navigation decorate-links-on-hover column" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
 						<h3 class="a11y__element">Main navigation</h3>
 						<a href="#page-content__main" class="a11y__skip navigation__skip">skip navigation</a>
-						<a href="#">About</a> <span class="navigation__separator"></span>
-						<a href="#">Projects</a> <span class="navigation__separator"></span>
-						<a href="#">Recommended</a> <span class="navigation__separator"></span>
-						<a href="#">Contact</a>
+						<a href="#" itemprop="url">
+							<span itemprop="name">About</span>
+						</a> <span class="navigation__separator"></span>
+						<a href="#" itemprop="url">
+							<span itemprop="name">Projects</span>
+						</a> <span class="navigation__separator"></span>
+						<a href="#" itemprop="url">
+							<span itemprop="name">Recommended</span>
+						</a> <span class="navigation__separator"></span>
+						<a href="#" itemprop="url">
+							<span itemprop="name">Contact</span>
+						</a>
 					</nav>
 					<div class="column">
 						<section>
@@ -127,11 +137,59 @@
 								vero!
 								Distinctio labore laboriosam unde.
 							</p>
-							<!--TODO: add discus-->
+							<div id="disqus_thread"></div>
+						</article>
+					</div>
+					<hr />
+					<div itemscope itemtype="http://schema.org/AboutPage">
+						<article class="content-entry" itemprop="mainContentOfPage">
+							<h2 itemprop="name">About</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
+								expedita
+								mollitia rem! Cum dolorem fuga laborum mollitia quasi quidem quo suscipit, veritatis
+								vero!
+								Distinctio labore laboriosam unde.
+							</p>
+						</article>
+					</div>
+					<hr />
+					<div itemscope itemtype="http://schema.org/Article">
+						<article class="content-entry" itemprop="articleBody">
+							<h2 itemprop="name">Projects</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
+								expedita
+								mollitia rem! Cum dolorem fuga laborum mollitia quasi quidem quo suscipit, veritatis
+								vero!
+								Distinctio labore laboriosam unde.
+							</p>
+						</article>
+					</div>
+					<hr />
+					<div itemscope itemtype="http://schema.org/Article">
+						<article class="content-entry" itemprop="articleBody">
+							<h2 itemprop="name">Recommended</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
+								expedita
+								mollitia rem! Cum dolorem fuga laborum mollitia quasi quidem quo suscipit, veritatis
+								vero!
+								Distinctio labore laboriosam unde.
+							</p>
+						</article>
+					</div>
+					<hr />
+					<div itemscope itemtype="http://schema.org/ContactPage">
+						<article class="content-entry" itemprop="mainContentOfPage">
+							<h2 itemprop="name">Contact</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
+								expedita
+								mollitia rem! Cum dolorem fuga laborum mollitia quasi quidem quo suscipit, veritatis
+								vero!
+								Distinctio labore laboriosam unde.
+							</p>
 						</article>
 					</div>
 				</main>
-				<footer id="page__footer">
+				<footer id="page__footer" role="contentinfo">
 					All content, unless otherwise indicated,
 					<span class="nowrap">
 						is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license">CC BY
@@ -147,6 +205,18 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'webuniverse'; // required: replace example with your forum shortname
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
 
 <script>
 	(function() {
