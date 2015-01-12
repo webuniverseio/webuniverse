@@ -1,4 +1,3 @@
-// TODO: review build process
 /*jshint node: true*/
 'use strict';
 
