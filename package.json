@@ -11,6 +11,11 @@
   "author": "Sergey Zarouski",
   "license": "CC BY 4.0",
   "private": true,
+  "dependencies": {
+    "hexo-renderer-ejs": "*",
+    "hexo-renderer-stylus": "*",
+    "hexo-renderer-marked": "*"
+  },
   "devDependencies": {
     "co": "^3.1.0",
     "colors": "^1.0.3",
