@@ -6,7 +6,7 @@
  * @return {{assets: {files: Array.<{expand: Boolean, src: String, dest: String, nonull: Boolean}>}}}
  */
 module.exports = function createCopyExports(grunt) {
-	return {
+	var config = {
 		assets: {
 			files: [{
 				expand: true,
@@ -21,6 +21,20 @@ module.exports = function createCopyExports(grunt) {
 				dest: 'static/dest/fonts',
 				nonull: true
 			}]
+		},
+		hexo: {
+			files: [{
+				expand: true,
+				cwd: 'static/dest/',
+				src: '**',
+				dest: 'themes/webuniverse/source/static/dest'
+			}, {
+				expand: true,
+				cwd: 'bower_components/normalize-css/',
+				src: '**',
+				dest: 'themes/webuniverse/source/bower_components/normalize-css'
+			}]
 		}
 	};
+	return config;
 };

@@ -1,0 +1,8 @@
+<section>
+	<h2 class="a11y__element">Archive</h2>
+	<div class="list" itemscope itemtype="http://schema.org/Blog">
+		<% page.posts.each(function(post){ %>
+		<%- partial('archive-post', {post: post}) %>
+		<% }) %>
+	</div>
+</section>

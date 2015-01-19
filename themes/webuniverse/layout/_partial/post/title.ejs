@@ -1,0 +1,9 @@
+<% if (index){ %>
+	<h1 itemprop="name">
+		<a href="<%- url_for(post.path) %>"><%= post.title %></a>
+	</h1>
+<% } else { %>
+	<h1 itemprop="name">
+		<%= post.title %>
+	</h1>
+<% } %>

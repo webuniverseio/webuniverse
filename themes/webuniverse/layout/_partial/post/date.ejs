@@ -1,0 +1,3 @@
+<time class="datetime" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+	<%= date(post.date, typeof date_format === 'undefined' ? null : date_format) %>
+</time>

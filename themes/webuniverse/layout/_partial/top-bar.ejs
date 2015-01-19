@@ -1,0 +1,17 @@
+<div id="top-bar" class="ov-h">
+	<nav class="navigation decorate-links-on-hover column" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+		<h2 class="a11y__element">Main navigation</h2>
+		<a href="#page-content__main" class="a11y__skip navigation__skip">skip navigation</a>
+		<% _.each(_.pairs(theme.menu), function (link, i, menu) { %>
+		<a href="<%- url_for(link[1]) %>" itemprop="url">
+			<span itemprop="name"><%= link[0] %></span></a>
+		<% if (i !== menu.length - 1) { %><span class="navigation__separator"></span><% } %>
+		<% }) %>
+	</nav>
+	<div class="column">
+		<section>
+			<h3 class="a11y__element">Search panel</h3>
+			<div class="gcse-search"></div>
+		</section>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<div itemscope itemtype="http://schema.org/Article"
+     id="<%= post.layout %>-<%= post.slug %>">
+	<article class="content-entry" itemprop="articleBody">
+		<h2 itemprop="name"><%= post.title %></h2>
+		<%- partial('post/date') %>
+		<meta itemprop="datePublished" content="2011-05-08T19:30"/>
+		<%- post.content %>
+		<div id="disqus_thread"></div>
+	</article>
+</div>
+
+<%- partial('_partial/disqus', null, {cache: true}) %>

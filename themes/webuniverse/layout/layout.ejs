@@ -1,0 +1,24 @@
+<%- partial('_partial/head') %>
+<body itemscope itemtype="http://schema.org/WebPage">
+<meta itemprop="typicalAgeRange" content="17-" />
+<div id="page__wrapper">
+	<div id="page__layout-base">
+		<%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+
+		<div id="page-content__wrapper">
+			<div id="page-content">
+				<%- partial('_partial/top-bar', null, {cache: !config.relative_link}) %>
+				<main id="page-content__main" tabindex="0" class="page-content__side-padding ov-h">
+					<%- body %>
+				</main>
+				<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%- partial('_partial/google-search', null, {cache: true}) %>
+<%- partial('_partial/google-analytics', null, {cache: true}) %>
+<%- partial('_partial/noscript', null, {cache: true}) %>
+</body>
+</html>

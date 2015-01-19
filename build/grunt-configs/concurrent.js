@@ -13,7 +13,7 @@
 module.exports = function createConcurrentExports(grunt) {
     var stepOneTasks = [
         'css',
-        'copy',
+        'copy:assets',
         'jsdoc',
         'jshint',
         'jscs'

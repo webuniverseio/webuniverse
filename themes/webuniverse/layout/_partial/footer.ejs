@@ -1,0 +1,12 @@
+<footer id="page__footer" role="contentinfo">
+	All content, unless otherwise indicated,
+					<span class="nowrap">
+						is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license">CC BY
+							4.0</a>.
+					</span><br>
+					<span itemscope itemtype="http://schema.org/Person" itemprop="author">
+						<a href="<%- url_for('about') %>" itemprop="url">
+							<span itemprop="name"><%= config.author || config.title %></span></a>
+					</span>
+	&copy; <span itemprop="copyrightYear"><%= date(new Date(), 'YYYY') %></span>.
+</footer>
