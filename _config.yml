@@ -71,11 +71,14 @@ time_format: HH:mm:ss
 per_page: 0
 pagination_dir: page
 
-# Disqus
-disqus_shortname:
-
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+sitemap:
+    path: sitemap.xml
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 theme: webuniverse
 exclude_generator:

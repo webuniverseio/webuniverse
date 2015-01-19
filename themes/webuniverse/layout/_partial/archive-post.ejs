@@ -3,5 +3,5 @@
 		<h3 class="archive__title"><a href="<%- url_for(post.path) %>" class="archive__link" itemprop="name"><%= post.title %></a></h3>
 		<%- partial('post/date') %>
 	</div>
-	<div class="column archive__description" itemprop="description articleBody"><%- post.excerpt %></div>
+	<div class="column archive__description" itemprop="description articleBody"><%- post.overview %></div>
 </div>

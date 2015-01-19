@@ -18,6 +18,14 @@ module.exports = function createAliasesExports(grunt) {
 		grunt.task.run('concurrent:stepOne');
 	});
 
+	/**
+	 * @callback createAliasesExports~runGruntHexoTask
+	 */
+	grunt.registerTask('hexo', function runGruntHexoTask() {
+		grunt.task.run('default');
+		grunt.task.run('copy:hexo');
+	});
+
 	grunt.registerTask('cleanBuildDestination', ['clean']);
 
 	/**
