@@ -14,7 +14,7 @@
   "dependencies": {
     "hexo-generator-feed": "^0.2.1",
     "hexo-generator-sitemap": "^0.2.0",
-    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-ejs": "git://github.com/szarouski/hexo-renderer-ejs.git",
     "hexo-renderer-marked": "^0.1.0"
   },
   "devDependencies": {
