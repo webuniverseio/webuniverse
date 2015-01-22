@@ -1,10 +1,26 @@
 title: Projects
 date: 2015-01-19 20:36:14
 overview: Wonderful open source projects to ease your development life
-image: projects/image.jpg
+image: image.jpg
 ---
-##Lodash traverse
-Native browser support allows you to traverse and select DOM using `querySelector`, `insertAdjacentHTML`, `parent`, and other api methods. But there are a few cases when it is not flexible/compatible enough. [Lodash traverse](https://github.com/szarouski/lodash.dom-traverse) is a tiny addon which provides a dozen of useful, chainable methods which in combination with native api give you minimalistic, yet ultimate control over your html.
+Quick overview of projects I've had a wonderful time working on...
+
+##[Sandbox](https://github.com/szarouski/sandbox)
+This little library was designed for modular architectures ([1](https://www.youtube.com/watch?v=b5pFv9NB9fs), [2](http://www.addyosmani.com/scalablejs/)) to unify API between stand alone modules. It is crossbrowser and crossplatform with 100% coverage.
+There a few simple requirements for it to work effectively:
+* your modules should never auto-initialize as they are loading
+<small>Doing this will make sure that your code doesn't depend on the order in which your modules are loading  and you can get a benefit of `'async'` attribute that way, which can increase performance by an order of magnitude.</small>
+* there always should be an initialization method
+* you initialize a new instance of sandbox and pass it into initialization calls of your modules
+List of benefits you'll get by using sandbox:
+* unified module initialization api
+* Sandbox supports publish/subscribe pattern, and provides additional methods to control permissions for message delivery. So you can control whether one module can communicate with a with a sibling module, with a sub-module or even with the core
+* Sandbox has various caching strategies which will help a lot while dealing with AMD or with ES6 modules
+<small>That way you really stop caring about order in which your modules are initialized, you can always cache events from one module and do lazy initialization when another module loads</small>
+* data, passed through Sandbox will become immutable, meaning that you can safely pass objects without fear that one of the modules can modify 'shared' state
+
+##[Lodash traverse](https://github.com/szarouski/lodash.dom-traverse)
+Native browser support allows you to traverse and select DOM using `'querySelector'`, `'insertAdjacentHTML'`, `'parent'`, and other API methods. But there are a few cases when it is not flexible/compatible enough and that is why jQuery is around. Lodash traverse is a tiny addon which provides a dozen of useful, chainable methods which in addition to native APIs give you minimalistic, yet ultimate control over your html. In combination with other [micro libraries](http://microjs.com/) you can assemble a highly customizable and slim in size library for your favorite projects.
  
- ##Simple permissions
- Nothing crazy, just a [small library](https://github.com/szarouski/simple-permissions) which allows you to add or remove multiple permissions for multiple targets. Crossbrowser and crossplatform with 100% coverage.
+ ##[Simple permissions](https://github.com/szarouski/simple-permissions)
+ Nothing crazy, just a small library which allows you to add or remove multiple permissions for multiple targets. Crossbrowser and crossplatform with 100% coverage.

@@ -1,0 +1,11 @@
+<div itemscope itemtype="http://schema.org/<%- schema.type %>">
+	<article class="content-entry" itemprop="<%- schema.content %>">
+		<% if (page.image) { %>
+		<img src="index/<%- page.image %>" alt="<%= page.title %>" />
+		<% } %>
+		<% if (typeof headless === 'undefined') { %>
+		<h1 itemprop="name"><%= page.title %></h1>
+		<% } %>
+		<%- page.content %>
+	</article>
+</div>

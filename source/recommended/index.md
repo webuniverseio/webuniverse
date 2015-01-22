@@ -1,7 +1,7 @@
 title: Recommended
 date: 2015-01-19 19:36:23
 overview: Recommended articles, blogs and books for professional web developers
-image: recommended/image.jpg
+image: image.jpg
 ---
 - http://www.2ality.com/ - Tons and tons of useful information about next version of javascript (ES6) and more
 - http://addyosmani.com/blog/ - Advanced level articles about javascript architecture and web performance
