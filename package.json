@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm cache clean",
-    "postinstall": "node --harmony build/installer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sergey Zarouski",
@@ -15,7 +14,9 @@
     "hexo-generator-feed": "^0.2.1",
     "hexo-generator-sitemap": "^0.2.0",
     "hexo-renderer-ejs": "git://github.com/szarouski/hexo-renderer-ejs.git",
-    "hexo-renderer-marked": "^0.1.0"
+    "hexo-renderer-marked": "^0.1.0",
+    "koa": "^0.16.0",
+    "koa-rewrite": "^1.1.0"
   },
   "devDependencies": {
     "co": "^3.1.0",

@@ -64,6 +64,10 @@ $highlight-font: "Source Code Pro", Consolas, Monaco, Menlo, Consolas;
 			float: right;
 		}
 	}
+	.line:after {
+		content: '';
+		display: inline-block;
+	}
 	.gutter pre {
 		padding-right: 20px;
 		color: #666;

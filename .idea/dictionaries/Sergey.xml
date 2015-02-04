@@ -22,6 +22,8 @@
       <w>printshiv</w>
       <w>shelljs</w>
       <w>sourcemap</w>
+      <w>transpiler</w>
+      <w>yieldable</w>
     </words>
   </dictionary>
 </component>

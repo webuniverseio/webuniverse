@@ -139,9 +139,10 @@
 						</div>
 					</section>
 					<hr />
-					<div itemscope itemtype="http://schema.org/Article">
+					<div class="article" itemscope itemtype="http://schema.org/Article">
 						<article class="content-entry" itemprop="articleBody">
-							<h2 itemprop="name">Lorem ipsum dolor.</h2>
+							<h2 itemprop="name" class="article__title">Clean javascript code with ES6 generators,<br>
+								promises and npm-co</h2>
 							<time class="datetime" itemprop="datePublished" datetime="2011-05-08T19:30">10 September, 2014</time>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
 								expedita
@@ -149,6 +150,19 @@
 								vero!
 								Distinctio labore laboriosam unde.
 							</p>
+							<blockquote>
+								<p>You can force a generator to throw an exception by calling its throw() method and
+									passing the exception value it should throw. This exception will be thrown from the
+									current suspended context of the generator, as if the yield that is currently
+									suspended were instead a throw value statement.
+								</p>
+								<footer>
+									<strong>MDN</strong>
+									<cite><a
+									href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators"
+									target="_blank" rel="external">developer.mozilla.org/en-US/…</a></cite>
+								</footer>
+							</blockquote>
 							<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 							<ul>
 								<li>Lorem ipsum dolor sit amet.</li>
@@ -162,6 +176,8 @@
 					<hr />
 					<div itemscope itemtype="http://schema.org/AboutPage">
 						<article class="content-entry" itemprop="mainContentOfPage">
+							<img src="static/dest/images/samples/image.jpg" alt="" />
+							<span class="image-copyright">&copy; ESO/José Francisco Salgado (josefrancisco.org)</span>
 							<h2 itemprop="name">About</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur, beatae dicta
 								expedita

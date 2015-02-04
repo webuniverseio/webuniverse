@@ -17,6 +17,7 @@ image: image.jpg
 - http://nodeweekly.com/ - Weekly news from nodejs (and IO.js) world
 - http://blog.npmjs.org/ - News about node package management
 - http://perfectionkills.com/ - Always high level, ultimate quality posts about web development
-- http://dmitrysoshnikov.com/ - Learn how javascript is working on the core level. Ecmascript specifications translated to the human language.
+- http://dmitrysoshnikov.com/ - Learn how javascript is working on the core level. Ecmascript specifications translated to the human language
+- https://serversforhackers.com/ - Great tutorials and articles about server configuration
 - http://goo.gl/7zaoGm - Clean Code book, learn how to write a professional code
-- http://goo.gl/dRXk1T - Clean Coder book, learn how to be a professional developer. When and how to say No and feel good about it. How to say Yes and what exactly it means. Any many more.
+- http://goo.gl/dRXk1T - Clean Coder book, learn how to be a professional developer. When and how to say No and feel good about it. How to say Yes and what exactly it means. Any many more

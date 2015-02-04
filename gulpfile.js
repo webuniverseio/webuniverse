@@ -12,6 +12,7 @@ var gulp = require('gulp');
  */
 gulp.task('css', function runCss() {
 	var sassOptions = {
+		style: 'compressed',
 		sourcemap: true,
 		compass: true
 	};

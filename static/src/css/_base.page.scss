@@ -33,3 +33,14 @@ hr {
 	border: 0;
 	border-top: 1px solid $line-color;
 }
+
+blockquote {
+	border-left: 1px solid $line-color;
+	padding-left: 20px;
+	footer {
+	}
+	cite:before {
+		content: "\2014";
+		padding: 0 0.5em;
+	}
+}

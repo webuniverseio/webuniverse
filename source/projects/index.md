@@ -12,10 +12,11 @@ There a few simple requirements for it to work effectively:
 <small>Doing this will make sure that your code doesn't depend on the order in which your modules are loading  and you can get a benefit of `'async'` attribute that way, which can increase performance by an order of magnitude.</small>
 * there always should be an initialization method
 * you initialize a new instance of sandbox and pass it into initialization calls of your modules
-List of benefits you'll get by using sandbox:
+
+List of benefits you'll get from using sandbox:
 * unified module initialization api
-* Sandbox supports publish/subscribe pattern, and provides additional methods to control permissions for message delivery. So you can control whether one module can communicate with a with a sibling module, with a sub-module or even with the core
-* Sandbox has various caching strategies which will help a lot while dealing with AMD or with ES6 modules
+* Sandbox supports publish/subscribe pattern, and provides additional methods to control permissions for message delivery. So you can control whether one module can communicate with a sibling module, with a sub-module or even with the core
+* Sandbox has various caching strategies which will help to deal with asynchronous nature of AMD or ES6 modules
 <small>That way you really stop caring about order in which your modules are initialized, you can always cache events from one module and do lazy initialization when another module loads</small>
 * data, passed through Sandbox will become immutable, meaning that you can safely pass objects without fear that one of the modules can modify 'shared' state
 
