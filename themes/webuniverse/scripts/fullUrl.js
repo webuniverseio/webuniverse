@@ -1,3 +1,9 @@
-hexo.extend.helper.register('fullUrl', function(url){
-  return hexo.config.url + hexo.config.root + url;
+/*global hexo*/
+'use strict';
+
+/**
+ * @param {String} url
+ */
+hexo.extend.helper.register('fullUrl', function makeFullUrl(url) {
+	return hexo.config.url + hexo.config.root + url;
 });
