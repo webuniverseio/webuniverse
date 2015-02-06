@@ -55,7 +55,7 @@ var installers = [
 	// 	skipDownload: true
 	// },
 	{
-		prefix: 'SET PATH=%PATH%;c:\\Ruby2\\bin&&gem install ',
+		prefix: 'SET PATH=%PATH%;c:\\Ruby2\\bin&&gem install',
 		name: 'compass',
 		postfix: ' -v 1.0.1',
 		skipDownload: true

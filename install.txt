@@ -297,7 +297,8 @@ add user to sudoers
 
 https://serversforhackers.com/log-rotate/ (also check webmin)
 
-http://stackoverflow.com/questions/12594541/npm-global-install-cannot-find-module NODE_PATH=
+http://stackoverflow.com/questions/12594541/npm-global-install-cannot-find-module
+NODE_PATH=path to global node_modules folder
 
 PM2
 	different node ?

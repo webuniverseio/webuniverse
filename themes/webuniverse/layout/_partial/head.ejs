@@ -1,11 +1,19 @@
 <!doctype html>
 <html lang="<%= config.language %>" class="no-js">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="dns-prefetch" href="//webuniverse.disqus.com">
+	<link rel="dns-prefetch" href="//a.disquscdn.com">
+	<link rel="dns-prefetch" href="//disqus.com">
+	<link rel="dns-prefetch" href="//glitter-services.disqus.com">
+	<link rel="dns-prefetch" href="//referrer.disqus.com">
+
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@webuniverseio" />
 	<meta property="og:url" content="<%= url %>" />
 	<meta name="twitter:url" content="<%= url %>" />
 	<%
+		/*global page, theme*/
 		var title = config.title;
 		if (page.title) {
 			title = [page.title, title].join(' | ')

@@ -5,24 +5,19 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm cache clean",
+    "postinstall": "node --harmony build/installer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sergey Zarouski",
   "license": "CC BY 4.0",
   "private": true,
   "dependencies": {
-    "hexo-generator-archive": "0.0.2",
-    "hexo-generator-category": "0.0.3",
     "hexo-generator-feed": "1.0.0",
     "hexo-generator-index": "0.0.2",
     "hexo-generator-sitemap": "1.0.0",
-    "hexo-generator-tag": "0.0.3",
     "hexo-renderer-ejs": "git://github.com/szarouski/hexo-renderer-ejs.git",
-    "hexo-renderer-marked": "0.2.0",
-    "hexo-renderer-stylus": "0.2.0",
-    "hexo-server": "0.1.1",
-    "koa": "^0.16.0",
-    "koa-rewrite": "^1.1.0"
+    "hexo-renderer-marked": "git://github.com/hexojs/hexo-renderer-marked.git#0.2.4",
+    "hexo-server": "0.1.2"
   },
   "devDependencies": {
     "co": "^3.1.0",

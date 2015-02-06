@@ -28,5 +28,6 @@
     <orderEntry type="library" name="gulp-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="custom-type-definitions" level="project" />
     <orderEntry type="library" name="compass-library" level="project" />
+    <orderEntry type="library" name="webuniverse node_modules" level="project" />
   </component>
 </module>

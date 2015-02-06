@@ -1,9 +1,9 @@
 # Header
 menu:
-  About: /about
-  Projects: /projects
-  Recommended: /recommended
-  Contact: /contact
+  About: /about/
+  Projects: /projects/
+  Recommended: /recommended/
+  Contact: /contact/
 rss: /atom.xml
 
 # Content

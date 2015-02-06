@@ -50,9 +50,9 @@ tag_map:
 ## 2: Enable pagination
 ## 1: Disable pagination
 ## 0: Fully Disable
-archive: 0
-category: 0
-tag: 0
+# archive: 0
+# category: 0
+# tag: 0
 
 # Server
 ## Hexo uses Connect as a server
@@ -83,8 +83,19 @@ feed:
   limit: 20
 sitemap:
   path: sitemap.xml
+
 html_minifier:
   #collapseWhitespace: false
+
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 theme: webuniverse
 exclude_generator:

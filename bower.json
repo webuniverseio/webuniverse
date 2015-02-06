@@ -8,8 +8,8 @@
   "dependencies": {
     "lodash": "~2.4.1",
     "requirejs-bower": "~2.1.10",
+    "inuit-normalize": "3.0.2",
     "inuit-starter-kit": "~0.2.8",
-    "normalize-css": "~3.0.2",
     "inuit-images": "~0.3.2",
     "inuit-paragraphs": "~0.1.4",
     "inuit-headings": "~0.2.2",
@@ -17,5 +17,8 @@
     "inuit-box": "~0.4.4",
     "inuit-flag": "~0.3.2",
     "singularity": "~1.4.0"
+  },
+  "resolutions": {
+    "inuit-normalize": "3.0.2"
   }
 }

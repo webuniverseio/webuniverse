@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectTasksOptions" suppressed-tasks="Traceur compiler;SCSS">
+  <component name="ProjectTasksOptions" suppressed-tasks="Traceur compiler;SCSS;6to5">
     <TaskOptions isEnabled="false">
       <option name="arguments" value="--no-cache --update static/src/css/$FileName$:static/dest/css/$FileNameWithoutExtension$.css" />
       <option name="checkSyntaxErrors" value="true" />
