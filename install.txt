@@ -302,11 +302,6 @@ PM2
 https://developers.facebook.com/tools/debug/og/object/
 	canonical url - remove index.html? (same for http://webuniverse.io/index.html)
 
-?setup redirect from webuniverse.ca -> webuniverse.io
-?hexo is on 0.0.0.0, should be 127.0.0.1
-remove not found from sitemap
-pass page encoding in headers
-
 TODO:
 	linkedin
 	twitter

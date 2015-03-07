@@ -2,7 +2,7 @@
 'use strict';
 var url = require('url');
 /***/
-hexo.extend.filter.register('server_middleware', function _cacheControllMiddleware(app) {
+hexo.extend.filter.register('server_middleware', function _cacheControlMiddleware(app) {
 	/***/
 	app.use(function setCacheControl(req, res, next) {
 		if (/\.(css|js|jpg|png|gif)$/.test(url.parse(req.url).pathname)) {

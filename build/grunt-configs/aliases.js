@@ -24,6 +24,15 @@ module.exports = function createAliasesExports(grunt) {
 	grunt.registerTask('hexo', function runGruntHexoTask() {
 		grunt.task.run('default');
 		grunt.task.run('copy:hexo');
+		grunt.task.run('hexo-generate');
+	});
+
+	/**
+	 * @callback createAliasesExports~generateHexo
+	 */
+	grunt.registerTask('hexo-generate', function generateHexo() {
+		shell.exec('hexo generate --config _config-live.yml');
+		shellHandler.throwIfHasErrors('error while running gulp css');
 	});
 
 	grunt.registerTask('cleanBuildDestination', ['clean']);
