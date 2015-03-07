@@ -1,7 +1,8 @@
-title: Asynchronous programming with<br> ES6 generators, promises and npm-co
+title: Asynchronous programming with ES6 generators, promises and npm-co
 date: 2015-02-03 18:20:00
 tags:
 overview: Simplify your code by writing<br> an asynchronous code in a synchronous manner
+image: image.jpg
 ---
 This article explains what an npm `co` module is, how it works and how it can help you to write much cleaner and simpler asynchronous code.
 ##The problem

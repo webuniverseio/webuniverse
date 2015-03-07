@@ -3,7 +3,7 @@
   "author": "Sergey Zarouski",
   "description": "Web Universe website",
   "license": "CC BY 4.0",
-  "homepage": "http://webuniverse.club",
+  "homepage": "http://webuniverse.io",
   "private": true,
   "dependencies": {
     "lodash": "~2.4.1",

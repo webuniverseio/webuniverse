@@ -39,7 +39,7 @@ module.exports = function createAliasesExports(grunt) {
 	/**
 	 * @callback createAliasesExports~runWatchStartTask
 	 */
-	grunt.registerTask('start-watch', function runWatchStartTask() {
+	grunt.registerTask('watch-start', function runWatchStartTask() {
 		grunt.task.run('default');
 		grunt.task.run('concurrent:watch');
 	});

@@ -1,12 +1,26 @@
 /*global hexo*/
 'use strict';
 var url = require('url');
+var moment = require('moment');
 /**
  * @param {Object} app
  */
 hexo.extend.filter.register('server_middleware', function _404middleware(app) {
 	/***/
 	app.use(function handle404(req, res, next) {
+		var host = req.headers.host;
+		var ip = req.connection.remoteAddress;
+		var ua = req.headers['user-agent'];
+		var time = moment().format();
+		var method = req.method;
+
+		console.error([
+			'method: ' + method,
+			', url: ' + host + req.url,
+			', time: ' + time,
+			', ip: ' + ip,
+			', ua: ' + ua
+		].join(''));
 		res.writeHead(302, {
 			'Location': hexo.config.url + hexo.config.root + 'not-found/'
 		});

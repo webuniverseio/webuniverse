@@ -21,7 +21,7 @@
 	%>
 	<meta property="og:title" content="<%= title %>" />
 	<meta name="twitter:title" content="<%= title %>" />
-	<meta property="og:site_name" content="<%= title %>"/>
+	<meta property="og:site_name" content="<%= config.title %>"/>
 	<meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>" />
 	<% if (page.layout === 'post') { %>
 	<meta property="article:publisher" content="https://www.facebook.com/webuniverseio"/>
@@ -33,7 +33,7 @@
 	<meta property="og:description" content="<%= description %>"/>
 	<meta name="twitter:description" content="<%= description %>" />
 	<%
-		var image = page.image ? fullUrl(page.image) : fullUrl('favicon-192x192.png');
+		var image = page.image ? page.permalink.replace(/index\.html$/, '') + page.image : fullUrl('favicon-192x192.png');
 	%>
 	<meta property="og:image" content="<%= image %>"/>
 	<meta name="twitter:image" content="<%= image %>" />

@@ -4,6 +4,8 @@ $line-height: 1.5;
 
 $inuit-base-font-size: 17px;
 $inuit-base-line-height: $inuit-base-font-size * $line-height;
+$inuit-base-background-color: #0b1013;
+$inuit-base-text-color: #fff;
 
 $page-width: 1024px;
 // when viewport width is too small how big should be the paddings?
@@ -16,9 +18,6 @@ $page-content-side-padding: 20px;
 
 // indent in between sections
 $vertical-indent: 1.5em;
-
-$body-background: #0b1013;
-$body-color: #fff;
 
 $footer-height: 70px;
 $output-styles-decorate-on-hover: true;

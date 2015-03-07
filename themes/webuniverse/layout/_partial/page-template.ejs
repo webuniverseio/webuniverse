@@ -1,7 +1,7 @@
 <div itemscope itemtype="http://schema.org/<%- schema.type %>">
 	<article class="content-entry" itemprop="<%- schema.content %>">
 		<% if (page.image) { %>
-		<img src="index/<%- page.image %>" alt="<%= page.title %>" />
+		<img src="<%- page.image %>" alt="<%= page.title %>" />
 		<% } %>
 		<% if (page.copyright) { %>
 		<span class="image-copyright">&copy; <%- page.copyright %></span>

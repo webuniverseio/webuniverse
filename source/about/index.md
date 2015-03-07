@@ -2,7 +2,8 @@ title: About
 layout: about
 date: 2015-01-17 16:57:36
 image: image.jpg
-copyright: ESO/José Francisco Salgado (josefrancisco.org)
+copyright: ESO/José Francisco Salgado
+overview: Learn about web technologies and more at Webuniverse
 ---
 Web universe is a technical blog about technologies, tools, patterns, ideas and resources for web development. You can follow us on [twitter](https://twitter.com/webuniverseio), [facebook](https://www.facebook.com/webuniverseio), or add our [feed](/atom.xml) to your favorite reader.
 

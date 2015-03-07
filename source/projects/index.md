@@ -7,7 +7,7 @@ Quick overview of projects I've had a wonderful time working on...
 
 ##[Sandbox](https://github.com/szarouski/sandbox)
 This little library was designed for modular architectures ([1](https://www.youtube.com/watch?v=b5pFv9NB9fs), [2](http://www.addyosmani.com/scalablejs/)) to unify API between stand alone modules. It is crossbrowser and crossplatform with 100% coverage.
-There a few simple requirements for it to work effectively:
+There are a few simple requirements for it to work effectively:
 * your modules should never auto-initialize as they are loading
 <small>Doing this will make sure that your code doesn't depend on the order in which your modules are loading  and you can get a benefit of `'async'` attribute that way, which can increase performance by an order of magnitude.</small>
 * there always should be an initialization method

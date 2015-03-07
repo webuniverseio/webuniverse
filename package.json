@@ -1,6 +1,6 @@
 {
-  "name": "hexo-site",
-  "version": "3.0.0-rc.2",
+  "name": "WebUniverse",
+  "version": "1.0.0",
   "description": "Web Universe website",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,14 @@
   "license": "CC BY 4.0",
   "private": true,
   "dependencies": {
+    "hexo": "^3.0.0-rc.4",
     "hexo-generator-feed": "1.0.0",
     "hexo-generator-index": "0.0.2",
     "hexo-generator-sitemap": "1.0.0",
     "hexo-renderer-ejs": "git://github.com/szarouski/hexo-renderer-ejs.git",
     "hexo-renderer-marked": "git://github.com/hexojs/hexo-renderer-marked.git#0.2.4",
-    "hexo-server": "0.1.2"
+    "hexo-server": "0.1.2",
+    "moment": "^2.9.0"
   },
   "devDependencies": {
     "co": "^3.1.0",
@@ -43,5 +45,8 @@
     "shelljs": "^0.3.0",
     "thunkify": "^2.1.2",
     "time-grunt": "^1.0.0"
+  },
+  "hexo": {
+    "version": "3.0.0-rc.4"
   }
 }
