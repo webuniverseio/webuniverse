@@ -2,6 +2,6 @@
 doc
 .DS_Store
 Thumbs.db
-db.json
+/db.json
 debug.log
 .deploy/
