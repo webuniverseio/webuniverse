@@ -164,7 +164,77 @@ http://www.pontikis.net/blog/debian-wheezy-web-server-setup:
 		Output = mail
 
 		custom logs
-			http://alphahydrae.com/2012/08/logwatch-how-to-add-a-service/
+			New Service
+
+	            The goal was to add the logs of my backup scripts in /var/log/backup/ to the logwatch reports. First you have to define a log file group. This tells logwatch which files to read.
+
+	            # /etc/logwatch/conf/logfiles/my-backup.conf
+
+	            # The LogFile path is relative to /var/log by default.
+	            # You can change the default by setting LogDir.
+	            LogFile = backup/*.log
+
+	            # This enables searching through zipped archives as well.
+	            Archive = backup/*.gz
+
+	            # Expand the repeats (actually just removes them now).
+	            *ExpandRepeats
+	            Next you need to create a service that will use the log file group.
+
+	            # /etc/logwatch/conf/services/my-backup.conf
+
+	            # The title shown in the report.
+	            Title = "My Backups"
+
+	            # The name of the log file group (file name).
+	            LogFile = my-backup
+	            Finally, you need a script to parse the log files. I’ve seen a lot of examples in perl, but I prefer bash for simple scripts. Note that the script has the same name as the service file.
+
+	            #!/usr/bin/env bash
+	            # /etc/logwatch/scripts/services/my-backup
+
+	            # Change the line separator to split by new lines.
+	            OLD_IFS=$IFS
+	            IFS=$'\n'
+
+	            # The contents of the log file are given in stdin.
+	            for LINE in $( cat /dev/stdin ); do
+
+	                # Only lines matching this regexp will be included.
+	                if echo $LINE|egrep 'info' &> /dev/null; then
+
+	                    # Every line we echo here will be included in the logwatch report.
+	                    echo $LINE
+
+	                fi
+
+	            done
+
+	            IFS=$OLD_IFS
+	            And you’re done! The contents of the backup log files will show up in the logwatch reports under “My Backups”.
+
+            Log Rotation
+
+	            If you don’t want your logwatch reports to forever grow in size, you also need to rotate the log files. Logrotate will conveniently do that for you with this simple configuration.
+
+	            # /etc/logrotate.d/backup
+
+	            /var/log/backup/*log {
+
+	                daily
+
+	                # keep 10 old logs
+	                rotate 10
+
+	                # don't do anything if the log is missing
+	                missingok
+
+	                # don't do anything if the log is empty
+	                notifempty
+
+	                # zip the archived logs
+	                compress
+	            }
 
 	apt-get install fail2ban (http://www.pontikis.net/blog/fail2ban-install-config-debian-wheezy)
 		nano /etc/fail2ban/jail.local
@@ -298,6 +368,13 @@ NODE_PATH=/usr/local/lib/node_modules/ path to global node_modules folder
 PM2
 	https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md
 	https://serversforhackers.com/log-rotate/ - pm2 reloadLogs
+
+http-master
+	https://www.digitalocean.com/community/tutorials/how-to-install-and-use-goaccess-web-log-analyzer-with-apache-on-debian-7
+	apt-get install libncurses5-dev
+	crontab -e
+		@daily cd /home/sergey/node_projects/http-master-logs&&goaccess -f access.log -a > report.html&&echo "Daily access report" | mutt -a "report.html" -s "Access log report" -- root@localhost
+	logrotate
 
 https://developers.facebook.com/tools/debug/og/object/
 	canonical url - remove index.html? (same for http://webuniverse.io/index.html)

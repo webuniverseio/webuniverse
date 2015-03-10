@@ -9,7 +9,7 @@ hexo.extend.filter.register('server_middleware', function _404middleware(app) {
 	/***/
 	app.use(function handle404(req, res, next) {
 		var host = req.headers.host;
-		var ip = req.connection.remoteAddress;
+		var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 		var ua = req.headers['user-agent'];
 		var time = moment().format();
 		var method = req.method;
