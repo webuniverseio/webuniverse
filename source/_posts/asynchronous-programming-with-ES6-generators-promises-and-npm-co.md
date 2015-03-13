@@ -193,3 +193,5 @@ Thank you and please feel free to ask questions in the comments, follow us on [f
 ###Generators<a name="generators"></a>
 * description and examples - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
 * support - http://kangax.github.io/compat-table/es6/#generators
+
+<style type="text/css">.article__title {font-size: 1.72rem;}</style>

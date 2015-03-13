@@ -1,6 +1,7 @@
 /*global hexo*/
 'use strict';
 var url = require('url');
+var modRewrite = require('connect-modrewrite');
 /***/
 hexo.extend.filter.register('server_middleware', function _cacheControlMiddleware(app) {
 	/***/
@@ -10,4 +11,8 @@ hexo.extend.filter.register('server_middleware', function _cacheControlMiddlewar
 		}
 		next();
 	});
+
+	app.use(modRewrite([
+		'(.*\.)v[0-9.]+\.(css|js|gif|png|jpg)$ $1$2'
+	]));
 });

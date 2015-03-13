@@ -154,6 +154,17 @@ http://www.pontikis.net/blog/debian-wheezy-web-server-setup:
 		...
 		post-up iptables-restore < /etc/iptables.up.rules
 
+	nano /etc/ip6tables.up.rules
+    		*filter
+    		-A INPUT -j LOG
+    		-A FORWARD -j LOG
+    		COMMIT
+
+    	ip6tables-restore < /etc/ip6tables.up.rules
+    	nano /etc/network/interfaces
+    		...
+    		post-up ip6tables-restore < /etc/ip6tables.up.rules
+
 	apt-get install -y git mc p7zip-full htop sysstat
 
 	apt-get install -y logwatch
@@ -340,6 +351,9 @@ npm i n -g
 	n stable
 	n latest
 
+npm i nave -g
+	nave usemain "stable"
+
 adding new user (like for node processes)
 https://serversforhackers.com/initial-security/
 add user to sudoers
@@ -372,8 +386,13 @@ PM2
 http-master
 	https://www.digitalocean.com/community/tutorials/how-to-install-and-use-goaccess-web-log-analyzer-with-apache-on-debian-7
 	apt-get install libncurses5-dev
+	touch report.sh
+		cd /home/node/node_projects/http-master-logs
+		cat webuniverse.log | /usr/local/bin/goaccess -a -d > webuniverse.html
+		...
+		echo "Daily access report" | mutt -a "webuniverse.html" -s "Access log report" -- root@localhost
 	crontab -e
-		@daily cd /home/sergey/node_projects/http-master-logs&&goaccess -f access.log -a > report.html&&echo "Daily access report" | mutt -a "report.html" -s "Access log report" -- root@localhost
+		@daily cd /home/node/node_projects/http-master-logs&&./report.sh
 	logrotate
 
 https://developers.facebook.com/tools/debug/og/object/

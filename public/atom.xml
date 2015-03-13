@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://webuniverse.io/"/>
-  <updated>2015-02-15T01:07:45.425Z</updated>
+  <updated>2015-03-12T19:40:01.051Z</updated>
   <id>http://webuniverse.io/</id>
   
   <author>
@@ -15,11 +15,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Css naming conventions and safe extend without preprocessors]]></title>
+    <link href="http://webuniverse.io/css-naming-convention-and-safe-extend-without-preprocessors/"/>
+    <id>http://webuniverse.io/css-naming-convention-and-safe-extend-without-preprocessors/</id>
+    <published>2015-03-12T18:37:31.000Z</published>
+    <updated>2015-03-12T19:40:01.051Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Asynchronous programming with ES6 generators, promises and npm-co]]></title>
     <link href="http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/"/>
     <id>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</id>
     <published>2015-02-03T23:20:00.000Z</published>
-    <updated>2015-02-15T01:07:45.425Z</updated>
+    <updated>2015-03-08T03:12:29.203Z</updated>
     <content type="html"><![CDATA[<p>This article explains what an npm <code>co</code> module is, how it works and how it can help you to write much cleaner and simpler asynchronous code.</p>
 <h2 id="The_problem">The problem</h2><p>Writing asynchronous code could be very tricky, if you never did it before or didn’t learn or develop good patterns to approach it. Asynchronous programming in javascript became popular with arrival of single page applications and node.js (where most of the operations happen asynchronously by default). Traditionally javascript was handling async operations using callbacks, and at least once every web developer faced a problem called <a href="https://www.google.ca/search?q=callback+hell+definition&amp;tbm=isch" target="_blank" rel="external"><code>callback hell</code></a> or <code>pyramid of doom</code>.</p>
 <h2 id="Solutions">Solutions</h2><p>A simple solution is to keep your code shallow, though error handling wouldn’t be that simple. Another one, very well established solution is to use promises. Using ES6 generators we can simplify code for promises and continue writing code in a synchronous, easy to follow, manner, while keeping it asynchronous. If you’re not familiar with how <a href="#promises">promises</a> or <a href="#generators">generators</a> are working, please do a quick research before you continue reading.</p>

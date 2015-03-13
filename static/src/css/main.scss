@@ -32,6 +32,7 @@
 ---------------------------------------- */
 @import "settings.general";
 @import "settings.colors";
+@import "settings.headings";
 @import "../../../bower_components/breakpoint-sass/stylesheets/breakpoint";
 @import "../../../bower_components/singularity/stylesheets/singularitygs";
 @import "../../../bower_components/inuit-defaults/settings.defaults";
@@ -64,7 +65,8 @@
 @import "base.quotes";
 @import "base.links";
 @import "../../../bower_components/inuit-headings/base.headings";
-@import "base.headers";
+@import "base.headings.media";
+@import "base.headings";
 
 /* 5. Objects
 ---------------------------------------- */

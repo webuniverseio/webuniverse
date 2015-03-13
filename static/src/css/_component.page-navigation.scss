@@ -11,6 +11,10 @@
 	}
 	position: relative;
 
+	.wf-slabo27px-n4-active & {
+		font-family: 'Slabo 27px', serif;
+	}
+
 	#top-bar & {
 		letter-spacing: 0.1em;
 		text-transform: uppercase;

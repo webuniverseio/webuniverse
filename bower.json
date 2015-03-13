@@ -17,8 +17,5 @@
     "inuit-box": "~0.4.4",
     "inuit-flag": "~0.3.2",
     "singularity": "~1.4.0"
-  },
-  "resolutions": {
-    "inuit-normalize": "3.0.2"
   }
 }

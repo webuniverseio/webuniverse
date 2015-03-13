@@ -1,0 +1,6 @@
+$header-custom-font: true;
+@mixin header-custom-font() {
+	.wf-slabo27px-n4-active & {
+		font-family: 'Slabo 27px', serif;
+	}
+}

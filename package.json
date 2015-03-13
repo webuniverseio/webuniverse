@@ -12,6 +12,7 @@
   "license": "CC BY 4.0",
   "private": true,
   "dependencies": {
+    "connect-modrewrite": "^0.7.11",
     "hexo": "^3.0.0",
     "hexo-generator-feed": "1.0.1",
     "hexo-generator-index": "0.0.2",
