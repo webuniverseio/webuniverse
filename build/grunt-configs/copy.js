@@ -36,6 +36,11 @@ module.exports = function createCopyExports(grunt) {
 					cwd: 'bower_components/normalize-css/',
 					src: '**',
 					dest: 'themes/webuniverse/source/bower_components/normalize-css'
+				}, {
+					expand: true,
+					cwd: 'bower_components/picturefill/',
+					src: '**',
+					dest: 'themes/webuniverse/source/bower_components/picturefill'
 				}
 			]
 		}

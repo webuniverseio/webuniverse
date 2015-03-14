@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://webuniverse.io/css-naming-convention-and-safe-extend-without-preprocessors/</loc>
-    <lastmod>2015-03-12T19:40:01.051Z</lastmod>
+    <loc>http://webuniverse.io/css-organization-naming-conventions-and-safe-extend-without-preprocessors/</loc>
+    <lastmod>2015-03-14T20:32:40.874Z</lastmod>
   </url>
   
   <url>
     <loc>http://webuniverse.io/recommended/index.html</loc>
-    <lastmod>2015-03-08T03:12:29.226Z</lastmod>
+    <lastmod>2015-03-14T16:28:13.105Z</lastmod>
   </url>
   
   <url>
     <loc>http://webuniverse.io/projects/index.html</loc>
-    <lastmod>2015-03-08T03:12:29.213Z</lastmod>
+    <lastmod>2015-03-14T16:28:03.665Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://webuniverse.io/about/index.html</loc>
+    <lastmod>2015-03-14T16:27:52.273Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</loc>
+    <lastmod>2015-03-14T01:40:23.418Z</lastmod>
   </url>
   
   <url>
     <loc>http://webuniverse.io/contact/index.html</loc>
     <lastmod>2015-03-08T03:12:29.208Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://webuniverse.io/about/index.html</loc>
-    <lastmod>2015-03-08T03:12:29.207Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</loc>
-    <lastmod>2015-03-08T03:12:29.203Z</lastmod>
   </url>
   
 </urlset>

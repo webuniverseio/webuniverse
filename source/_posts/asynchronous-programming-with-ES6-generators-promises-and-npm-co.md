@@ -2,7 +2,8 @@ title: Asynchronous programming with ES6 generators, promises and npm-co
 date: 2015-02-03 18:20:00
 tags:
 overview: Simplify your code by writing<br> an asynchronous code in a synchronous manner
-image: image.jpg
+image: image.v1.jpg
+imageSmall: imageSmall.jpg
 ---
 This article explains what an npm `co` module is, how it works and how it can help you to write much cleaner and simpler asynchronous code.
 ##The problem
@@ -183,7 +184,7 @@ Thank you and please feel free to ask questions in the comments, follow us on [f
 ##Links
 * co - https://github.com/tj/co  
 * shallow code - http://exponential.io/blog/unnest-callbacks/
-* 6to5 transpiler - https://6to5.org/docs/learn-es6/
+* 6to5 transpiler (babeljs) - https://babeljs.io/docs/learn-es6/
 
 ###Promises<a name="promises"></a>
 * description - https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise

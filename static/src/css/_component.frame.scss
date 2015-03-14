@@ -1,16 +1,36 @@
 @import "settings.general";
 @import "settings.colors";
 @import "settings.zIndex";
+@import "settings.breakpoints";
+@import "objects.layouts";
 
+//noinspection CssOverwrittenProperties
 body:after {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: url(../images/samples/bg.jpg) no-repeat center center fixed;
-	background-size: cover;
 	content: '';
+
+	@include grid-breakpoint(max-width map_get($breakpoints, 'navigation__small')) {
+		background: url(../images/samples/bg--small.jpg) no-repeat center center fixed;
+		background: url(../images/samples/bg--small.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
+		background-size: cover;
+		background-attachment: scroll; //fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862
+	}
+	@include grid-breakpoint(min-width map_get($breakpoints, 'navigation__small') + 1) {
+		background: url(../images/samples/bg--medium.jpg) no-repeat center center fixed;
+		background: url(../images/samples/bg--medium.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
+		background-size: cover;
+		background-attachment: scroll; //fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862
+	}
+	@include grid-breakpoint(min-width map_get($breakpoints, 'archive__single-column') + 1) {
+		background: url(../images/samples/bg.jpg) no-repeat center center fixed;
+		background: url(../images/samples/bg.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
+		background-size: cover;
+		background-attachment: scroll; //fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862
+	}
 }
 
 #page__wrapper {

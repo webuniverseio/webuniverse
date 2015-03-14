@@ -1,5 +1,13 @@
 .article {
 }
+	.article__image-wrapper {
+		margin: auto;
+		display: table;
+
+		img { //fix for firefox bug https://bugzilla.mozilla.org/show_bug.cgi?id=975632
+			width: 100%;
+		}
+	}
 	.article__title {
 		font-weight: normal;
 

@@ -1,11 +1,18 @@
-<div itemscope itemtype="http://schema.org/Article"
+<div class="article" itemscope itemtype="http://schema.org/Article"
      id="<%= post.layout %>-<%= post.slug %>" class="article">
 	<article class="content-entry" itemprop="articleBody">
 		<% if (page.image) { %>
-		<img src="<%- page.image %>" alt="<%= page.title %>" />
-		<% } %>
-		<% if (page.copyright) { %>
-		<span class="image-copyright">&copy; <%- page.copyright %></span>
+		<div class="article__image-wrapper">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="<%- page.image %>" media="(min-width: 600px)">
+				<!--[if IE 9]></video><![endif]-->
+				<img srcset="<%- page.imageSmall %>" alt="<%= page.title %>">
+			</picture>
+			<% if (page.copyright) { %>
+			<span class="image-copyright">&copy; <%- page.copyright %></span>
+			<% } %>
+		</div>
 		<% } %>
 		<h1 itemprop="name" class="article__title"><%- post.title %></h1>
 		<%- partial('post/date') %>

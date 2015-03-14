@@ -28,16 +28,11 @@
 		content: '..';
 		text-align: center;
 		letter-spacing: 1.15em;
-		text-indent: 1.25em;
+		text-indent: 1.2em;
 	}
 
 	.wf-slabo27px-n4-active & {
-		font-family: 'Slabo 27px', serif;
-
-		&:before {
-			letter-spacing: 1em;
-			text-indent: 0.7em;
-		}
+		font-family: "Times New Roman", Times, serif;
 	}
 }
 	.logo__universe {

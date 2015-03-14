@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: http://webuniverse.io/sitemap.xml
+
+User-agent: Baiduspider
+User-agent: Baiduspider-image
+Disallow: /

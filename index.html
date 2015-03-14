@@ -37,6 +37,7 @@
 	<title>Welcome to Web Universe</title>
 	<script>
 		document.documentElement.className = document.documentElement.className.replace('no-js', '');
+		document.createElement('picture');
 	</script>
 	<!--http://davidwalsh.name/canonical-link-rel-->
 	<link rel="canonical" href="http://webuniverse.io/" />
@@ -77,6 +78,9 @@
 					<nav class="navigation decorate-links-on-hover column" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
 						<h2 class="a11y__element">Main navigation</h2>
 						<a href="#page-content__main" class="a11y__skip navigation__skip">skip navigation</a>
+						<a href="#" itemprop="url">
+							<span itemprop="name">Home</span></a>
+						<span class="navigation__separator"></span>
 						<a href="#" itemprop="url">
 							<span itemprop="name">About</span></a>
 						<span class="navigation__separator"></span>
@@ -142,6 +146,15 @@
 					<hr />
 					<div class="article" itemscope itemtype="http://schema.org/Article">
 						<article class="content-entry" itemprop="articleBody">
+							<div class="article__image-wrapper">
+								<picture>
+									<!--[if IE 9]><video style="display: none;"><![endif]-->
+									<source srcset="static/dest/images/samples/image_800.jpg" media="(min-width: 600px)">
+									<!--[if IE 9]></video><![endif]-->
+									<img srcset="static/dest/images/samples/image_square.jpg" alt="">
+								</picture>
+								<span class="image-copyright">&copy; ESO/José Francisco Salgado</span>
+							</div>
 							<h2 itemprop="name" class="article__title">Clean javascript code with ES6 generators,<br>
 								promises and npm-co</h2>
 							<time class="datetime" itemprop="datePublished" datetime="2011-05-08T19:30">10 September, 2014</time>
@@ -177,8 +190,6 @@
 					<hr />
 					<div itemscope itemtype="http://schema.org/AboutPage">
 						<article class="content-entry" itemprop="mainContentOfPage">
-							<img src="static/dest/images/samples/image.jpg" alt="" />
-							<span class="image-copyright">&copy; ESO/José Francisco Salgado (josefrancisco.org)</span>
 							<h2 itemprop="name">About</h2>
 
 							<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, voluptates?</h1>
@@ -248,13 +259,23 @@
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 	})();
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+<script src="bower_components/picturefill/dist/picturefill.min.js" async></script>
 <script>
-	WebFont.load({
+	window.WebFontConfig = {
 		google: {
 			families: ['Slabo+27px']
 		}
-	});
+	};
+
+	(function() {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		'://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+	})();
 </script>
 <script>
 	(function() {

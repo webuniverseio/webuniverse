@@ -30,7 +30,8 @@
 		display: inline-block;
 
 		@include grid-breakpoint(max-width map_get($breakpoints, 'navigation__small')) {
-			#top-bar &:nth-child(6) {
+			#top-bar &:nth-child(6),
+			#top-bar &:nth-child(10) {
 				height: 0;
 				display: block;
 			}
