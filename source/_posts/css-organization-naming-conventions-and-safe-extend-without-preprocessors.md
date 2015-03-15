@@ -78,7 +78,6 @@ So what can we do here to take advantage of behaviour which `@extend` gives us, 
   font-family: Arial, sans-serif;
 }
   .container__shopping-cart {
-    @extend .container;
     border: 4px solid orange;
     background-color: #eee;
   }
