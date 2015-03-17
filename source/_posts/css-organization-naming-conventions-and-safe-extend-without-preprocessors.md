@@ -21,14 +21,14 @@ If at some point you'll need to remove whole `.content` block from CSS which has
 
 Now lets take a look at one of the ways to write the same with BEM:
 ```html
-<div class="container container__shopping-cart">
+<div class="container container--shopping-cart">
   <div class="container__content container__content--special-offer">
     <h2 class="container__title">Title</h2>
   </div>
 </div>
 ```
 
-By looking at this, we immediately know the relationship of each of the elements and can safely do clean up, if we need to remove some styles. BEM is an abbreviation for Block, Element, Modifier and in the example above we can tell that `container` is a Block, `shopping-cart`, `content` and `title` are Elements and `special-offer` is a Modifier. While approach is great, it sounds a bit weird to call `container` a Block and `shoppint-cart` an Element. When someone mentions BEM as an approach for selectors naming, I like to translate it to **GRM** - Group, Role, Modifier. Lets read it again: `container` is a Group, `shopping-cart`, `content` and `title` define Roles within a Group, and `special-offer` is a Modifier.
+By looking at this, we immediately know the relationship of each of the elements and can safely do clean up, if we need to remove some styles. BEM is an abbreviation for Block, Element, Modifier and in the example above we can tell that `container` is a Block, `content` and `title` are Elements, `shopping-cart` and `special-offer` are Modifiers. While approach is great, it sounds a bit weird to call `container` a Block and `content` an Element. When someone mentions BEM as an approach for selectors naming, I like to translate it to **GRM** - Group, Role, Modifier. Lets read it again: `container` is a Group, `content` and `title` define Roles within a Group, `shopping-cart` and `special-offer` are Modifiers.
 
 ##To extend or not to extend?
 Though there is something that is not too pretty in the example above. Having duplicated classes feels redundant. Lets see what we can do about it. For html example above styles typically look similar to following:
@@ -38,7 +38,7 @@ Though there is something that is not too pretty in the example above. Having du
   padding: 10px;
   font-family: Arial, sans-serif;
 }
-  .container__shopping-cart {
+  .container--shopping-cart {
     border: 4px solid orange;
     background-color: #eee;
   }
@@ -50,7 +50,7 @@ If one use preprocessors we could illuminate a need for duplicated classes using
   padding: 10px;
   font-family: Arial, sans-serif;
 }
-  .container__shopping-cart {
+  .container--shopping-cart {
     @extend .container;
     border: 4px solid orange;
     background-color: #eee;
@@ -58,33 +58,33 @@ If one use preprocessors we could illuminate a need for duplicated classes using
 ```
 And generated result:
 ```css
-.container, .container__shopping-cart {
+.container, .container--shopping-cart {
   border: 1px solid grey;
   padding: 10px;
   font-family: Arial, sans-serif;
 }
-  .container__shopping-cart {
+  .container--shopping-cart {
     border: 4px solid orange;
     background-color: #eee;
   }
 ```
-Looks nice, now we can use both `.container` and `.container__shopping-cart` independently and CSS result still looks good. However `@extend` should be used carefully, as it might significantly increase the size of your CSS file or [jumble specificity](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
+Looks nice, now we can use both `.container` and `.container--shopping-cart` independently and CSS result still looks good. However `@extend` should be used carefully, as it might significantly increase the size of your CSS file or [jumble specificity](http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/).
  
 So what can we do here to take advantage of behaviour which `@extend` gives us, but without any risk? Here is a pure CSS solution:
 ```scss
-.container, [class^="container__"], [class*=" container__"] {
+.container, [class^="container--"], [class*=" container--"] {
   border: 1px solid grey;
   padding: 10px;
   font-family: Arial, sans-serif;
 }
-  .container__shopping-cart {
+  .container--shopping-cart {
     border: 4px solid orange;
     background-color: #eee;
   }
 ```
- It is going to work because in BEM all modifiers start with `%base%__` and pretty much the only time when you want to extend something is when you need to take base styles and modify them in a way. `[class^="container__"]` is taking care of a case when classname starts with selector, while `[class*=" container__"]` takes care of cases when selector is in the middle or at the end of classname. I noticed that [iconmoon](https://icomoon.io/) icon font generator is using that approach too. So now html could be simplified to following:
+ It is going to work if your BEM modifiers start with `%base%--`. Pretty much the only time when you want to extend something is when you need to take base styles and modify them in a way. `[class^="container--"]` is taking care of a case when classname starts with selector, while `[class*=" container--"]` takes care of cases when selector is in the middle or at the end of classname. I noticed that [iconmoon](https://icomoon.io/) icon font generator is using that approach too. So now html could be simplified to following:
  ```html
- <div class="container__shopping-cart">
+ <div class="container--shopping-cart">
    <div class="container__content--special-offer">
      <h2 class="container__title">Title</h2>
    </div>
