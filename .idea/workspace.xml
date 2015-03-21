@@ -7,6 +7,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/GulpBuild.html" afterPath="$PROJECT_DIR$/doc/GulpBuild.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/ProgramInstaller.html" afterPath="$PROJECT_DIR$/doc/ProgramInstaller.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/ShellErrorHandler.html" afterPath="$PROJECT_DIR$/doc/ShellErrorHandler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/src/css/_component.page-footer.scss" afterPath="$PROJECT_DIR$/static/src/css/_component.page-footer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/atom.xml" afterPath="$PROJECT_DIR$/public/atom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/build_ShellErrorHandler.js.html" afterPath="$PROJECT_DIR$/doc/build_ShellErrorHandler.js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/build_grunt-configs_aliases.js.html" afterPath="$PROJECT_DIR$/doc/build_grunt-configs_aliases.js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/build_grunt-configs_clean.js.html" afterPath="$PROJECT_DIR$/doc/build_grunt-configs_clean.js.html" />
@@ -17,13 +19,28 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/build_grunt-configs_jshint.js.html" afterPath="$PROJECT_DIR$/doc/build_grunt-configs_jshint.js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/build_installer.js.html" afterPath="$PROJECT_DIR$/doc/build_installer.js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/classes.list.html" afterPath="$PROJECT_DIR$/doc/classes.list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md" afterPath="$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.json" afterPath="$PROJECT_DIR$/db.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/global.html" afterPath="$PROJECT_DIR$/doc/global.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/gulpfile.js.html" afterPath="$PROJECT_DIR$/doc/gulpfile.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/webuniverse/layout/_partial/head.ejs" afterPath="$PROJECT_DIR$/themes/webuniverse/layout/_partial/head.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="$PROJECT_DIR$/doc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/about/index.html" afterPath="$PROJECT_DIR$/public/about/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/asynchronous-programming-with-ES6-generators-promises-and-npm-co/index.html" afterPath="$PROJECT_DIR$/public/asynchronous-programming-with-ES6-generators-promises-and-npm-co/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/contact/index.html" afterPath="$PROJECT_DIR$/public/contact/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css-organization-naming-conventions-and-safe-extend-without-preprocessors/index.html" afterPath="$PROJECT_DIR$/public/css-organization-naming-conventions-and-safe-extend-without-preprocessors/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/not-found/index.html" afterPath="$PROJECT_DIR$/public/not-found/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/not-found/index.md" afterPath="$PROJECT_DIR$/source/not-found/index.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/projects/index.html" afterPath="$PROJECT_DIR$/public/projects/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/recommended/index.html" afterPath="$PROJECT_DIR$/public/recommended/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/dest/css/main.css.map" afterPath="$PROJECT_DIR$/public/static/dest/css/main.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/dest/css/main.css.map" afterPath="$PROJECT_DIR$/static/dest/css/main.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/webuniverse/source/static/dest/css/main.css.map" afterPath="$PROJECT_DIR$/themes/webuniverse/source/static/dest/css/main.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/dest/css/main.css" afterPath="$PROJECT_DIR$/public/static/dest/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/dest/css/main.css" afterPath="$PROJECT_DIR$/static/dest/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/webuniverse/source/static/dest/css/main.css" afterPath="$PROJECT_DIR$/themes/webuniverse/source/static/dest/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/namespaces.list.html" afterPath="$PROJECT_DIR$/doc/namespaces.list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sitemap.xml" afterPath="$PROJECT_DIR$/public/sitemap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/spy.conf.js.html" afterPath="$PROJECT_DIR$/doc/spy.conf.js.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -46,42 +63,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="css-organization-naming-conventions-and-safe-extend-without-preprocessors.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="css-organization-naming-conventions-and-safe-extend-without-preprocessors.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9454546">
-              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.22633298">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/not-found/index.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12274368">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/about/index.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2363636">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="26" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -89,55 +80,39 @@
         <entry file="file://$PROJECT_DIR$/install.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="328" column="16" selection-start-line="328" selection-start-column="16" selection-end-line="328" selection-end-column="68" />
+              <caret line="304" column="8" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aliases.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/grunt-configs/aliases.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state vertical-scroll-proportion="-17.807692">
+              <caret line="303" column="0" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#437#524#0" expanded="true" />
-                <element signature="e#646#745#0" expanded="true" />
-                <element signature="e#868#1022#0" expanded="true" />
-                <element signature="e#1181#1276#0" expanded="true" />
-                <element signature="e#1407#1478#0" expanded="true" />
-                <element signature="e#1594#1688#0" expanded="true" />
+                <marker date="1426289484801" expanded="true" signature="8259:8273" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_settings.font-icomoon.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/src/css/_settings.font-icomoon.scss">
+      <file leaf-file-name="_component.page-footer.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/src/css/_component.page-footer.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="35" />
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_settings.breakpoints.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/src/css/_settings.breakpoints.scss">
+      <file leaf-file-name="head.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/_partial/head.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_component.page-navigation.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/src/css/_component.page-navigation.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="26" />
+            <state vertical-scroll-proportion="-18.346153">
+              <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -169,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/about/index.html" />
         <option value="$PROJECT_DIR$/themes/webuniverse/scripts/cache-controll.js" />
         <option value="$PROJECT_DIR$/themes/webuniverse/scripts/file-encoding-header.js" />
         <option value="$PROJECT_DIR$/../.pm2/beta.webuniverse.json" />
@@ -204,7 +178,6 @@
         <option value="$PROJECT_DIR$/themes/webuniverse/layout/_partial/google-font.ejs" />
         <option value="$PROJECT_DIR$/static/src/css/_component.article.scss" />
         <option value="$PROJECT_DIR$/static/src/css/_component.logo.scss" />
-        <option value="$PROJECT_DIR$/themes/webuniverse/layout/_partial/head.ejs" />
         <option value="$PROJECT_DIR$/themes/webuniverse/layout/layout.ejs" />
         <option value="$PROJECT_DIR$/build/grunt-configs/copy.js" />
         <option value="$PROJECT_DIR$/source/_posts/asynchronous-programming-with-ES6-generators-promises-and-npm-co.md" />
@@ -218,10 +191,15 @@
         <option value="$PROJECT_DIR$/static/src/css/_component.frame.scss" />
         <option value="$PROJECT_DIR$/build/grunt-configs/aliases.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_30" />
-        <option value="$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md" />
         <option value="$PROJECT_DIR$/source/not-found/index.md" />
+        <option value="$PROJECT_DIR$/static/src/css/_component.page-footer.scss" />
+        <option value="$PROJECT_DIR$/themes/webuniverse/layout/_partial/head.ejs" />
+        <option value="$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true">
+    <gruntfile path="$PROJECT_DIR$/Gruntfile.js" />
   </component>
   <component name="JsGruntFileManager">
     <initial>false</initial>
@@ -262,7 +240,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -273,62 +251,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="not-found" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -343,6 +266,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="com.intellij.ide.scratch.NewScratchFileAction" value="TEXT" />
+    <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -454,7 +378,13 @@
       <option name="project" value="LOCAL" />
       <updated>1426634775960</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix typo">
+      <created>1426682466207</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1426682466207</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -462,14 +392,17 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36217305" sideWeight="0.44427082" order="2" side_tool="false" content_ui="combo" x="336" y="129" width="1239" height="754" />
+      <window_info id="Project" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35613683" sideWeight="0.44427082" order="2" side_tool="false" content_ui="combo" x="336" y="129" width="1239" height="754" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32563257" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45833334" sideWeight="0.50049454" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42638037" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37730062" sideWeight="0.4661017" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36217305" sideWeight="0.55572915" order="0" side_tool="true" content_ui="tabs" x="329" y="209" width="1321" height="652" />
+      <window_info id="Terminal" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36176774" sideWeight="0.55572915" order="0" side_tool="true" content_ui="tabs" x="329" y="209" width="1321" height="652" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32627118" sideWeight="0.4649948" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39738432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="359" width="1920" height="362" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -479,7 +412,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39738432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="359" width="1920" height="362" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="100" width="1468" height="880" />
@@ -487,7 +419,6 @@
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49537513" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944915" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44583333" sideWeight="0.50048405" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37730062" sideWeight="0.4661017" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="V8 Profiling" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39738432" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="CSS Styles" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5036573" sideWeight="0.49788135" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31690142" sideWeight="0.6631356" order="3" side_tool="false" content_ui="tabs" />
@@ -521,13 +452,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower_components/inuit-headings/_base.headings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1906542">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/_partial/disqus.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -548,13 +472,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_drafts/javascript-legacy-code-upgrade-strategy.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
@@ -579,13 +503,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/landscape/layout/_partial/mobile-nav.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/_partial/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -705,37 +622,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/projects/index.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.103658535">
           <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/asynchronous-programming-with-ES6-generators-promises-and-npm-co.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/asynchronous-programming-with-ES6-generators-promises-and-npm-co.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13821138">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/_partial/head.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40625">
-          <caret line="59" column="60" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4375">
-          <caret line="156" column="34" selection-start-line="148" selection-start-column="28" selection-end-line="156" selection-end-column="34" />
-        </state>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/webuniverse/source/robots.txt">
@@ -760,13 +663,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/recommended/index.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09479554">
           <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/grunt-configs/copy.js">
@@ -780,22 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44973546">
           <caret line="15" column="15" selection-start-line="3" selection-start-column="8" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/src/css/_component.page-navigation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/src/css/_settings.breakpoints.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -834,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/src/css/_settings.font-icomoon.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/npm-shrinkwrap.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4493997">
@@ -849,9 +728,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/grunt-configs/aliases.js">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_30">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31578946">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/not-found/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07606264">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/about/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07606264">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="304" column="8" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/grunt-configs/aliases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.085443035">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -865,52 +781,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_30">
+    <entry file="file://$PROJECT_DIR$/static/src/css/_settings.font-icomoon.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31578946">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.22125813">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install.txt">
+    <entry file="file://$PROJECT_DIR$/static/src/css/_settings.breakpoints.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.055314533">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/css/_component.page-navigation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.055314533">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.807692">
+          <caret line="303" column="0" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
+          <folding>
+            <marker date="1426289484801" expanded="true" signature="8259:8273" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/_partial/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="328" column="16" selection-start-line="328" selection-start-column="16" selection-end-line="328" selection-end-column="68" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/src/css/_component.page-footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/_partial/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.346153">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9454546">
-          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.22633298">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/about/index.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2363636">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/not-found/index.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12274368">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>
