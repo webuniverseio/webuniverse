@@ -8,6 +8,7 @@ sass_dir = "static/src/css"
 images_dir = "static/src/images"
 javascripts_dir = "static/src/js"
 fonts_dir = "static/src/fonts"
+additional_import_paths = "."
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

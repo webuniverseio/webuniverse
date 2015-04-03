@@ -10,22 +10,13 @@ var shellHandler = new ShellErrorHandler(shell);
  * @param {IGrunt} grunt
  */
 module.exports = function createAliasesExports(grunt) {
-	/**
-	 * @callback createAliasesExports~runDefaultGruntTask
-	 */
-	grunt.registerTask('default', function runDefaultGruntTask() {
-		grunt.task.run('cleanBuildDestination');
-		grunt.task.run('concurrent:stepOne');
-	});
+	grunt.registerTask('default', ['clean', 'concurrent:stepOne']);
 
-	/**
-	 * @callback createAliasesExports~runGruntHexoTask
-	 */
-	grunt.registerTask('hexo', function runGruntHexoTask() {
-		grunt.task.run('default');
-		grunt.task.run('copy:hexo');
-		grunt.task.run('hexo-generate');
-	});
+	grunt.registerTask('hexo', [
+		'default',
+		'copy:hexo',
+		'hexo-generate'
+	]);
 
 	/**
 	 * @callback createAliasesExports~generateHexo
@@ -36,8 +27,6 @@ module.exports = function createAliasesExports(grunt) {
 		shellHandler.throwIfHasErrors('error while running gulp css');
 	});
 
-	grunt.registerTask('cleanBuildDestination', ['clean']);
-
 	/**
 	 * @callback createAliasesExports~runCss
 	 */
@@ -46,13 +35,7 @@ module.exports = function createAliasesExports(grunt) {
 		shellHandler.throwIfHasErrors('error while running gulp css');
 	});
 
-	/**
-	 * @callback createAliasesExports~runWatchStartTask
-	 */
-	grunt.registerTask('watch-start', function runWatchStartTask() {
-		grunt.task.run('default');
-		grunt.task.run('concurrent:watch');
-	});
+	grunt.registerTask('watch-start', ['default', 'concurrent:watch']);
 
 	/**
 	 * @callback createAliasesExports~runCssWatch

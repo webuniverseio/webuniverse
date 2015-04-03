@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{Node.js v0.12.0 Core Modules, webfont}" />
+    <file url="file://$PROJECT_DIR$/build" libraries="{lodash-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{Node.js v0.12.0 Core Modules, webfont, webuniverse node_modules}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
     <includedPredefinedLibrary name="Node.js Globals" />
   </component>
 </project>

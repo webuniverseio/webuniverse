@@ -1,4 +1,4 @@
-@import "../../../bower_components/inuit-mixins/tools.mixins";
+@import "bower_components/inuit-mixins/tools.mixins";
 @mixin font-size($size, $lineHeight: auto) {
 	@include inuit-font-size($size, $lineHeight);
 }

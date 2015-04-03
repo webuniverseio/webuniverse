@@ -68,7 +68,7 @@ var ctx = this;
 //Context binding example
 co.call(context, function* getResults() {/*'this' will point to context*/})
 ```
-Then it checks, if `gen` is a function. It it is, then co needs to initialize a generator object by calling a function and it also ensure that `this` has a proper context. If `gen` is already a generator object, a statement will be skipped:
+Then it checks, if `gen` is a function. If it is, then co needs to initialize a generator object by calling a function and it also ensure that `this` has a proper context. If `gen` is already a generator object, a statement will be skipped:
 ``` js co/index.js:co
 if (typeof gen === 'function') gen = gen.call(this);
 ```
@@ -150,7 +150,7 @@ try {
   ret = {value: [a, b], done: false};
 }
 ```
-Catch brunch is skipped but it would otherwise reject the promise. Finally, another next call happens: it would skip immediate resolve, convert array to a promise created with Promise.all (check out `arrayToPromise` function), which will be settled only when `a` and `b` promises are settled or one of them is rejected. Note how `arrayToPromise` is making sure that Promise.all argument is an array of promises:
+Catch brunch is skipped but it would otherwise reject the promise. Finally, another `next` call happens: it would skip immediate resolve, convert array to a promise created with Promise.all (check out `arrayToPromise` function), which will be settled only when `a` and `b` promises are settled or one of them is rejected. Note how `arrayToPromise` is making sure that Promise.all argument is an array of promises:
 ```js co/index.js:arrayToPromise
 obj.map(toPromise, this)
 ```

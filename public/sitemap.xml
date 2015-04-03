@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</loc>
+    <lastmod>2015-03-29T13:28:51.091Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://webuniverse.io/css-organization-naming-conventions-and-safe-extend-without-preprocessors/</loc>
     <lastmod>2015-03-21T14:03:12.118Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>http://webuniverse.io/about/index.html</loc>
     <lastmod>2015-03-14T16:27:52.273Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</loc>
-    <lastmod>2015-03-14T01:40:23.418Z</lastmod>
   </url>
   
   <url>

@@ -53,9 +53,6 @@
   "disallowMultipleLineStrings": true,
   "disallowKeywordsOnNewLine": ["else"],
   "disallowYodaConditions": true,
-  "requireSpaceAfterLineComment": {
-    "allExcept": ["#", "=", "jshint"]
-  },
   "disallowAnonymousFunctions": true,
   "disallowNewlineBeforeBlockStatements": true,
   "validateParameterSeparator": ", ",

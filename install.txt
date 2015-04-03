@@ -398,7 +398,17 @@ http-master
 https://developers.facebook.com/tools/debug/og/object/
 	canonical url - remove index.html? (same for http://webuniverse.io/index.html)
 
-TODO:
-	linkedin
-	twitter
-	facebook
+git
+	http://www.abeautifulsite.net/how-to-delete-a-tag-on-github/
+	http://mherman.org/blog/2013/09/16/managing-multiple-github-accounts/
+
+article
+verify webuniverse changes
+node update
+pm2 update
+commit & publish
+linkedin
+echo.js
+facebook
+google+?
+hacker news?
