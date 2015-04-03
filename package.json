@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm cache clean",
-    "postinstall": "node --harmony build/installer.js",
+    "postinstall": "node --harmony build/installer.js&&npm shrinkwrap --dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sergey Zarouski",
@@ -17,13 +17,13 @@
     "hexo-generator-feed": "1.0.1",
     "hexo-generator-index": "0.0.2",
     "hexo-generator-sitemap": "1.0.1",
-    "hexo-renderer-ejs": "git://github.com/szarouski/hexo-renderer-ejs.git",
+    "hexo-renderer-ejs": "szarouski/hexo-renderer-ejs",
     "hexo-renderer-marked": "0.2.5",
     "hexo-server": "0.1.2",
     "moment": "^2.9.0"
   },
   "devDependencies": {
-    "co": "^3.1.0",
+    "co": "^4.5.1",
     "colors": "^1.0.3",
     "grunt": "^0.4.5",
     "grunt-concurrent": "^1.0.0",
@@ -40,12 +40,13 @@
     "jit-grunt": "^0.9.0",
     "jscs": "^1.8.1",
     "jscs-jsdoc": "^0.2.0",
-    "load-grunt-config": "git://github.com/szarouski/load-grunt-config.git",
+    "load-grunt-config": "szarouski/load-grunt-config",
     "lodash": "^2.4.1",
     "request": "^2.46.0",
     "shelljs": "^0.3.0",
     "thunkify": "^2.1.2",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.0.0",
+    "simple-installer": "szarouski/SimpleInstaller#dev"
   },
   "hexo": {
     "version": "3.0.0"
