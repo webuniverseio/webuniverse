@@ -42,147 +42,8 @@
       <change type="DELETED" beforePath="D:\sz\websites\node_projects\webuniverse\node_modules\hexo-server\node_modules\serve-static\node_modules\send\node_modules\debug\node_modules\ms\.npmignore" afterPath="" />
       <change type="DELETED" beforePath="D:\sz\websites\node_projects\webuniverse\node_modules\hexo-server\node_modules\serve-static\node_modules\send\node_modules\debug\node_modules\ms\README.md" afterPath="" />
       <change type="DELETED" beforePath="D:\sz\websites\node_projects\webuniverse\node_modules\hexo-server\node_modules\serve-static\node_modules\send\node_modules\debug\node_modules\ms\package.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.jscsrc" afterPath="$PROJECT_DIR$/.jscsrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/.npmignore" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/upper-case-first/README.md" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/upper-case-first/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/README.md" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/README.md" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/src/css/_tools.text.scss" afterPath="$PROJECT_DIR$/static/src/css/_tools.text.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/grunt-configs/aliases.js" afterPath="$PROJECT_DIR$/build/grunt-configs/aliases.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/docs/api.rst" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/docs/api.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/applescript.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/applescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/arta.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/arta.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/ascetic.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/ascetic.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/asciidoc.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/asciidoc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/aspectj.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/aspectj.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/lib/ast.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/lib/ast.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/async.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/async.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/asynchronous-programming-with-ES6-generators-promises-and-npm-co.md" afterPath="$PROJECT_DIR$/source/_posts/asynchronous-programming-with-ES6-generators-promises-and-npm-co.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-dune.dark.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-dune.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-forest.dark.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-forest.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-forest.light.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-forest.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-heath.light.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-heath.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-lakeside.dark.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-lakeside.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-seaside.dark.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-seaside.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-seaside.light.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/atelier-seaside.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/atom.xml" afterPath="$PROJECT_DIR$/public/atom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/autohotkey.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/autohotkey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/avrasm.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/avrasm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/bash.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/bash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/browser/bluebird.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/browser/bluebird.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/browser/bluebird.min.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/browser/bluebird.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/brown_paper.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/brown_paper.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/cancel.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/cancel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/captured_trace.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/captured_trace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/changelog.md" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/changelog.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/cli.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/cli.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/clojure.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/clojure.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/coffeescript.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/coffeescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/color-brewer.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/color-brewer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.rb" afterPath="$PROJECT_DIR$/config.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/cpp.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/cpp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/css.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/dark.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/debuggability.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/debuggability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/delphi.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/delphi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/django.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/django.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/dos.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/dos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/elixir.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/elixir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/erb.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/erb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/erlang-repl.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/erlang-repl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/far.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/far.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/fsharp.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/fsharp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/gcode.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/gcode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/googlecode.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/googlecode.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/highlight.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/highlight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/http.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/http.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/idea.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/idea.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/asynchronous-programming-with-ES6-generators-promises-and-npm-co/index.html" afterPath="$PROJECT_DIR$/public/asynchronous-programming-with-ES6-generators-promises-and-npm-co/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/ini.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/ini.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install.txt" afterPath="$PROJECT_DIR$/install.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/installer.js" afterPath="$PROJECT_DIR$/build/installer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/javascript.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/kimbie.dark.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/kimbie.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/docs/language-guide.rst" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/docs/language-guide.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/less.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/less.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/lisp.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/lisp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/livecodeserver.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/livecodeserver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/lua.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/lua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/mizar.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/mizar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/monkey.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/monkey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/monokai_sublime.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/monokai_sublime.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/nix.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/nix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/tools/node.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/tools/node.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/objectivec.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/objectivec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/ocaml.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/ocaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/oxygene.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/oxygene.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/connect-modrewrite/package.json" afterPath="$PROJECT_DIR$/node_modules/connect-modrewrite/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-generator-feed/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-feed/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-generator-feed/node_modules/ejs/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-feed/node_modules/ejs/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-generator-index/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-index/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-generator-index/node_modules/hexo-pagination/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-index/node_modules/hexo-pagination/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-generator-index/node_modules/utils-merge/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-index/node_modules/utils-merge/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-generator-sitemap/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-sitemap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-generator-sitemap/node_modules/ejs/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-generator-sitemap/node_modules/ejs/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/camel-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/camel-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/constant-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/constant-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/is-lower-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/is-lower-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/lower-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/lower-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/pascal-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/pascal-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/snake-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/snake-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/title-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/title-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/upper-case/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/upper-case/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/node_modules/exit/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/node_modules/exit/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/node_modules/glob/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/node_modules/glob/node_modules/inherits/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/cli/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/relateurl/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/relateurl/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/node_modules/async/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/node_modules/async/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/node_modules/source-map/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/node_modules/source-map/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/node_modules/uglify-to-browserify/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/node_modules/uglify-to-browserify/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/marked/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/marked/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/strip-indent/node_modules/get-stdin/package.json" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/strip-indent/node_modules/get-stdin/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/paraiso.dark.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/paraiso.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/paraiso.light.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/paraiso.light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/perl.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/perl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/pojoaque.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/pojoaque.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/promise.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/python.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/python.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/r.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/ruby.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/ruby.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/rust.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/rust.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/schedule.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/schedule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/scheme.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/scheme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/school_book.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/school_book.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/scilab.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/scilab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/scss.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/scss.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sitemap.xml" afterPath="$PROJECT_DIR$/public/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/smali.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/smali.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/solarized_light.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/solarized_light.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/lib/sourcemap.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/uglify-js/lib/sourcemap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/stata.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/stata.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/step21.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/step21.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/docs/style-contribution.rst" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/docs/style-contribution.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/stylus.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/stylus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/tcl.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/tcl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/tex.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/tex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/thrift.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/thrift.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/tomorrow-night-blue.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/tomorrow-night-blue.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/tomorrow.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/tomorrow.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/twig.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/twig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/typescript.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/typescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/upper-case-first/upper-case-first.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-ejs/node_modules/html-minifier/node_modules/change-case/node_modules/upper-case-first/upper-case-first.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/util.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/bluebird/js/main/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/vbscript.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/vbscript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/vhdl.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/vhdl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webuniverse.iml" afterPath="$PROJECT_DIR$/.idea/webuniverse.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/x86asm.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/x86asm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/xcode.css" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/styles/xcode.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/xml.js" afterPath="$PROJECT_DIR$/node_modules/hexo-renderer-marked/node_modules/hexo-util/node_modules/highlight.js/lib/languages/xml.js" />
     </list>
     <ignored path="webuniverse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -206,8 +67,8 @@
       <file leaf-file-name="install.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/install.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2826421">
-              <caret line="369" column="22" selection-start-line="369" selection-start-column="22" selection-end-line="369" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.76982594">
+              <caret line="404" column="7" selection-start-line="404" selection-start-column="7" selection-end-line="404" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -479,7 +340,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -490,30 +351,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webuniverse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -710,19 +548,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32672334" sideWeight="0.44010416" order="6" side_tool="false" content_ui="combo" x="336" y="129" width="1239" height="754" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32563257" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295562" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21510416" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45833334" sideWeight="0.50049454" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42587346" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36166194" sideWeight="0.5598958" order="0" side_tool="true" content_ui="tabs" x="329" y="209" width="1321" height="652" />
+      <window_info id="Terminal" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36166194" sideWeight="0.5598958" order="0" side_tool="true" content_ui="tabs" x="329" y="209" width="1321" height="652" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32627118" sideWeight="0.4649948" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -734,6 +571,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3967112" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="359" width="1920" height="362" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295562" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="100" y="100" width="1468" height="880" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915523" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49537513" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -775,6 +613,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="168" column="111" selection-start-line="168" selection-start-column="111" selection-end-line="168" selection-end-column="111" />
+          <folding>
+            <marker date="1426289484801" expanded="true" signature="8259:8273" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -828,13 +684,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/projects/index.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.103658535">
           <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/webuniverse/source/robots.txt">
@@ -859,13 +715,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/recommended/index.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09479554">
           <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/_partial/article.ejs">
@@ -918,23 +774,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/not-found/index.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07606264">
           <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/about/index.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/about/index.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07606264">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="26" />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/src/css/_settings.font-icomoon.scss">
@@ -987,13 +843,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22633298">
           <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://C:/Program Files/Microsoft Mouse and Keyboard Center/commands.xml">
@@ -1084,26 +940,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/asynchronous-programming-with-ES6-generators-promises-and-npm-co.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3522388">
-          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
-        </state>
-      </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../temp/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1086262">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../temp/installer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.3522388">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1165,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/install.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2826421">
-          <caret line="369" column="22" selection-start-line="369" selection-start-column="22" selection-end-line="369" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.76982594">
+          <caret line="404" column="7" selection-start-line="404" selection-start-column="7" selection-end-line="404" selection-end-column="7" />
           <folding />
         </state>
       </provider>

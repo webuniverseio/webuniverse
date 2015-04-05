@@ -403,7 +403,6 @@ git
 	http://mherman.org/blog/2013/09/16/managing-multiple-github-accounts/
 
 article
-verify webuniverse changes
 node update
 pm2 update
 commit & publish
