@@ -20,7 +20,7 @@ In this article you're going to learn about a program installation manager simil
 
 ## Example: Installing git on Debian
 
-Here is another example which allows to install git via `apt-get` on debian:
+Lets take a look at how it can be used to install a program. Here it installs git via `apt-get` on debian:
 ```js
 var co = require('co');
 var SimpleInstaller = require('simple-installer');
@@ -36,7 +36,7 @@ Since SimpleInstaller is using generators, it is [recommended](/asynchronous-pro
 
 ## Example: Installing ruby on Windows
 
-Lets take a look at how it can be used to download and install a program. This example is installing ruby on Windows (there will be more examples for other platforms too, so keep reading):
+This example downloads ruby and installs it on Windows:
 ```js
 var co = require('co');
 var SimpleInstaller = require('simple-installer');
@@ -56,7 +56,7 @@ Fortunately rubyinstaller has command line interface which supports `/verysilent
 
 <div style="text-align: center;margin-top: 1em;">[![Installation process](simple-installer.gif)](simple-installer.gif)</div>
 
-When we setup a new machine for a new team member, or to maintain a project developed by another company, we need to install all dependencies which are required for project to build and run. Those could be node modules, ruby gems, git repositories, bower components, etc... Lets take a look at how we could use SimpleInstaller to make project dependencies installation as simple as possible.
+When we setup a new machine for a new team member, or when we start on a project developed by another company, we need to install all dependencies which are required for project to build and run. Those could be node modules, ruby gems, git repositories, bower components, etc... Lets take a look at how we could use SimpleInstaller to make project dependencies installation as simple as possible.
 
 First we're going to create a module `config.js`, which exports an array of program `info` objects, which are required to build and run our project:
 ```js
@@ -130,7 +130,7 @@ co(function* runCoroutine() {
 });
 ```
 
-And finally we need to find a good place to run installer.js. I like adding it into package.json postinstall script:
+And finally we need to find a good place to run installer.js. I like using it in package.json postinstall script:
 ```js
 {
   "scripts": {
@@ -140,4 +140,4 @@ And finally we need to find a good place to run installer.js. I like adding it i
   }
 }
 ```
-That way, once we get all node_modules we can run our installer, which in turn will install all other missing dependencies.
+That way, after `npm install`, once we get all node_modules, we can run our installer, which in turn will install all missing dependencies.

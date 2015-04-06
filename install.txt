@@ -199,7 +199,7 @@ http://www.pontikis.net/blog/debian-wheezy-web-server-setup:
 
 	            # The name of the log file group (file name).
 	            LogFile = my-backup
-	            Finally, you need a script to parse the log files. I’ve seen a lot of examples in perl, but I prefer bash for simple scripts. Note that the script has the same name as the service file.
+	            Finally, you need a script to parse the log files. Iï¿½ve seen a lot of examples in perl, but I prefer bash for simple scripts. Note that the script has the same name as the service file.
 
 	            #!/usr/bin/env bash
 	            # /etc/logwatch/scripts/services/my-backup
@@ -222,11 +222,11 @@ http://www.pontikis.net/blog/debian-wheezy-web-server-setup:
 	            done
 
 	            IFS=$OLD_IFS
-	            And you’re done! The contents of the backup log files will show up in the logwatch reports under “My Backups”.
+	            And youï¿½re done! The contents of the backup log files will show up in the logwatch reports under ï¿½My Backupsï¿½.
 
             Log Rotation
 
-	            If you don’t want your logwatch reports to forever grow in size, you also need to rotate the log files. Logrotate will conveniently do that for you with this simple configuration.
+	            If you donï¿½t want your logwatch reports to forever grow in size, you also need to rotate the log files. Logrotate will conveniently do that for you with this simple configuration.
 
 	            # /etc/logrotate.d/backup
 
@@ -402,10 +402,7 @@ git
 	http://www.abeautifulsite.net/how-to-delete-a-tag-on-github/
 	http://mherman.org/blog/2013/09/16/managing-multiple-github-accounts/
 
-article
-node update
-pm2 update
-commit & publish
+
 linkedin
 echo.js
 facebook
