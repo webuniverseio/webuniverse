@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://webuniverse.io/"/>
-  <updated>2015-04-06T02:13:33.695Z</updated>
+  <updated>2015-04-06T12:32:19.979Z</updated>
   <id>http://webuniverse.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://webuniverse.io/manage-project-dependencies-with-simple-installer/"/>
     <id>http://webuniverse.io/manage-project-dependencies-with-simple-installer/</id>
     <published>2015-04-05T14:52:22.000Z</published>
-    <updated>2015-04-06T02:13:33.695Z</updated>
+    <updated>2015-04-06T12:32:19.979Z</updated>
     <content type="html"><![CDATA[<p>In this article you’re going to learn about a program installation manager similar to <a href="https://chocolatey.org/" target="_blank" rel="external">chocolatey</a> or <code>apt-get</code>, which is running on node.js. It is called <a href="https://github.com/szarouski/SimpleInstaller" target="_blank" rel="external"><code>SimpleInstaller</code></a> and it can also work as a downloader and a task runner. We’re going to look at a few simple usage examples and then we’re going to see how SimpleInstaller can be integrated into project setup workflow, to bring new members of the team up to speed. </p>
 <h2 id="Top_level_highlights">Top level highlights</h2><ul>
 <li>is crossplatform (tested on windows and debian)</li>
@@ -27,7 +27,7 @@
 <li>skips already installed programs</li>
 <li>could be used as a simple task runner</li>
 <li>could work as a downloader</li>
-<li>simple and because of that flexible and expendable <a href="https://github.com/szarouski/SimpleInstaller#api" target="_blank" rel="external">api</a></li>
+<li>simple and because of that flexible and extendable <a href="https://github.com/szarouski/SimpleInstaller#api" target="_blank" rel="external">api</a></li>
 <li>tested with 100% coverage</li>
 <li>uses harmony mode for generators and <code>npm co</code> to manage execution flow</li>
 </ul>
