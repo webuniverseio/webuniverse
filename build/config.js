@@ -30,4 +30,8 @@ module.exports = [{
 	prefix: 'SET PATH=%PATH%;c:\\Ruby2\\bin&&gem install ',
 	name: 'compass',
 	postfix: ' -v 1.0.1'
+}, {
+	prefix: 'echo ',
+	name: 'bower_components',
+	postfix: '&&SET PATH=%PATH%;c:\\Git\\bin\\&&bower install'
 }];

@@ -14,12 +14,6 @@ var _ = require('lodash');
 var ShellErrorHandler = require('simple-installer/src/ShellErrorHandler');
 var shellHandler = new ShellErrorHandler(shelljs);
 var config = require('./config');
-var simpleInstalls = [
-	{
-		command: 'SET PATH=%PATH%;c:\\Git\\bin\\&&bower install',
-		errorMessage: 'some bower modules failed to install'
-	}
-];
 
 /**
  * @callback runInstaller
@@ -31,15 +25,6 @@ function* runInstaller(info) {
 }
 
 /**
- * @param {Object} setup
- */
-function runSimpleSetup(setup) {
-	console.log(setup.command.cyan);
-	shelljs.exec(setup.command);
-	shellHandler.throwIfHasErrors(setup.errorMessage);
-}
-
-/**
  * @callback runCoroutine
  */
 co(function* runCoroutine() {
@@ -48,8 +33,6 @@ co(function* runCoroutine() {
 	for (var i = 0, length = setup.length; i < length; i++) {
 		yield setup[i];
 	}
-
-	_.each(simpleInstalls, runSimpleSetup);
 
 	shelljs.rm('-rf', SimpleInstaller.tempFolder);
 	shellHandler.throwIfHasErrors(

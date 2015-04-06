@@ -4,7 +4,7 @@
   "dependencies": {
     "co": {
       "version": "4.5.1",
-      "from": "co@>=4.5.1 <5.0.0",
+      "from": "https://registry.npmjs.org/co/-/co-4.5.1.tgz",
       "resolved": "https://registry.npmjs.org/co/-/co-4.5.1.tgz"
     },
     "colors": {
@@ -190,7 +190,7 @@
         },
         "exit": {
           "version": "0.1.2",
-          "from": "exit@>=0.1.2 <0.2.0",
+          "from": "exit@>=0.1.0 <0.2.0",
           "resolved": "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz"
         },
         "getobject": {
@@ -285,7 +285,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "0.2.1",
-                  "from": "ansi-regex@>=0.2.0 <0.3.0",
+                  "from": "ansi-regex@>=0.2.1 <0.3.0",
                   "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.2.1.tgz"
                 }
               }
@@ -297,7 +297,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "0.2.1",
-                  "from": "ansi-regex@>=0.2.0 <0.3.0",
+                  "from": "ansi-regex@>=0.2.1 <0.3.0",
                   "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.2.1.tgz"
                 }
               }
@@ -740,7 +740,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "0.2.1",
-                  "from": "ansi-regex@>=0.2.0 <0.3.0",
+                  "from": "ansi-regex@>=0.2.1 <0.3.0",
                   "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.2.1.tgz"
                 }
               }
@@ -752,7 +752,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "0.2.1",
-                  "from": "ansi-regex@>=0.2.0 <0.3.0",
+                  "from": "ansi-regex@>=0.2.1 <0.3.0",
                   "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-0.2.1.tgz"
                 }
               }
@@ -1194,7 +1194,7 @@
               "dependencies": {
                 "once": {
                   "version": "1.3.1",
-                  "from": "once@>=1.3.0 <1.4.0",
+                  "from": "once@>=1.3.0 <2.0.0",
                   "resolved": "https://registry.npmjs.org/once/-/once-1.3.1.tgz",
                   "dependencies": {
                     "wrappy": {
@@ -1235,7 +1235,7 @@
           "dependencies": {
             "user-home": {
               "version": "1.1.1",
-              "from": "user-home@>=1.0.0 <2.0.0",
+              "from": "user-home@>=1.1.1 <2.0.0",
               "resolved": "https://registry.npmjs.org/user-home/-/user-home-1.1.1.tgz"
             }
           }
@@ -1247,7 +1247,7 @@
           "dependencies": {
             "user-home": {
               "version": "1.1.1",
-              "from": "user-home@>=1.0.0 <2.0.0",
+              "from": "user-home@>=1.1.1 <2.0.0",
               "resolved": "https://registry.npmjs.org/user-home/-/user-home-1.1.1.tgz"
             }
           }
@@ -1293,7 +1293,7 @@
                     },
                     "inherits": {
                       "version": "2.0.1",
-                      "from": "inherits@>=2.0.1 <2.1.0",
+                      "from": "inherits@>=2.0.0 <3.0.0",
                       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
                     },
                     "once": {
@@ -1420,7 +1420,7 @@
             },
             "graceful-fs": {
               "version": "3.0.6",
-              "from": "graceful-fs@>=3.0.4 <4.0.0",
+              "from": "graceful-fs@>=3.0.0 <4.0.0",
               "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-3.0.6.tgz"
             },
             "mkdirp": {
@@ -1479,7 +1479,7 @@
                     },
                     "inherits": {
                       "version": "2.0.1",
-                      "from": "inherits@>=2.0.1 <2.1.0",
+                      "from": "inherits@>=2.0.0 <3.0.0",
                       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
                     }
                   }
@@ -1533,9 +1533,9 @@
               "resolved": "https://registry.npmjs.org/num2fraction/-/num2fraction-1.0.1.tgz"
             },
             "caniuse-db": {
-              "version": "1.0.30000114",
+              "version": "1.0.30000117",
               "from": "caniuse-db@>=1.0.30000106 <2.0.0",
-              "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000114.tgz"
+              "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000117.tgz"
             },
             "postcss": {
               "version": "4.0.6",
@@ -1870,7 +1870,7 @@
                 },
                 "inherits": {
                   "version": "2.0.1",
-                  "from": "inherits@>=2.0.1 <2.1.0",
+                  "from": "inherits@>=2.0.0 <3.0.0",
                   "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
                 }
               }
@@ -2481,7 +2481,7 @@
                       "dependencies": {
                         "xtend": {
                           "version": "4.0.0",
-                          "from": "xtend@>=4.0.0 <4.1.0",
+                          "from": "xtend@>=4.0.0 <5.0.0",
                           "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.0.tgz"
                         }
                       }
@@ -2552,7 +2552,7 @@
             },
             "graceful-fs": {
               "version": "3.0.6",
-              "from": "graceful-fs@>=3.0.4 <4.0.0",
+              "from": "graceful-fs@>=3.0.0 <4.0.0",
               "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-3.0.6.tgz"
             },
             "merge-stream": {
@@ -2604,7 +2604,7 @@
                     },
                     "inherits": {
                       "version": "2.0.1",
-                      "from": "inherits@>=2.0.1 <2.1.0",
+                      "from": "inherits@>=2.0.0 <3.0.0",
                       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
                     }
                   }
@@ -2701,7 +2701,7 @@
                 },
                 "inherits": {
                   "version": "2.0.1",
-                  "from": "inherits@>=2.0.1 <2.1.0",
+                  "from": "inherits@>=2.0.0 <3.0.0",
                   "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
                 }
               }
@@ -2781,7 +2781,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "1.1.1",
-                  "from": "ansi-regex@>=1.0.0 <2.0.0",
+                  "from": "ansi-regex@>=1.1.0 <2.0.0",
                   "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz"
                 }
               }
@@ -2820,7 +2820,7 @@
         },
         "exit": {
           "version": "0.1.2",
-          "from": "exit@>=0.1.2 <0.2.0",
+          "from": "exit@>=0.1.0 <0.2.0",
           "resolved": "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz"
         },
         "glob": {
@@ -3091,7 +3091,7 @@
         },
         "strip-json-comments": {
           "version": "1.0.2",
-          "from": "strip-json-comments@>=1.0.2 <1.1.0",
+          "from": "strip-json-comments@>=1.0.0 <1.1.0",
           "resolved": "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-1.0.2.tgz"
         },
         "vow": {
@@ -3185,7 +3185,7 @@
     },
     "load-grunt-config": {
       "version": "0.16.0",
-      "from": "C:\\Users\\Sergey\\AppData\\Local\\Temp\\npm-3456-8324ce4e\\git-cache-140957d9bbaf\\d6421dedf0e729fa888252a9a6ac146fe005a82a",
+      "from": "C:\\Users\\Sergey\\AppData\\Local\\Temp\\npm-9232-d2cf5154\\git-cache-073040fc0890\\d6421dedf0e729fa888252a9a6ac146fe005a82a",
       "resolved": "git+https://github.com/szarouski/load-grunt-config#d6421dedf0e729fa888252a9a6ac146fe005a82a",
       "dependencies": {
         "glob": {
@@ -3300,9 +3300,9 @@
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-2.4.1.tgz"
     },
     "request": {
-      "version": "2.54.0",
+      "version": "2.55.0",
       "from": "request@>=2.46.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/request/-/request-2.54.0.tgz",
+      "resolved": "https://registry.npmjs.org/request/-/request-2.55.0.tgz",
       "dependencies": {
         "bl": {
           "version": "0.9.4",
@@ -3311,7 +3311,7 @@
           "dependencies": {
             "readable-stream": {
               "version": "1.0.33",
-              "from": "readable-stream@>=1.0.26 <1.1.0",
+              "from": "readable-stream@>=1.0.33-1 <1.1.0-0",
               "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.33.tgz",
               "dependencies": {
                 "core-util-is": {
@@ -3331,7 +3331,7 @@
                 },
                 "inherits": {
                   "version": "2.0.1",
-                  "from": "inherits@>=2.0.1 <2.1.0",
+                  "from": "inherits@>=2.0.0 <3.0.0",
                   "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
                 }
               }
@@ -3534,7 +3534,7 @@
                   "dependencies": {
                     "ansi-regex": {
                       "version": "1.1.1",
-                      "from": "ansi-regex@>=1.0.0 <2.0.0",
+                      "from": "ansi-regex@>=1.1.0 <2.0.0",
                       "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz"
                     }
                   }
@@ -3602,9 +3602,9 @@
       "resolved": "https://registry.npmjs.org/shelljs/-/shelljs-0.3.0.tgz"
     },
     "simple-installer": {
-      "version": "1.1.0",
-      "from": "C:\\Users\\Sergey\\AppData\\Local\\Temp\\npm-3456-8324ce4e\\git-cache-4be74af4936a\\8c70418b76fa984eb614d23287ec3ea09662a237",
-      "resolved": "git+https://github.com/szarouski/SimpleInstaller#8c70418b76fa984eb614d23287ec3ea09662a237",
+      "version": "1.1.3",
+      "from": "C:\\Users\\Sergey\\AppData\\Local\\Temp\\npm-9232-d2cf5154\\git-cache-010daa71f83d\\2bfb8b44df46d1bd5f36377e9a555726e01a457a",
+      "resolved": "git+https://github.com/szarouski/SimpleInstaller#2bfb8b44df46d1bd5f36377e9a555726e01a457a",
       "dependencies": {
         "shelljs": {
           "version": "0.4.0",
@@ -3645,7 +3645,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "1.1.1",
-                  "from": "ansi-regex@>=1.0.0 <2.0.0",
+                  "from": "ansi-regex@>=1.1.0 <2.0.0",
                   "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz"
                 },
                 "get-stdin": {
@@ -3662,7 +3662,7 @@
               "dependencies": {
                 "ansi-regex": {
                   "version": "1.1.1",
-                  "from": "ansi-regex@>=1.0.0 <2.0.0",
+                  "from": "ansi-regex@>=1.1.0 <2.0.0",
                   "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-1.1.1.tgz"
                 }
               }
