@@ -14,7 +14,7 @@ In this article you're going to learn about a program installation manager simil
 - skips already installed programs
 - could be used as a simple task runner
 - could work as a downloader
-- simple and because of that flexible and expendable [api](https://github.com/szarouski/SimpleInstaller#api)
+- simple and because of that flexible and extendable [api](https://github.com/szarouski/SimpleInstaller#api)
 - tested with 100% coverage
 - uses harmony mode for generators and `npm co` to manage execution flow
 
