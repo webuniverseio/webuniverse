@@ -317,6 +317,9 @@ http://www.pontikis.net/blog/debian-wheezy-web-server-setup:
 	apt-get install -y rkhunter
 		http://habrahabr.ru/company/first/blog/242865/
 		nano /etc/default/rkhunter
+		rkhunter -c --enable all --disable none
+		rkhunter --propupd
+		rkhunter --update
 
 	apt-get install -y lynis
 	lynis -c
@@ -408,3 +411,5 @@ echo.js
 facebook
 google+?
 hacker news?
+https://jslive.com/
+https://www.twilio.com/blog/2015/04/get-notified-when-someone-posts-an-article-from-your-domain-on-hacker-news-using-node-js-firebase-and-twilio.html?utm_source=javascriptweekly&utm_medium=email
