@@ -6,13 +6,13 @@ image: image.v1.jpg
 imageSmall: imageSmall.jpg
 ---
 This article explains what an npm `co` module is, how it works and how it can help you to write much cleaner and simpler asynchronous code.
-##The problem
+## The problem
 Writing asynchronous code could be very tricky, if you never did it before or didn't learn or develop good patterns to approach it. Asynchronous programming in javascript became popular with arrival of single page applications and node.js (where most of the operations happen asynchronously by default). Traditionally javascript was handling async operations using callbacks, and at least once every web developer faced a problem called [`callback hell`](https://www.google.ca/search?q=callback+hell+definition&tbm=isch) or `pyramid of doom`.
 
-##Solutions
+## Solutions
 A simple solution is to keep your code shallow, though error handling wouldn't be that simple. Another one, very well established solution is to use promises. Using ES6 generators we can simplify code for promises and continue writing code in a synchronous, easy to follow, manner, while keeping it asynchronous. If you're not familiar with how [promises](#promises) or [generators](#generators) are working, please do a quick research before you continue reading.
 
-###co to the rescue
+### co to the rescue
 co is a wrapper around promises and generators which allows to simplify asynchronous code a lot. Take a look at the example which shows how an async code could be written in a sync manner using co:
 ``` js
 co(function* getResults(){
@@ -181,17 +181,17 @@ In a nutshell this is exactly what happens in co: generators and promises take c
 
 Thank you and please feel free to ask questions in the comments, follow us on [facebook](https://www.facebook.com/webuniverseio) and [twitter](https://twitter.com/webuniverseio) pages, or subscribe to our [feed](/atom.xml).
 
-##Links
+## Links
 * co - https://github.com/tj/co  
 * shallow code - http://exponential.io/blog/unnest-callbacks/
 * 6to5 transpiler (babeljs) - https://babeljs.io/docs/learn-es6/
 
-###Promises<a name="promises"></a>
+### Promises<a name="promises"></a>
 * description - https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise
 * support - http://kangax.github.io/compat-table/es6/#Promise
 * examples - http://www.2ality.com/2014/09/es6-promises-foundations.html
 
-###Generators<a name="generators"></a>
+### Generators<a name="generators"></a>
 * description and examples - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
 * support - http://kangax.github.io/compat-table/es6/#generators
 

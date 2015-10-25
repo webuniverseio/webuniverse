@@ -5,7 +5,7 @@ var path = require('path');
 //noinspection SpellCheckingInspection
 module.exports = [{
 	link: 'https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.1-x64.exe?direct',
-	name: 'ruby',
+	name: 'ruby.exe',
 	postfix: ' /verysilent /dir="c:\\Ruby2" /tasks="assocfiles,modpath"'
 },
 {

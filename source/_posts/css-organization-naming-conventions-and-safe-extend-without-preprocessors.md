@@ -7,7 +7,7 @@ imageSmall: imageSmall.jpg
 ---
 Maintainability of CSS project highly depends on developer's choices, on how a project was originally planned. Due to CSS cascading nature, it is easy to end up in a situation when you try to fix or add one thing, which breaks something else. In worst case scenario the issue will remain unnoticed and end up going to production. It is especially hard to work on poorly organized css in a large team (a case where large team has access to CSS files is [not too common](https://css-tricks.com/poll-wrapup-the-number-of-people-touching-css/), but is still valid).
 
-##BEM (or better GRM)
+## BEM (or better GRM)
 Good news is that there are battle tested tools and approaches which help to keep things under control. One of them is the famous [BEM](https://en.bem.info/). Lets take a look at the following example:
 ```html
 <div class="shopping-cart-item">
@@ -30,7 +30,7 @@ Now lets take a look at one of the ways to write the same with BEM:
 
 By looking at this, we immediately know the relationship of each of the elements and can safely do clean up, if we need to remove some styles. BEM is an abbreviation for Block, Element, Modifier and in the example above we can tell that `container` is a Block, `content` and `title` are Elements, `shopping-cart` and `special-offer` are Modifiers. While approach is great, it sounds a bit weird to call `container` a Block and `content` an Element. When someone mentions BEM as an approach for selectors naming, I like to translate it to **GRM** - Group, Role, Modifier. Lets read it again: `container` is a Group, `content` and `title` define Roles within a Group, `shopping-cart` and `special-offer` are Modifiers.
 
-##To extend or not to extend?
+## To extend or not to extend?
 Though there is something that is not nice in the example above. Having duplicated classes feels redundant. Lets see what we can do about it. For html example above styles typically look similar to following:
 ```css
 .container {
@@ -90,5 +90,5 @@ So what can we do here to take advantage of behaviour which `@extend` gives us, 
    </div>
  </div>
  ```
- ##Project organization tips
+ ## Project organization tips
  [Inuit css](https://github.com/inuitcss/getting-started) is a great example of how css project could be organized. You don't have to use styles from inuit if you don't want to. As long as you follow the same _simple_ rules as outlined in getting started guide, your components will be reusable, while project will be scalable and maintainable. Note how files in inuit are namespaced, you'll get similar benefits as described in an article [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/), and you don't necessary have to prefix all your classnames with namespaces. 

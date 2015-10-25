@@ -5,7 +5,7 @@ overview: Learn how to make your existing web applications stable and fast by ad
 ---
 I'm sure all of us seen very unoptimized websites, those, which are taking long time to render and sometimes slow down or even freeze when user preforms an action. Not that long ago I've had an opportunity to work on one of sites like that and in that article I'm going to save and share experience which I gained dealing with various edge cases. 
 
-##Prologue
+## Prologue
 Web application consisted from main site and a few smaller web apps. Each of them had its own giant, minified javascript file located near the head section and bunch of script tags with function calls all over the page. Code base included a few hundreds of files with total size of ~6 megabytes. There were a couple of factors which made it extremely hard to maintain such a giant code base: 
 * there were no strict rules - developers could easily access global scope from anywhere
 * code was dependant on the order in which files were concatenated
@@ -15,6 +15,6 @@ Web application consisted from main site and a few smaller web apps. Each of the
 * there were no code validation tools
 * we had to keep track of what inline scripts were doing and which conditions in the back-end logic caused them to show
 
-##The Story
+## The Story
 
-##Epilogue
+## Epilogue
