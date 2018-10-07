@@ -8,7 +8,7 @@ http://www.pontikis.net/blog/debian-wheezy-web-server-setup:
 		EDITOR=nano
 	nano /etc/nanorc
 		set const
-	
+
 	adduser sergey
 	use puttygen to create new keys or use load to load existing keys
 	login as sergey
@@ -16,18 +16,18 @@ http://www.pontikis.net/blog/debian-wheezy-web-server-setup:
 		set 700 for .ssh and 600 for authorized_keys
 	verify authorization, switch to root
 	use pagent for convenience
-	
+
 	apt-get install -y systemd
 	nano /etc/default/grub
 		GRUB_CMDLINE_LINUX_DEFAULT="nomodeset init=/bin/systemd"
 	update-grub && reboot
-	
+
 	apt-get install -y ntp
 	dpkg-reconfigure tzdata
 		America, Toronto
 	systemctl restart cron.service
 	*reboot
-	
+
 	nano /etc/apt/sources.list
 		deb http://download.webmin.com/download/repository sarge contrib
 	cd /root
