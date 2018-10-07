@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://webuniverse.io/"/>
-  <updated>2015-10-25T18:29:18.230Z</updated>
+  <updated>2015-10-25T18:29:18.231Z</updated>
   <id>http://webuniverse.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://webuniverse.io/cyclomatic-complexity-refactoring-tips/"/>
     <id>http://webuniverse.io/cyclomatic-complexity-refactoring-tips/</id>
     <published>2015-10-23T04:00:00.000Z</published>
-    <updated>2015-10-25T18:29:18.230Z</updated>
+    <updated>2015-10-25T18:29:18.231Z</updated>
     <content type="html"><![CDATA[<p>This article briefly explains what is cyclomatic complexity and gives practical tips about how to make your projects maintainable.</p>
 <h2 id="Cyclomatic_complexity">Cyclomatic complexity</h2><p>In short cyclomatic complexity is a number which indicates how many execution scenarios there might be inside your code. Everyday developers read lots of code and during this process they try to imagine what the code is doing. The more execution scenarios they see in the code, the harder it is to keep track of what is going on. That leads to misunderstanding and therefore to hacks and buggy implementations. Conditional operators increase cyclomatic complexity, so it is a matter of keeping them under control. Following operators will increase cyclomatic complexity in javascript:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if | while | for | case | || | catch | ternary operator ?:</span><br></pre></td></tr></table></figure></p>
 <p>Below is an example of how you don’t want your code to look as it will be too complex to understand:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">  <span class="keyword">if</span> (condition) &#123;</span><br><span class="line">    <span class="keyword">while</span> (condition ? expression : expression) &#123;</span><br><span class="line">      <span class="keyword">if</span> (condition || condition &amp;&amp; condition) &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//... a few more conditions like this and there is a 100% chance that we'll need a debugger today</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -93,7 +93,7 @@
     <link href="http://webuniverse.io/css-organization-naming-conventions-and-safe-extend-without-preprocessors/"/>
     <id>http://webuniverse.io/css-organization-naming-conventions-and-safe-extend-without-preprocessors/</id>
     <published>2015-03-14T18:37:31.000Z</published>
-    <updated>2015-10-25T18:17:17.556Z</updated>
+    <updated>2015-10-25T18:17:17.557Z</updated>
     <content type="html"><![CDATA[<p>Maintainability of CSS project highly depends on developer’s choices, on how a project was originally planned. Due to CSS cascading nature, it is easy to end up in a situation when you try to fix or add one thing, which breaks something else. In worst case scenario the issue will remain unnoticed and end up going to production. It is especially hard to work on poorly organized css in a large team (a case where large team has access to CSS files is <a href="https://css-tricks.com/poll-wrapup-the-number-of-people-touching-css/" target="_blank" rel="external">not too common</a>, but is still valid).</p>
 <h2 id="BEM_(or_better_GRM)">BEM (or better GRM)</h2><p>Good news is that there are battle tested tools and approaches which help to keep things under control. One of them is the famous <a href="https://en.bem.info/" target="_blank" rel="external">BEM</a>. Lets take a look at the following example:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"shopping-cart-item"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content special-offer"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h2</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span>Title<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>If at some point you’ll need to remove whole <code>.content</code> block from CSS which has nested <code>.title</code>, you’ll need to check if <code>.special-offer</code> or even <code>.shopping-cart-item</code> (and other ancestors) also have a nested <code>.title</code>.</p>
@@ -118,7 +118,7 @@
     <link href="http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/"/>
     <id>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</id>
     <published>2015-02-03T23:20:00.000Z</published>
-    <updated>2015-10-25T18:15:17.687Z</updated>
+    <updated>2015-10-25T18:15:17.688Z</updated>
     <content type="html"><![CDATA[<p>This article explains what an npm <code>co</code> module is, how it works and how it can help you to write much cleaner and simpler asynchronous code.</p>
 <h2 id="The_problem">The problem</h2><p>Writing asynchronous code could be very tricky, if you never did it before or didn’t learn or develop good patterns to approach it. Asynchronous programming in javascript became popular with arrival of single page applications and node.js (where most of the operations happen asynchronously by default). Traditionally javascript was handling async operations using callbacks, and at least once every web developer faced a problem called <a href="https://www.google.ca/search?q=callback+hell+definition&amp;tbm=isch" target="_blank" rel="external"><code>callback hell</code></a> or <code>pyramid of doom</code>.</p>
 <h2 id="Solutions">Solutions</h2><p>A simple solution is to keep your code shallow, though error handling wouldn’t be that simple. Another one, very well established solution is to use promises. Using ES6 generators we can simplify code for promises and continue writing code in a synchronous, easy to follow, manner, while keeping it asynchronous. If you’re not familiar with how <a href="#promises">promises</a> or <a href="#generators">generators</a> are working, please do a quick research before you continue reading.</p>
@@ -167,7 +167,7 @@
 <li>examples - <a href="http://www.2ality.com/2014/09/es6-promises-foundations.html" target="_blank" rel="external">http://www.2ality.com/2014/09/es6-promises-foundations.html</a></li>
 </ul>
 <h3 id="Generators">Generators<a name="generators"></a></h3><ul>
-<li>description and examples - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*</a></li>
+<li>description and examples - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function</a>*</li>
 <li>support - <a href="http://kangax.github.io/compat-table/es6/#generators" target="_blank" rel="external">http://kangax.github.io/compat-table/es6/#generators</a></li>
 </ul>
 <style type="text/css">.article__title {font-size: 1.72rem;}</style>]]></content>

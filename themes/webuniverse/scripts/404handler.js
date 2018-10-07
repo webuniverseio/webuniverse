@@ -15,7 +15,7 @@ hexo.extend.filter.register('server_middleware', function _404middleware(app) {
 		var method = req.method;
 
 		console.error([
-			'method: ' + method,
+			'Cannot find resource - method: ' + method,
 			', url: ' + host + req.url,
 			', time: ' + time,
 			', ip: ' + ip,
