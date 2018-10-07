@@ -1,4 +1,4 @@
-//jshint node:true, esnext: true
+//jshint node:true, es3: false
 'use strict';
 
 var co = require('co');
