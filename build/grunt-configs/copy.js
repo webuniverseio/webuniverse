@@ -16,6 +16,12 @@ module.exports = function createCopyExports(grunt) {
 					dest: 'static/dest/images',
 					nonull: true
 				}, {
+          expand: true,
+          cwd: 'static/src/js/',
+          src: '**',
+          dest: 'static/dest/js',
+          nonull: true
+        }, {
 					expand: true,
 					cwd: 'static/src/fonts/',
 					src: '**',

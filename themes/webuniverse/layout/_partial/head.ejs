@@ -48,6 +48,8 @@
 		document.documentElement.className = document.documentElement.className.replace('no-js', '');
 		document.createElement('picture');
 	</script>
+	<script defer src="//d2wy8f7a9ursnm.cloudfront.net/v4/bugsnag.min.js"></script>
+	<script defer src="<%= url_for("static/dest/js/main.js?v=1") %>"></script>
 	<link rel="canonical" href="<%= page.canonical_url || url %>" />
 	<link rel="apple-touch-icon" sizes="57x57" href="<%= url_for("apple-touch-icon-57x57.png") %>">
 	<link rel="apple-touch-icon" sizes="114x114" href="<%= url_for("apple-touch-icon-114x114.png") %>">
