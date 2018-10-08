@@ -1,12 +1,12 @@
 title: Recommended
 date: 2015-01-19 19:36:23
 overview: Recommended articles, blogs and books for professional web developers
-image: image.v1.jpg
+image: image.jpg?v=1
 imageSmall: imageSmall.jpg
 ---
 - http://www.2ality.com/ - Tons and tons of useful information about next version of javascript (ES6) and more
 - http://addyosmani.com/blog/ - Advanced level articles about javascript architecture and web performance
-- http://csswizardry.com/#section:articles - CSS may end up a nightmare if you don't take care to structure it well. You'll find everything you need to know about CSS in that blog
+- http://csswizardry.com/#section:articles - CSS may end up being a nightmare if you don't take care to structure it well. You'll find everything you need to know about CSS in that blog
 - http://css-tricks.com/ - Blog with tons of posts about web development. Great source for beginner-intermediate level
 - http://geek-and-poke.com/ - Smart humor about software development
 - http://www.stevesouders.com/blog - Web performance the right way

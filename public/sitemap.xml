@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://webuniverse.io/recommended/index.html</loc>
+    <lastmod>2018-10-08T15:49:42.033Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://webuniverse.io/projects/index.html</loc>
+    <lastmod>2018-10-08T15:45:22.328Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://webuniverse.io/about/index.html</loc>
+    <lastmod>2018-10-08T15:44:56.721Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</loc>
+    <lastmod>2018-10-08T15:43:12.869Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://webuniverse.io/cyclomatic-complexity-refactoring-tips/</loc>
     <lastmod>2015-10-25T18:29:18.231Z</lastmod>
   </url>
@@ -14,26 +34,6 @@
   <url>
     <loc>http://webuniverse.io/manage-project-dependencies-with-simple-installer/</loc>
     <lastmod>2015-10-25T18:15:39.569Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</loc>
-    <lastmod>2015-10-25T18:15:17.688Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://webuniverse.io/about/index.html</loc>
-    <lastmod>2015-10-25T18:15:17.685Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://webuniverse.io/projects/index.html</loc>
-    <lastmod>2015-04-06T01:05:38.557Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://webuniverse.io/recommended/index.html</loc>
-    <lastmod>2015-03-14T16:28:13.106Z</lastmod>
   </url>
   
   <url>

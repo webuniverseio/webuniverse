@@ -1,7 +1,7 @@
 title: About
 layout: about
 date: 2015-01-17 16:57:36
-image: image.v1.jpg
+image: image.jpg?v=1
 imageSmall: imageSmall.jpg
 copyright: ESO/José Francisco Salgado
 overview: Learn about web technologies and more at Webuniverse

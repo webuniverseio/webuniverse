@@ -1,7 +1,7 @@
 title: Projects
 date: 2015-01-19 20:36:14
 overview: Wonderful open source projects to ease your development life
-image: image.v1.jpg
+image: image.jpg?v=1
 imageSmall: imageSmall.jpg
 ---
 Quick overview of projects I've had a wonderful time working on...
