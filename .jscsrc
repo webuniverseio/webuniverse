@@ -40,7 +40,6 @@
   "disallowMultipleVarDecl": true,
   "requireBlocksOnNewline": true,
   "disallowPaddingNewlinesInBlocks": true,
-  "requirePaddingNewLinesInObjects": true,
   "disallowSpacesInsideArrayBrackets": "all",
   "disallowSpacesInsideParentheses": true,
   "disallowSpaceAfterObjectKeys": true,
