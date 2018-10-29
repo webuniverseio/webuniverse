@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19f100a4-8c6a-429b-b0bc-4583f37af70a" name="Default" comment="Fix image paths after removing rewrite module">
-      <change afterPath="$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js" afterDir="false" />
+    <list default="true" id="19f100a4-8c6a-429b-b0bc-4583f37af70a" name="Default" comment="Add security headers like CSP + others">
+      <change afterPath="$PROJECT_DIR$/public/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/imageSmall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/imageSmall.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jscsrc" beforeDir="false" afterPath="$PROJECT_DIR$/.jscsrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/webuniverse/source/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
     </list>
     <ignored path="webuniverse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,30 +47,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ejs" value="6" />
+          <entry key="ejs" value="7" />
           <entry key="es6" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="hexo" value="1" />
           <entry key="html" value="2" />
-          <entry key="js" value="51" />
+          <entry key="jpg" value="2" />
+          <entry key="js" value="56" />
           <entry key="jscsrc" value="2" />
           <entry key="jshintrc" value="2" />
           <entry key="json" value="3" />
-          <entry key="md" value="6" />
+          <entry key="md" value="10" />
           <entry key="txt" value="3" />
           <entry key="yml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="EJS" value="6" />
+          <entry key="EJS" value="7" />
           <entry key="Git file" value="1" />
           <entry key="HTML" value="2" />
+          <entry key="Image" value="2" />
           <entry key="JSCS" value="2" />
           <entry key="JSHint" value="2" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="52" />
-          <entry key="Markdown" value="6" />
+          <entry key="JavaScript" value="57" />
+          <entry key="Markdown" value="10" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="2" />
           <entry key="YAML" value="7" />
@@ -78,8 +87,8 @@
           <entry key="jscsrc" value="5" />
           <entry key="jshintrc" value="52" />
           <entry key="json" value="21" />
-          <entry key="md" value="26" />
-          <entry key="txt" value="312" />
+          <entry key="md" value="3686" />
+          <entry key="txt" value="351" />
           <entry key="yml" value="15" />
         </counts>
       </usages-collector>
@@ -92,8 +101,8 @@
           <entry key="JSHint" value="52" />
           <entry key="JSON" value="21" />
           <entry key="JavaScript" value="1172" />
-          <entry key="Markdown" value="26" />
-          <entry key="PLAIN_TEXT" value="312" />
+          <entry key="Markdown" value="3686" />
+          <entry key="PLAIN_TEXT" value="351" />
           <entry key="YAML" value="15" />
         </counts>
       </usages-collector>
@@ -104,39 +113,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/cache-control.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#258#408#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js">
+        <entry file="file://$PROJECT_DIR$/build/grunt-configs/aliases.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+            <state relative-caret-position="468">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#297#464#0" expanded="true" />
-                <element signature="e#528#607#0" expanded="true" />
-                <element signature="e#680#693#0" expanded="true" />
-                <element signature="e#725#740#0" expanded="true" />
+                <element signature="e#404#454#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config.rb" />
         <option value="$PROJECT_DIR$/../../temp/index.html" />
         <option value="$PROJECT_DIR$/scaffolds/post.md" />
         <option value="$PROJECT_DIR$/static/src/css/_settings.general.scss" />
@@ -266,6 +249,7 @@
         <option value="$PROJECT_DIR$/_config-live.yml" />
         <option value="$PROJECT_DIR$/themes/webuniverse/scripts/cache-control.js" />
         <option value="$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js" />
+        <option value="$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI.md" />
       </list>
     </option>
   </component>
@@ -430,35 +414,6 @@
               <item name="webuniverse" type="b2602c69:ProjectViewProjectNode" />
               <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webuniverse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webuniverse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="request" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webuniverse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webuniverse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webuniverse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="webuniverse" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -495,11 +450,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\sz\websites\node_projects\webuniverse\source\_posts\Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI" />
+      <recent name="D:\sz\websites\node_projects\webuniverse\source\_posts" />
       <recent name="D:\sz\websites\node_projects\webuniverse\themes\webuniverse\scripts" />
       <recent name="D:\sz\websites\node_projects\webuniverse\source\_posts\cyclomatic-complexity-refactoring-tips" />
-      <recent name="D:\sz\websites\node_projects\webuniverse\source\_posts" />
       <recent name="D:\sz\websites\node_projects\webuniverse\source\_posts\manage-project-dependencies-with-simple-installer" />
-      <recent name="D:\sz\websites\node_projects\webuniverse\build" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -645,7 +600,7 @@
       <workItem from="1539008020963" duration="1471000" />
       <workItem from="1539010534321" duration="54000" />
       <workItem from="1539013363570" duration="7396000" />
-      <workItem from="1540735325270" duration="4458000" />
+      <workItem from="1540735325270" duration="13100000" />
     </task>
     <task id="LOCAL-00001" summary="minor adjustments">
       <created>1425691483412</created>
@@ -843,22 +798,35 @@
       <option name="project" value="LOCAL" />
       <updated>1539014023589</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add security headers like CSP + others">
+      <created>1540740299660</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1540740299660</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add security headers like CSP + others">
+      <created>1540740523791</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1540740523791</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36164000" />
+    <option name="totallyTimeSpent" value="44806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="top" x="0" y="359" width="1920" height="362" id="Debug" order="0" sideWeight="0.49791667" weight="0.3967112" />
       <window_info anchor="top" id="V8 Profiling" order="1" side_tool="true" weight="0.39738432" />
       <window_info id="Structure" order="0" sideWeight="0.49621928" weight="0.25" />
       <window_info content_ui="combo" x="336" y="129" width="1239" height="754" id="Project" internal_type="SLIDING" order="1" sideWeight="0.52551985" side_tool="true" weight="0.37708333" />
-      <window_info id="Version Control" order="2" sideWeight="0.52551985" side_tool="true" weight="0.37708333" />
-      <window_info active="true" x="329" y="209" width="1321" height="652" id="Terminal" order="3" sideWeight="0.5236295" side_tool="true" visible="true" weight="0.37708333" />
+      <window_info active="true" id="Version Control" order="2" sideWeight="0.52551985" side_tool="true" visible="true" weight="0.37708333" />
+      <window_info x="329" y="209" width="1321" height="652" id="Terminal" order="3" sideWeight="0.5236295" side_tool="true" weight="0.37708333" />
       <window_info id="Favorites" order="4" sideWeight="0.4649948" side_tool="true" weight="0.32627118" />
       <window_info id="Quokka" order="5" sideWeight="0.6587902" side_tool="true" weight="0.4265625" />
       <window_info id="Run" order="6" sideWeight="0.47448015" weight="0.37708333" />
@@ -997,7 +965,8 @@
     <MESSAGE value="Added bugsnag" />
     <MESSAGE value="Test public folder" />
     <MESSAGE value="Fix image paths after removing rewrite module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix image paths after removing rewrite module" />
+    <MESSAGE value="Add security headers like CSP + others" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add security headers like CSP + others" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,41 +981,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/fullUrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/hexo/lib/hexo/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="431" column="21" selection-start-line="431" selection-start-column="21" selection-end-line="431" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/hexo/lib/hexo/load_plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/hexo-server/lib/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_56.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="294" column="33" lean-forward="true" selection-start-line="294" selection-start-column="33" selection-end-line="294" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/hexo/lib/plugins/helper/css.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -1096,13 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/grunt-configs/concurrent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/hexo/lib/plugins/helper/url_for.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -1135,28 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/about.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/about/index.md">
-      <provider editor-type-id="text-editor">
-        <state>
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="78">
-            <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/projects/index.md">
       <provider editor-type-id="text-editor">
         <state>
@@ -1179,13 +1084,6 @@
             <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/grunt-configs/aliases.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1224,9 +1122,6 @@
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-local-cli.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1314,17 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/cache-control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#258#408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/request/request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -1332,13 +1216,6 @@
           <folding>
             <element signature="e#41355#41398#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1352,6 +1229,121 @@
             <element signature="e#528#607#0" expanded="true" />
             <element signature="e#680#693#0" expanded="true" />
             <element signature="e#725#740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/cache-control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#258#408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-local-cli.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/css-organization-naming-conventions-and-safe-extend-without-preprocessors.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/imageSmall.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/webuniverse/layout/about.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#49#105#0#JavaScript" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/about/index.md">
+      <provider editor-type-id="text-editor">
+        <state>
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="130">
+            <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/cyclomatic-complexity-refactoring-tips.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="416">
+            <caret line="9" column="343" lean-forward="true" selection-start-line="7" selection-end-line="9" selection-end-column="343" />
+            <folding>
+              <element signature="n#!!block;n#run#0" expanded="true" />
+              <element signature="n#!!block;n#getName#0" expanded="true" />
+              <element signature="n#!!block;n#getMarkupForError#0" expanded="true" />
+              <element signature="n#!!block;n#getMarkupForError#0" expanded="true" />
+              <element signature="n#!!block;n#getMarkupForError#0" expanded="true" />
+              <element signature="n#!!block;n#highlightCurrentSection#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/image.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="849">
+            <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/grunt-configs/concurrent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#320#398#0" expanded="true" />
+            <element signature="e#422#468#0" expanded="true" />
+            <element signature="e#482#676#0" expanded="true" />
+            <element signature="e#501#550#0" expanded="true" />
+            <element signature="e#569#612#0" expanded="true" />
+            <element signature="e#629#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/grunt-configs/aliases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#404#454#0" expanded="true" />
           </folding>
         </state>
       </provider>

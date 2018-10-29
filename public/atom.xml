@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://webuniverse.io/"/>
-  <updated>2015-10-25T18:29:18.231Z</updated>
+  <updated>2018-10-29T00:31:09.172Z</updated>
   <id>http://webuniverse.io/</id>
   
   <author>
@@ -13,6 +13,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Getting started with Reporting API, Network Error Logging & Report URI]]></title>
+    <link href="http://webuniverse.io/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/"/>
+    <id>http://webuniverse.io/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/</id>
+    <published>2018-10-28T15:48:10.000Z</published>
+    <updated>2018-10-29T00:31:09.172Z</updated>
+    <content type="html"><![CDATA[<p>This article briefly explains how to enable deprecation, intervention &amp; crash reports as well as network error logging with new browser API. It is pretty much a TL;DR version of <a href="https://scotthelme.co.uk/introducing-the-reporting-api-nel-other-major-changes-to-report-uri/" target="_blank" rel="external">scotthelme.co.uk</a> article and reason for writing it in a first place is for me to understand this topic better. I hope you like this short version too and once interested you will subscribe to Scott’s blog :)</p>
+<h2 id="Reporting_API">Reporting API</h2><p>Reporting API, which is currently in a status of <a href="https://www.w3.org/TR/reporting/" target="_blank" rel="external">working draft</a>, allows applications to tell browsers to report things like deprecation warnings to a specified url. Currently Reporting API supports following reporting types:</p>
+<ul>
+<li>Deprecation - reports soon to be deprecated api. For example <code>WebSQL is deprecated and will be removed in Chrome 97 around January 2020</code>. </li>
+<li>Intervention - reports when browser blocks request due to security or performance reasons. <code>A request to play audio was blocked because it was not triggered by user activation (such as a click)</code>.</li>
+<li>Crashes - reports browser crashes &amp; when possible provides a reason. At the time of writing this only <code>out-of-memory crash</code> or <code>oom</code> reason was supported.</li>
+</ul>
+<h3 id="Report-To_header"><code>Report-To</code> header</h3><p>In order to enable reporting api you need to set a response header like following:</p>
+<p><code>Report-To: {&quot;group&quot;:&quot;default&quot;,&quot;max_age&quot;:604800,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://endpoint/path&quot;}],&quot;include_subdomains&quot;:true}</code></p>
+<p>For deprecation/intervention/crash report types you should use <code>default</code> for group name, so we can leave it alone. <code>max_age</code> tells browser to remember to send requests to specified endpoints for given time in seconds (in the example it is set to 7 days). You can specify multiple endpoints if you wish.</p>
+<h2 id="Network_error_logging">Network error logging</h2><p>Network error logging, which is also in a status of <a href="https://www.w3.org/TR/network-error-logging/" target="_blank" rel="external">working draft</a>, allows to report issues with:</p>
+<ul>
+<li>dns <code>unreachable, name_not_resolved, ...</code></li>
+<li>tcp <code>timed_out, refused, ...</code></li>
+<li>tls <code>cert.name_invalid, cert.authority_invalid, ...</code></li>
+<li>http <code>response.invalid, response.redirect_loop, ...</code></li>
+<li>abandoned</li>
+<li>unknown</li>
+</ul>
+<p>Full list with descriptions can be found on the <a href="https://www.w3.org/TR/network-error-logging/#dns-resolution-errors" target="_blank" rel="external">specification page</a>.</p>
+<h3 id="NEL_header"><code>NEL</code> header</h3><p>In order to enable network error logging you need to set a response header like following:</p>
+<p><code>NEL: {&quot;report_to&quot;:&quot;default&quot;,&quot;max_age&quot;:604800,&quot;include_subdomains&quot;:true}</code></p>
+<p>As you can see there is no endpoints property. <code>Report-To</code> should be specified for this header, because <code>NEL</code> uses endpoints from it to report data.</p>
+<h2 id="Working_with_reports_&amp;_report-uri-com">Working with reports &amp; <code>report-uri.com</code></h2><p>You could build your own dashboard which handles reports for mentioned APIs. Sample report data structure is shown on previously mentioned specification pages. However there is a free to use service called <a href="https://report-uri.com/" target="_blank" rel="external">Report URI</a> which already handles these and other type of reports. It takes 5-10 minutes to set it up and as long as it is easy for you to add headers to your site, it should be very easy to start gathering data from Reporting &amp; Network Error Logging APIs. It took it just about 30 minutes for me to add it to my site &amp; I encourage you to do the same.</p>
+<p>Thanks for reading &amp; have fun.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>This article briefly explains how to enable deprecation, intervention &amp; crash reports as well as network error logging with new brows]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Cyclomatic complexity refactoring tips for javascript developers]]></title>
