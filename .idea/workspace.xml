@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19f100a4-8c6a-429b-b0bc-4583f37af70a" name="Default" comment="Reporting API article">
-      <change afterPath="$PROJECT_DIR$/source/_posts/Creating-publishing-a-browser-extension-or-How-changing-a-Stride-favicon-improved-my-performance-by-40.md" afterDir="false" />
+    <list default="true" id="19f100a4-8c6a-429b-b0bc-4583f37af70a" name="Default" comment="Stride favicon video">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
     </list>
     <ignored path="webuniverse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +43,7 @@
           <entry key="hexo" value="1" />
           <entry key="html" value="2" />
           <entry key="jpg" value="2" />
-          <entry key="js" value="56" />
+          <entry key="js" value="57" />
           <entry key="jscsrc" value="2" />
           <entry key="jshintrc" value="2" />
           <entry key="json" value="3" />
@@ -63,7 +61,7 @@
           <entry key="JSCS" value="2" />
           <entry key="JSHint" value="2" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="57" />
+          <entry key="JavaScript" value="58" />
           <entry key="Markdown" value="12" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="2" />
@@ -75,12 +73,12 @@
           <entry key="ejs" value="45" />
           <entry key="gitignore" value="7" />
           <entry key="html" value="34" />
-          <entry key="js" value="1172" />
+          <entry key="js" value="1174" />
           <entry key="jscsrc" value="5" />
           <entry key="jshintrc" value="52" />
           <entry key="json" value="21" />
           <entry key="md" value="4166" />
-          <entry key="txt" value="375" />
+          <entry key="txt" value="397" />
           <entry key="yml" value="15" />
         </counts>
       </usages-collector>
@@ -92,9 +90,9 @@
           <entry key="JSCS" value="5" />
           <entry key="JSHint" value="52" />
           <entry key="JSON" value="21" />
-          <entry key="JavaScript" value="1172" />
+          <entry key="JavaScript" value="1174" />
           <entry key="Markdown" value="4166" />
-          <entry key="PLAIN_TEXT" value="375" />
+          <entry key="PLAIN_TEXT" value="397" />
           <entry key="YAML" value="15" />
         </counts>
       </usages-collector>
@@ -117,7 +115,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/Creating-publishing-a-browser-extension-or-How-changing-a-Stride-favicon-improved-my-performance-by-40.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -125,6 +123,21 @@
                 <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#313#488#0" expanded="true" />
+                <element signature="e#532#635#0" expanded="true" />
+                <element signature="e#769#966#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -250,9 +263,9 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_config-live.yml" />
         <option value="$PROJECT_DIR$/themes/webuniverse/scripts/cache-control.js" />
-        <option value="$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js" />
         <option value="$PROJECT_DIR$/source/_posts/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI.md" />
         <option value="$PROJECT_DIR$/source/_posts/Creating-publishing-a-browser-extension-or-How-changing-a-Stride-favicon-improved-my-performance-by-40.md" />
+        <option value="$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js" />
       </list>
     </option>
   </component>
@@ -329,7 +342,7 @@
       <path value="$PROJECT_DIR$/themes/webuniverse/source/bower_components/picturefill/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -616,7 +629,7 @@
       <workItem from="1539013363570" duration="7396000" />
       <workItem from="1540735325270" duration="13920000" />
       <workItem from="1540821308233" duration="46000" />
-      <workItem from="1540956896257" duration="1737000" />
+      <workItem from="1540956896257" duration="2162000" />
     </task>
     <task id="LOCAL-00001" summary="minor adjustments">
       <created>1425691483412</created>
@@ -835,14 +848,22 @@
       <option name="project" value="LOCAL" />
       <updated>1540774833341</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Stride favicon video">
+      <created>1540958823657</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1540958823657</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47409000" />
+    <option name="totallyTimeSpent" value="47834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="top" x="0" y="359" width="1920" height="362" id="Debug" order="0" sideWeight="0.49791667" weight="0.3967112" />
       <window_info anchor="top" id="V8 Profiling" order="1" side_tool="true" weight="0.39738432" />
@@ -990,7 +1011,8 @@
     <MESSAGE value="Fix image paths after removing rewrite module" />
     <MESSAGE value="Add security headers like CSP + others" />
     <MESSAGE value="Reporting API article" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reporting API article" />
+    <MESSAGE value="Stride favicon video" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stride favicon video" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1226,13 +1248,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/cache-control.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -1342,6 +1357,19 @@
             <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/webuniverse/scripts/security-headers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#313#488#0" expanded="true" />
+            <element signature="e#532#635#0" expanded="true" />
+            <element signature="e#769#966#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

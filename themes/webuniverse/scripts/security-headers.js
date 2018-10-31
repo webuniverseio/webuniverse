@@ -30,7 +30,7 @@ hexo.extend.filter.register('server_middleware', function _setSecurityHeadersMid
       `img-src 'self' *.google-analytics.com *.googleapis.com *.google.com *.gstatic.com *.disqus.com *.disquscdn.com`,
       `style-src 'self' 'unsafe-inline' *.googleapis.com *.google.com *.disquscdn.com`,
 	    `font-src 'self' data: *.gstatic.com`,
-      `frame-src 'self' *.google.com disqus.com`,
+      `frame-src 'self' *.google.com disqus.com *.youtube.com`,
       `connect-src 'self' *.bugsnag.com *.disqus.com`,
 	    `report-uri https://webuniverse.report-uri.com/r/d/csp/enforce`
     ].join(';'));
