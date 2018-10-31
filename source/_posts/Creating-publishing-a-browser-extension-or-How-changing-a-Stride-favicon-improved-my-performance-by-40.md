@@ -1,0 +1,20 @@
+title: >-
+  Creating & publishing a browser extension or How changing a Stride favicon
+  improved my performance by 40%
+date: 2018-10-30 23:40:27
+tags:
+overview: Small change in stride chat web client improved my performance by 40%. In this article you'll learn how to start working with chrome extensions & how to upload your extension to chrome store.
+---
+In this video you're going to learn about a UX problem in Stride web application due to distracting favicon & a way to address this by writing & publishing a custom extension.
+
+{% raw %}
+<iframe style="margin-top: 1em;" width="100%" height="400" src="https://www.youtube.com/embed/lw9yk0w7S78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endraw %}
+
+Links from the video:
+- [Get started with extensions](https://developer.chrome.com/extensions/getstarted)
+- [Example repo](https://github.com/k1LoW/backlog-favicon-changer/) 
+- **[Stride favicon repo](https://github.com/szarouski/stride-favicon)**
+- [Permissions description](https://developer.chrome.com/extensions/permission_warnings) 
+- [Content scripts description](https://developer.chrome.com/extensions/content_scripts)
+- [Chrome webstore dashboard](https://chrome.google.com/webstore/developer/dashboard?pli=1&authuser=1)
