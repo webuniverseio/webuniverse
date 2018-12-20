@@ -16,43 +16,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
+    <style>
+      body {
+        height: 500px;
+        background-color: #c00;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>
-        A Dream of the Future
-      </h1>
-    </header>
+    <input />
+    hello
+    <iframe src="https://www.homedepot.ca/en/home.html" width="100%" height="300" />
 
-    <main>
-      <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
-    </main>
-
-    <footer>
-      Made with <a href="https://glitch.com">Glitch</a>!
-    </footer>
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
-
+    <script>
+      document.body.addEventListener('keydown', (e) => {
+        let text = e.type +
+          ' key=' + e.key +
+          ' code=' + e.code +
+          (e.shiftKey ? ' shiftKey' : '') +
+          (e.ctrlKey ? ' ctrlKey' : '') +
+          (e.altKey ? ' altKey' : '') +
+          (e.metaKey ? ' metaKey' : '') +
+          (e.repeat ? ' (repeat)' : '') +
+          "\n";
+        console.log(text);
+      }, true);
+      document.body.addEventListener('focus', (e) => {
+        console.log('focused');
+      });
+    </script>
   </body>
 </html>
