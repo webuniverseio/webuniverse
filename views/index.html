@@ -26,10 +26,10 @@
   <body>
     <input />
     hello
-    <iframe src="https://www.homedepot.ca/en/home.html" width="100%" height="300" />
+<!--     <iframe src="https://csp-nonce-validation.glitch.me/" width="100%" height="300" /> -->
 
     <script>
-      document.body.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', (e) => {
         let text = e.type +
           ' key=' + e.key +
           ' code=' + e.code +
@@ -41,9 +41,13 @@
           "\n";
         console.log(text);
       }, true);
-      document.body.addEventListener('focus', (e) => {
+      document.addEventListener('focus', (e) => {
         console.log('focused');
       });
+      setTimeout(() => {
+        document.body.insertAdjacentHTML('beforeend', `<iframe src="https://csp-nonce-validation.glitch.me/" width="100%" height="300" />`);
+        console.log('added iframe');
+      }, 5000)
     </script>
   </body>
 </html>
