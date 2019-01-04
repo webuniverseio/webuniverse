@@ -27,27 +27,6 @@
     <input />
     hello
 <!--     <iframe src="https://csp-nonce-validation.glitch.me/" width="100%" height="300" /> -->
-
-    <script>
-      document.addEventListener('keydown', (e) => {
-        let text = e.type +
-          ' key=' + e.key +
-          ' code=' + e.code +
-          (e.shiftKey ? ' shiftKey' : '') +
-          (e.ctrlKey ? ' ctrlKey' : '') +
-          (e.altKey ? ' altKey' : '') +
-          (e.metaKey ? ' metaKey' : '') +
-          (e.repeat ? ' (repeat)' : '') +
-          "\n";
-        console.log(text);
-      }, true);
-      document.addEventListener('focus', (e) => {
-        console.log('focused');
-      });
-      setTimeout(() => {
-        document.body.insertAdjacentHTML('beforeend', `<iframe src="https://csp-nonce-validation.glitch.me/" width="100%" height="300" />`);
-        console.log('added iframe');
-      }, 5000)
-    </script>
+    <script src="/client.js"></script>
   </body>
 </html>
