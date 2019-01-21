@@ -3,6 +3,7 @@
 
 // init project
 const express = require('express');
+const request = require('superagent');
 const app = express();
 
 // we've started you off with Express, 
@@ -18,7 +19,14 @@ app.use((req, res, next) => {
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/index.html');
+  //response.sendFile(__dirname + '/views/index.html');
+  //request.get('')
+  //www.chapters.indigo.ca.edgekey-staging.net
+  const net = require('net');
+  const client = net.connect({port: 80, host:"google.com"}, () => {
+    console.log('MyIP='+client.localAddress);
+    console.log('MyPORT='+client.localPort);
+  });
 });
 
 // listen for requests :)
