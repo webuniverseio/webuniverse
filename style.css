@@ -4,6 +4,7 @@ body {
   background-image: url(cute.jpg);
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: aqua;
 }
 h1 {
   font-family: "Times New Roman", serif;
