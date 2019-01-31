@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://8a7e7fcf-9adc-4e38-926e-d4370fe46621@api.glitch.com/csp-nonce-validation/git",
+  "author": "Sergey Zarouski <serge.zarouski@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "echo preinstall",
+    "install": "echo install",
+    "postinstall": "echo refresh && refresh"
+  }
+}
