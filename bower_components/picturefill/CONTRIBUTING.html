@@ -1,0 +1,21 @@
+<h1 id="Contributing">Contributing</h1><h2 id="Important_notes">Important notes</h2><p>Please don’t edit files in the <code>dist</code> subdirectory as they are generated via Grunt. You’ll find source code in the <code>src</code> subdirectory!</p>
+<h3 id="Code_style">Code style</h3><p>Regarding code style like indentation and whitespace, <strong>follow the conventions you see used in the source already.</strong></p>
+<h3 id="Project_Scope">Project Scope</h3><p>Picturefill aims to polyfill the standard features of the <code>picture</code> element and related <code>srcset</code>, <code>sizes</code>, <code>type</code>, and <code>media</code> attributes (some of which work on <code>img</code> elements without a <code>picture</code> parent as well). Issues and contributions that fall outside of this scope are not likely to be accepted by the project. Some exceptions include workarounds that improve browser support for standard features.</p>
+<h3 id="PhantomJS">PhantomJS</h3><p>While Grunt can run the included unit tests via <a href="http://phantomjs.org/">PhantomJS</a>, this shouldn’t be considered a substitute for the real thing. Please be sure to test the <code>test/*.html</code> unit test file(s) in <em>actual</em> browsers.</p>
+<h2 id="Modifying_the_code">Modifying the code</h2><p>First, ensure that you have the latest <a href="http://nodejs.org/">Node.js</a> and <a href="http://npmjs.org/">npm</a> installed.</p>
+<p>Test that Grunt’s CLI is installed by running <code>grunt --version</code>.  If the command isn’t found, run <code>npm install -g grunt-cli</code>.  For more information about installing Grunt, see the <a href="http://gruntjs.com/getting-started">getting started guide</a>.</p>
+<ol>
+<li>Fork and clone the repo.</li>
+<li>Run <code>npm install</code> to install all dependencies (including Grunt).</li>
+<li>Run <code>grunt</code> to grunt this project.</li>
+</ol>
+<p>Assuming that you don’t see any red, you’re ready to go. Just be sure to run <code>grunt</code> after making any changes, to ensure that nothing is broken.</p>
+<h2 id="Submitting_pull_requests">Submitting pull requests</h2><ol>
+<li>Create a new branch, please don’t work in your <code>master</code> branch directly.</li>
+<li>Add failing tests for the change you want to make. Run <code>grunt</code> to see the tests fail.</li>
+<li>Fix stuff.</li>
+<li>Run <code>grunt</code> to see if the tests pass. Repeat steps 2-4 until done.</li>
+<li>Open <code>test/*.html</code> unit test file(s) in actual browser to ensure tests pass everywhere.</li>
+<li>Update the documentation to reflect any changes.</li>
+<li>Push to your fork and submit a pull request.</li>
+</ol>
