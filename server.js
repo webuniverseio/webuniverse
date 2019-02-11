@@ -8,13 +8,16 @@ var app = express();
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
+app.use((req, res, next) => {
+  console.log('yeah');
+  next();
+});
+
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
 app.use((err, req, res, next) => {
-  if (err) {
-    console.error({err});
-  }
+  console.error({err});
   next();
 });
 
