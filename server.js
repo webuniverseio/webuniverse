@@ -11,7 +11,7 @@ var url = require('url');
 
 app.use(function setCacheControl(req, res, next) {
   if (/\.(css|js|jpg|png|gif)$/.test(url.parse(req.url).pathname)) {
-    res.setHeader('Cache-Control', 'public, max-age=31536000');
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
   }
   next();
 });
