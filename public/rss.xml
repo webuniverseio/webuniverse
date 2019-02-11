@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Web Universe]]></title><description><![CDATA[Technical blog about web development, javascript, css, html, accessibility and many other cool things.]]></description><link>http://webuniverse.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 11 Feb 2019 01:26:31 GMT</lastBuildDate><item><title><![CDATA[Creating & publishing a browser extension or How changing a Stride favicon improved my performance by 40%]]></title><description><![CDATA[In this video you're going to learn about a UX problem in Stride web application due to distracting favicon & a way to address this by…]]></description><link>http://webuniverse.io/Creating-publishing-a-browser-extension-or-How-changing-a-Stride-favicon-improved-my-performance-by-40/</link><guid isPermaLink="false">http://webuniverse.io/Creating-publishing-a-browser-extension-or-How-changing-a-Stride-favicon-improved-my-performance-by-40/</guid><pubDate>Tue, 30 Oct 2018 23:40:27 GMT</pubDate><content:encoded>&lt;div&gt;&lt;p&gt;In this video you&amp;#x27;re going to learn about a UX problem in Stride web application due to distracting favicon &amp;amp; a way to address this by writing &amp;amp; publishing a custom extension.&lt;/p&gt;&lt;iframe style=&quot;margin-top:1em&quot; width=&quot;100%&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/lw9yk0w7S78&quot; frameBorder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;Links from the video:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://developer.chrome.com/extensions/getstarted&quot;&gt;Get started with extensions&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/k1LoW/backlog-favicon-changer/&quot;&gt;Example repo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/szarouski/stride-favicon&quot;&gt;Stride favicon repo&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.chrome.com/extensions/permission_warnings&quot;&gt;Permissions description&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://developer.chrome.com/extensions/content_scripts&quot;&gt;Content scripts description&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/developer/dashboard?pli=1&amp;amp;authuser=1&quot;&gt;Chrome webstore dashboard&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Getting started with Reporting API, Network Error Logging & Report URI]]></title><description><![CDATA[This article briefly explains how to enable deprecation, intervention & crash reports as well as network error logging with new browser API…]]></description><link>http://webuniverse.io/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/</link><guid isPermaLink="false">http://webuniverse.io/Getting-started-with-Reporting-API-Network-Error-Logging-Report-URI/</guid><pubDate>Sun, 28 Oct 2018 11:48:10 GMT</pubDate><content:encoded>&lt;div&gt;&lt;p&gt;This article briefly explains how to enable deprecation, intervention &amp;amp; crash reports as well as network error logging with new browser API. It is pretty much a TL;DR version of &lt;a href=&quot;https://scotthelme.co.uk/introducing-the-reporting-api-nel-other-major-changes-to-report-uri/&quot;&gt;scotthelme.co.uk&lt;/a&gt; article and reason for writing it in a first place is for me to understand this topic better. I hope you like this short version too and once interested you will subscribe to Scott&amp;#x27;s blog :)&lt;/p&gt;&lt;h2&gt;Reporting API&lt;/h2&gt;&lt;p&gt;Reporting API, which is currently in a status of &lt;a href=&quot;https://www.w3.org/TR/reporting/&quot;&gt;working draft&lt;/a&gt;, allows applications to tell browsers to report things like deprecation warnings to a specified url. Currently Reporting API supports following reporting types:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Deprecation - reports soon to be deprecated api. For example &lt;code&gt;WebSQL is deprecated and will be removed in Chrome 97 around January 2020&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;Intervention - reports when browser blocks request due to security or performance reasons. &lt;code&gt;A request to play audio was blocked because it was not triggered by user activation (such as a click)&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;Crashes - reports browser crashes &amp;amp; when possible provides a reason. At the time of writing this only &lt;code&gt;out-of-memory crash&lt;/code&gt; or &lt;code&gt;oom&lt;/code&gt; reason was supported.&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;&lt;code&gt;Report-To&lt;/code&gt; header&lt;/h3&gt;&lt;p&gt;In order to enable reporting api you need to set a response header like following:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;Report-To: {
+ &amp;quot;group&amp;quot;:&amp;quot;default&amp;quot;,
+ &amp;quot;max_age&amp;quot;:604800,
+ &amp;quot;endpoints&amp;quot;:[{
+   &amp;quot;url&amp;quot;:&amp;quot;https://endpoint/path&amp;quot;
+ }],
+ &amp;quot;include_subdomains&amp;quot;:true
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For deprecation/intervention/crash report types you should use &lt;code&gt;default&lt;/code&gt; for group name, so we can leave it alone. &lt;code&gt;max_age&lt;/code&gt; tells browser to remember to send requests to specified endpoints for given time in seconds (in the example it is set to 7 days). You can specify multiple endpoints if you wish.&lt;/p&gt;&lt;h2&gt;Network error logging&lt;/h2&gt;&lt;p&gt;Network error logging, which is also in a status of &lt;a href=&quot;https://www.w3.org/TR/network-error-logging/&quot;&gt;working draft&lt;/a&gt;, allows to report issues with:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;dns &lt;code&gt;unreachable, name_not_resolved, ...&lt;/code&gt;&lt;/li&gt;&lt;li&gt;tcp &lt;code&gt;timed_out, refused, ...&lt;/code&gt;&lt;/li&gt;&lt;li&gt;tls &lt;code&gt;cert.name_invalid, cert.authority_invalid, ...&lt;/code&gt;&lt;/li&gt;&lt;li&gt;http &lt;code&gt;response.invalid, response.redirect_loop, ...&lt;/code&gt;&lt;/li&gt;&lt;li&gt;abandoned&lt;/li&gt;&lt;li&gt;unknown&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Full list with descriptions can be found on the &lt;a href=&quot;https://www.w3.org/TR/network-error-logging/#dns-resolution-errors&quot;&gt;specification page&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;code&gt;NEL&lt;/code&gt; header&lt;/h3&gt;&lt;p&gt;In order to enable network error logging you need to set a response header like following:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;NEL: {
+  &amp;quot;report_to&amp;quot;:&amp;quot;default&amp;quot;,
+  &amp;quot;max_age&amp;quot;:604800,
+  &amp;quot;include_subdomains&amp;quot;:true
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see there is no endpoints property. &lt;code&gt;Report-To&lt;/code&gt; should be specified for this header, because &lt;code&gt;NEL&lt;/code&gt; uses endpoints from it to report data.&lt;/p&gt;&lt;h2&gt;Working with reports &amp;amp; &lt;code&gt;report-uri.com&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;You could build your own dashboard which handles reports for mentioned APIs. Sample report data structure is shown on previously mentioned specification pages. However there is a free to use service called &lt;a href=&quot;https://report-uri.com/&quot;&gt;Report URI&lt;/a&gt; which already handles these and other type of reports. It takes 5-10 minutes to set it up and as long as it is easy for you to add headers to your site, it should be very easy to start gathering data from Reporting &amp;amp; Network Error Logging APIs. It took it just about 30 minutes for me to add it to my site &amp;amp; I encourage you to do the same.&lt;/p&gt;&lt;p&gt;Thanks for reading &amp;amp; have fun.&lt;/p&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Cyclomatic complexity refactoring tips for javascript developers]]></title><description><![CDATA[This article briefly explains what is cyclomatic complexity and gives practical tips about how to make your projects maintainable…]]></description><link>http://webuniverse.io/cyclomatic-complexity-refactoring-tips/</link><guid isPermaLink="false">http://webuniverse.io/cyclomatic-complexity-refactoring-tips/</guid><pubDate>Fri, 23 Oct 2015 00:00:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;p&gt;This article briefly explains what is cyclomatic complexity and gives practical tips about how to make your projects maintainable.&lt;/p&gt;&lt;h2&gt;Cyclomatic complexity&lt;/h2&gt;&lt;p&gt;In short cyclomatic complexity is a number which indicates how many execution scenarios there might be inside your code. Everyday developers read lots of code and during this process they try to imagine what the code is doing. The more execution scenarios they see in the code, the harder it is to keep track of what is going on. That leads to misunderstanding and therefore to hacks and buggy implementations. Conditional operators increase cyclomatic complexity, so it is a matter of keeping them under control. Following operators will increase cyclomatic complexity in javascript:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;if | while | for | case | || | catch | ternary operator ?:
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Below is an example of how you don&amp;#x27;t want your code to look as it will be too complex to understand:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;if (condition) {
+  if (condition) {
+    while (condition ? expression : expression) {
+      if (condition || condition &amp;amp;&amp;amp; condition) {
+      }
+    }
+  }
+  //... a few more conditions like this and there is a 100% chance that we&amp;#x27;ll need a debugger today
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Functions as a way to reduce complexity&lt;/h2&gt;&lt;p&gt;We break down code into functions not only to make sure that we don&amp;#x27;t repeat ourselves, but also to define a scoped scenario which we can understand more easily. If code inside function was written without side effects (does only one thing and exactly what it says it does - that is what we&amp;#x27;re expecting from APIs which does not belong to us, right? :)), it is enough for us take a look at function&amp;#x27;s name to get the idea about what it is doing.&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function run() {
+  if (!isInstalled()) {
+    chooseInstallProcess();
+  }
+}
+function isInstalled() {}
+function chooseInstallProcess() {
+  if (shouldSkipDownload()) {
+    installProgram();
+  } else {
+    downloadAndInstall();
+  }
+}
+function shouldSkipDownload() {}
+function downloadAndInstall() {
+  downloadProgram();
+  installProgram();
+}
+function downloadProgram() {}
+function installProgram() {}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It is much easier to read code which is broken into smaller functions, isn&amp;#x27;t it? Small functions alone will improve readability of your code and make whole app much more stable and maintainable. &lt;strong&gt;When we split code into functions we split cyclomatic complexity.&lt;/strong&gt;&lt;/p&gt;&lt;h2&gt;Tools&lt;/h2&gt;&lt;p&gt;Code analysis tools like &lt;a href=&quot;http://eslint.org/docs/rules/complexity.html&quot;&gt;eslint&lt;/a&gt; or &lt;a href=&quot;http://jshint.com/docs/options/#maxcomplexity&quot;&gt;jshint&lt;/a&gt; will help you to find the value of cyclomatic complexity per each function. All you need to do is to define a max value after which they&amp;#x27;ll start logging errors. My personal preference for max complexity is 3 as it will guarantee that my functions will be small. Code below will fail complexity check:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function getName(firstName, lastName) {
+  //cyclomatic complexity always starts from 1
+  if (firstName &amp;amp;&amp;amp; lastName) { //if operator, +1
+    return firstName + &amp;#x27; &amp;#x27; + lastName;
+  } else if (firstName) { // +1
+    return firstName;
+  } else if (lastName) { // +1
+    return lastName;
+  } else if (!firstName &amp;amp;&amp;amp; !lastName) { // +1
+    return &amp;#x27;stranger&amp;#x27;;
+  }
+  //total complexity is 5
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And following code will pass:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function getNameOrFallback(name, fallback) {
+  //complexity starts from 1
+  return name || fallback; //|| operator, +1
+  //total complexity is 2
+}
+
+function getName(firstName, lastName) {
+  //complexity starts from 1
+  let name = &amp;#x27;&amp;#x27;;
+  if (firstName) { //if operator, +1
+    name = firstName;
+  }
+  if (lastName) { // +1
+    name += &amp;#x27; &amp;#x27; + lastName;
+  }
+  //even though complexity for getNameOrFallback is 2, it doesn&amp;#x27;t add up to complexity of current function
+  return getNameOrFallback(name.trim(), &amp;#x27;stranger&amp;#x27;);
+  //total complexity is 3
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When max complexity is set to 3 we can use at least two &lt;code&gt;if&lt;/code&gt; operators, which is more than enough per function. Every time, when you run into situation, where you need complexity to be more than 3 - you need to refactor, move part of the logic into a separate function or both.&lt;/p&gt;&lt;h2&gt;Refactoring tips&lt;/h2&gt;&lt;p&gt;There are a few scenarios where you might be tempted to disable or increase max-complexity. It is always a bad decision, so let me show you a few examples and how code can be refactored to meet your standards.&lt;/p&gt;&lt;h3&gt;Refactoring a switch-like logic&lt;/h3&gt;&lt;p&gt;Following example can be arbitrary complex:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function getMarkupForError(error) {
+  switch (error) {
+  case &amp;#x27;validation-error&amp;#x27;:
+    //...
+    break;
+  case &amp;#x27;network-error&amp;#x27;:
+    //...
+    break;
+  case &amp;#x27;server-error&amp;#x27;:
+    //...
+    break;
+  //... more cases
+  default:
+    //...handle unknown error
+    break;
+  }
+  //arbitrary complex
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The same example also can be re-written with if/if-else/else operators:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function getMarkupForError(error) {
+  if (error === &amp;#x27;validation-error&amp;#x27;) {/*...*/}
+  else if (error === &amp;#x27;network-error&amp;#x27;) {/*...*/}
+  else if (error === &amp;#x27;server-error&amp;#x27;) {/*...*/}
+  //...more conditions
+  else {/*...handle unknown error*/}
+  //arbitrary complex
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In order to reduce complexity here you simply need to create a map object:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function getMarkupForError(error) {
+  let errorTypeToMarkupMap = {
+    &amp;#x27;validation-error&amp;#x27;: function () {/*...*/},
+    &amp;#x27;network-error&amp;#x27;: function () {/*...*/},
+    &amp;#x27;server-error&amp;#x27;: function () {/*...*/}
+  };
+  if (errorTypeToMarkupMap.hasOwnProperty(error)) {
+    return errorTypeToMarkupMap[error];
+  }
+  /*...handle unknown error*/
+  //total complexity of this function will be 2
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;Refactoring logic which follows a pattern&lt;/h3&gt;&lt;p&gt;Following example is a bit more complex so we can&amp;#x27;t use switch:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function highlightCurrentSection($t) {
+  $t.find(&amp;#x27;.menu__item&amp;#x27;).removeClass(&amp;#x27;active&amp;#x27;);
+  let pathname = window.location.pathname;
+  if (//(books|livres)/i.test(pathname)) {
+    $t.find(&amp;#x27;.menu__books&amp;#x27;).addClass(&amp;#x27;active&amp;#x27;);
+  }
+  else if (//(baby|bebe)/i.test(pathname)) {
+    $t.find(&amp;#x27;.menu__baby&amp;#x27;).addClass(&amp;#x27;active&amp;#x27;);
+  }
+  else if (//(house-and-home|maison)/i.test(pathname)) {
+    $t.find(&amp;#x27;.menu__houseandhome&amp;#x27;).addClass(&amp;#x27;active&amp;#x27;);
+  }
+  //...more conditions
+  else if (//giftcards/i.test(pathname)) {
+    $t.find(&amp;#x27;.menu__giftcards&amp;#x27;).addClass(&amp;#x27;active&amp;#x27;);
+  }
+  //arbitrary complex
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can see that branches are following a pattern - we check that regex is matching current location and add an &lt;code&gt;active&lt;/code&gt; class to specified selector. The same code can be simplified if we create an array of objects, which contain a pattern and a selector and loop through it:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function highlightCurrentSection($t) {
+  $t.find(&amp;#x27;.menu__item&amp;#x27;).removeClass(&amp;#x27;active&amp;#x27;);
+
+  let menuItems = [
+    {pattern: //(books|livres)/i, className: &amp;#x27;.menu__books&amp;#x27;},
+    {pattern: //(baby|bebe)/i, className: &amp;#x27;.menu__baby&amp;#x27;},
+    {pattern: //(house-and-home|maison)/i, className: &amp;#x27;.menu__houseandhome&amp;#x27;},
+    {pattern: //giftcards/i, className: &amp;#x27;.menu__giftcards&amp;#x27;}
+  ];
+  let hasMatch = false;
+  let pathname = window.location.pathname;
+  _.each(menuItems, function addClassIfNeeded(params) {
+    if(!hasMatch &amp;amp;&amp;amp; params.pattern.test(pathname)) {
+      $t.find(params.className).addClass(&amp;#x27;active&amp;#x27;);
+      hasMatch = true;
+    }
+    //total complexity of addClassIfNeeded is 2
+  });
+  //total complexity of highlightCurrentSection function is 1
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;Refactoring logic where branches have similar purpose&lt;/h3&gt;&lt;p&gt;In following example we can see that branches inside lookupModule have the same purpose, but code inside conditions and inside branches doesn&amp;#x27;t follow a pattern:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function lookupModule(id) {
+  let sharedPathsConfig = require(&amp;#x27;../sharedPathsConfig&amp;#x27;);
+  let overWritesForServer = &amp;#x27;events&amp;#x27;;
+  let map = {react: &amp;#x27;react/addons&amp;#x27;, jquery: overWritesForServer};
+  if (/^\$.+/.test(id)) {
+    return overWritesForServer;
+  }
+  if (map[id]) {
+    return map[id];
+  }
+  if (id in sharedPathsConfig.paths) {
+    return path.join(process.cwd(), sharedPathsConfig.paths[id]);
+  }
+  //...more conditions
+  return id;
+  //total complexity of lookupModule is arbitrary
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;On order to refactor this we can create an array of objects which contain a callback for condition and a callback for logic and iterate over it:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;function lookupModule(id) {
+  let sharedPathsConfig = require(&amp;#x27;../sharedPathsConfig&amp;#x27;);
+  let overWritesForServer = &amp;#x27;events&amp;#x27;;
+  let map = {react: &amp;#x27;react/addons&amp;#x27;, jquery: overWritesForServer};
+  let lookupActions = [
+    {
+      condition: function() {return /^\$.+/.test(id);},
+      result: function() {return overWritesForServer;}
+    },
+    {
+      condition: function() {return map[id];},
+      result: function() {return map[id];}
+    },
+    {
+      condition: function() {return id in sharedPathsConfig.paths;},
+      result: function() {return path.join(process.cwd(), sharedPathsConfig.paths[id]);}
+    },
+    //...more conditions
+    {
+      condition: function() {return true;},
+      result: function() {return id;}
+    }
+  ];
+  //Symbol.iterator is used here for simplicity, you can use a polyfill function `makeIterator` from
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators
+  let actionsIterator = lookupActions[Symbol.iterator]();
+  let result;
+  while (!result) {
+    let action = actionsIterator.next().value;
+    if (action.condition()) {
+      result = action.result();
+    }
+  }
+  return result;
+  //total complexity of lookupModule function is 3
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Final thoughts&lt;/h2&gt;&lt;p&gt;Cyclomatic complexity defines how many use cases we should keep in mind (and how many tests we need to create) while working with a program. It is important to keep cyclomatic complexity under control and as we could see with a little practice we can keep it low quite easily.&lt;/p&gt;&lt;p&gt;I hope you liked this article. Please share your thoughts an tips in comments.&lt;/p&gt;&lt;h2&gt;Links&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cyclomatic_complexity&quot;&gt;Cyclomatic complexity&lt;/a&gt; - Wikipedia
+&lt;a href=&quot;http://eslint.org/docs/user-guide/integrations&quot;&gt;eslint integrations&lt;/a&gt; with editors and build tools
+&lt;a href=&quot;http://jshint.com/install/&quot;&gt;jshint integrations&lt;/a&gt; with editors and build tools&lt;/p&gt;&lt;style&gt;
+main h1[itemprop=&quot;name&quot;] {font-size: 32px;}
+@media (max-width: 540px) {
+    main h1[itemprop=&quot;name&quot;] {font-size: 25px;}
+}
+&lt;/style&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Manage project dependencies with simple-installer]]></title><description><![CDATA[In this article you're going to learn about a program installation manager similar to  chocolatey  or  apt-get , which is running on node.js…]]></description><link>http://webuniverse.io/manage-project-dependencies-with-simple-installer/</link><guid isPermaLink="false">http://webuniverse.io/manage-project-dependencies-with-simple-installer/</guid><pubDate>Sun, 05 Apr 2015 10:52:22 GMT</pubDate><content:encoded>&lt;div&gt;&lt;p&gt;In this article you&amp;#x27;re going to learn about a program installation manager similar to &lt;a href=&quot;https://chocolatey.org/&quot;&gt;chocolatey&lt;/a&gt; or &lt;code&gt;apt-get&lt;/code&gt;, which is running on node.js. It is called &lt;a href=&quot;https://github.com/szarouski/SimpleInstaller&quot;&gt;&lt;code&gt;SimpleInstaller&lt;/code&gt;&lt;/a&gt; and it can also work as a downloader and a task runner. We&amp;#x27;re going to look at a few simple usage examples and then we&amp;#x27;re going to see how SimpleInstaller can be integrated into project setup workflow, to bring new members of the team up to speed.&lt;/p&gt;&lt;h2&gt;Top level highlights&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;is crossplatform (tested on windows and debian)&lt;/li&gt;&lt;li&gt;downloads files (optional) and runs commands&lt;/li&gt;&lt;li&gt;skips already installed programs&lt;/li&gt;&lt;li&gt;could be used as a simple task runner&lt;/li&gt;&lt;li&gt;could work as a downloader&lt;/li&gt;&lt;li&gt;simple and because of that flexible and extendable &lt;a href=&quot;https://github.com/szarouski/SimpleInstaller#api&quot;&gt;api&lt;/a&gt;&lt;/li&gt;&lt;li&gt;tested with 100% coverage&lt;/li&gt;&lt;li&gt;uses harmony mode for generators and &lt;code&gt;npm co&lt;/code&gt; to manage execution flow&lt;/li&gt;&lt;/ul&gt;&lt;h2&gt;Example: Installing git on Debian&lt;/h2&gt;&lt;p&gt;Lets take a look at how it can be used to install a program. Here it installs git via &lt;code&gt;apt-get&lt;/code&gt; on debian:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;var co = require(&amp;#x27;co&amp;#x27;);
+var SimpleInstaller = require(&amp;#x27;simple-installer&amp;#x27;);
+
+co(function* () {
+    yield new SimpleInstaller({
+        prefix: &amp;#x27;apt-get install &amp;#x27;,
+        name: &amp;#x27;git&amp;#x27;
+    }).run();
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Since SimpleInstaller is using generators, it is &lt;a href=&quot;/asynchronous-programming-with-ES6-generators-promises-and-npm-co/&quot;&gt;recommended&lt;/a&gt; to use npm modules like &lt;code&gt;co&lt;/code&gt; to keep asynchronous code in a synchronous / maintainable manner.&lt;/p&gt;&lt;h2&gt;Example: Installing ruby on Windows&lt;/h2&gt;&lt;p&gt;This example downloads ruby and installs it on Windows:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;var co = require(&amp;#x27;co&amp;#x27;);
+var SimpleInstaller = require(&amp;#x27;simple-installer&amp;#x27;);
+
+co(function* () {
+    var installer = new SimpleInstaller({
+        link: &amp;#x27;https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.1-x64.exe?direct&amp;#x27;,
+        name: &amp;#x27;ruby&amp;#x27;,
+        postfix: &amp;#x27; /verysilent /dir=&amp;quot;c:\Ruby2&amp;quot; /tasks=&amp;quot;assocfiles,modpath&amp;quot;&amp;#x27;
+    });
+    yield installer.run();
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Fortunately rubyinstaller has command line interface which supports &lt;code&gt;/verysilent&lt;/code&gt; mode - which allows us to install a program without a single popup.&lt;/p&gt;&lt;h2&gt;Example: Batch installation&lt;/h2&gt;&lt;div style=&quot;text-align:center;margin-top:1em&quot;&gt;&lt;img src=&quot;static/simple-installer-fb31a79bb19ef48cf3bdc474f6171d74.gif&quot; alt=&quot;Installation process&quot;/&gt;&lt;/div&gt;&lt;p&gt;When we setup a new machine for a new team member, or when we start on a project developed by another company, we need to install all dependencies which are required for project to build and run. Those could be node modules, ruby gems, git repositories, bower components, etc... Lets take a look at how we could use SimpleInstaller to make project dependencies installation as simple as possible.&lt;/p&gt;&lt;p&gt;First we&amp;#x27;re going to create a module &lt;code&gt;config.js&lt;/code&gt;, which exports an array of program &lt;code&gt;info&lt;/code&gt; objects, which are required to build and run our project:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&amp;#x27;use strict&amp;#x27;;
+
+var path = require(&amp;#x27;path&amp;#x27;);
+
+module.exports = [{
+    link: &amp;#x27;https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.1-x64.exe?direct&amp;#x27;,
+    name: &amp;#x27;ruby&amp;#x27;,
+    postfix: &amp;#x27; /verysilent /dir=&amp;quot;c:\Ruby2&amp;quot; /tasks=&amp;quot;assocfiles,modpath&amp;quot;&amp;#x27;
+},
+{
+    link: &amp;#x27;http://github.com/msysgit/msysgit/releases/download/&amp;#x27; +
+    &amp;#x27;Git-1.9.4-preview20140929/Git-1.9.4-preview20140929.exe&amp;#x27;,
+    name: &amp;#x27;git.exe&amp;#x27;,
+    postfix: &amp;#x27; /DIR=&amp;quot;c:\Git&amp;quot; /VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /NOICONS &amp;#x27; +
+    &amp;#x27;/COMPONENTS=&amp;quot;icons,ext\reg\shellhere,assoc,assoc_sh&amp;quot; /LOADINF=&amp;quot;&amp;#x27; + path.resolve(__dirname, &amp;#x27;git.inf&amp;#x27;) + &amp;#x27;&amp;quot;&amp;#x27;
+}, {
+    prefix: &amp;#x27;npm i &amp;#x27;,
+    name: &amp;#x27;karma&amp;#x27;,
+    postfix: &amp;#x27;-cli -g&amp;#x27;
+}, {
+    prefix: &amp;#x27;npm i &amp;#x27;,
+    name: &amp;#x27;grunt&amp;#x27;,
+    postfix: &amp;#x27;-cli -g&amp;#x27;
+}, {
+    prefix: &amp;#x27;npm i &amp;#x27;,
+    name: &amp;#x27;bower&amp;#x27;,
+    postfix: &amp;#x27; -g&amp;#x27;
+}, {
+    prefix: &amp;#x27;SET PATH=%PATH%;c:\Ruby2\bin&amp;amp;&amp;amp;gem install &amp;#x27;,
+    name: &amp;#x27;compass&amp;#x27;,
+    postfix: &amp;#x27; -v 1.0.1&amp;#x27;
+}, {
+    prefix: &amp;#x27;echo &amp;#x27;,
+    name: &amp;#x27;bower_components&amp;#x27;,
+    postfix: &amp;#x27;&amp;amp;&amp;amp;SET PATH=%PATH%;c:\Git\bin\&amp;amp;&amp;amp;bower install&amp;#x27;
+}];
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here we can see that project requires a few global node packages, along with git, ruby and compass gem. As a final step it also runs &lt;code&gt;bower install&lt;/code&gt; to install client side dependencies.&lt;/p&gt;&lt;p&gt;Next we need to create a module &lt;code&gt;installer.js&lt;/code&gt; which will contain installation logic:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&amp;#x27;use strict&amp;#x27;;
+
+var co = require(&amp;#x27;co&amp;#x27;); //use co and lodash to simplify code
+var _ = require(&amp;#x27;lodash&amp;#x27;);
+var SimpleInstaller = require(&amp;#x27;simple-installer&amp;#x27;);
+var config = require(&amp;#x27;./config&amp;#x27;); //our config
+
+co(function* runCoroutine() {
+    //first we convert array of objects to array of generators
+    var setup = _.map(config, function* runInstaller(info) {
+        var installer = new SimpleInstaller(info);
+        yield installer.run();
+    });
+
+    //then iterate and run installers, one at a time
+    for (var i = 0, length = setup.length; i &amp;lt; length; i++) {
+        yield setup[i];
+    }
+
+    console.log(&amp;#x27;Installation finished&amp;#x27;.yellow);
+}).catch(function (ex) {
+    setTimeout(function throwUnhandledException() {
+        console.log(&amp;#x27;setup failed&amp;#x27;.red);
+        console.log((ex.message ? ex.message : ex).red);
+        throw ex;
+    }, 0);
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And finally we need to find a good place to run installer.js. I like using it in package.json postinstall script:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;{
+  &amp;quot;scripts&amp;quot;: {
+    &amp;quot;preinstall&amp;quot;: &amp;quot;npm cache clean&amp;quot;,
+    &amp;quot;postinstall&amp;quot;: &amp;quot;node --harmony installer.js&amp;amp;&amp;amp;npm shrinkwrap --dev&amp;quot;,
+    &amp;quot;test&amp;quot;: &amp;quot;echo &amp;quot;Error: no test specified&amp;quot; &amp;amp;&amp;amp; exit 1&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That way, after &lt;code&gt;npm install&lt;/code&gt;, once we get all node_modules, we can run our installer, which in turn will install all missing dependencies.&lt;/p&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[CSS organization, naming conventions and safe extend without preprocessors]]></title><description><![CDATA[Maintainability of CSS project highly depends on developer's choices, on how a project was originally planned. Due to CSS cascading nature…]]></description><link>http://webuniverse.io/css-organization-naming-conventions-and-safe-extend-without-preprocessors/</link><guid isPermaLink="false">http://webuniverse.io/css-organization-naming-conventions-and-safe-extend-without-preprocessors/</guid><pubDate>Sat, 14 Mar 2015 14:37:31 GMT</pubDate><content:encoded>&lt;div&gt;&lt;p&gt;Maintainability of CSS project highly depends on developer&amp;#x27;s choices, on how a project was originally planned. Due to CSS cascading nature, it is easy to end up in a situation when you try to fix or add one thing, which breaks something else. In worst case scenario the issue will remain unnoticed and end up going to production. It is especially hard to work on poorly organized css in a large team (a case where large team has access to CSS files is &lt;a href=&quot;https://css-tricks.com/poll-wrapup-the-number-of-people-touching-css/&quot;&gt;not too common&lt;/a&gt;, but is still valid).&lt;/p&gt;&lt;h2&gt;BEM (or better GRM)&lt;/h2&gt;&lt;p&gt;Good news is that there are battle tested tools and approaches which help to keep things under control. One of them is the famous &lt;a href=&quot;https://en.bem.info/&quot;&gt;BEM&lt;/a&gt;. Lets take a look at the following example:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div class=&amp;quot;shopping-cart-item&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;content special-offer&amp;quot;&amp;gt;
+    &amp;lt;h2 class=&amp;quot;title&amp;quot;&amp;gt;Title&amp;lt;/h2&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If at some point you&amp;#x27;ll need to remove whole &lt;code&gt;.content&lt;/code&gt; block from CSS which has nested &lt;code&gt;.title&lt;/code&gt;, you&amp;#x27;ll need to check if &lt;code&gt;.special-offer&lt;/code&gt; or even &lt;code&gt;.shopping-cart-item&lt;/code&gt; (and other ancestors) also have a nested &lt;code&gt;.title&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;Now lets take a look at one of the ways to write the same with BEM:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div class=&amp;quot;container container--shopping-cart&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;container__content container__content--special-offer&amp;quot;&amp;gt;
+    &amp;lt;h2 class=&amp;quot;container__title&amp;quot;&amp;gt;Title&amp;lt;/h2&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;By looking at this, we immediately know the relationship of each of the elements and can safely do clean up, if we need to remove some styles. BEM is an abbreviation for Block, Element, Modifier and in the example above we can tell that &lt;code&gt;container&lt;/code&gt; is a Block, &lt;code&gt;content&lt;/code&gt; and &lt;code&gt;title&lt;/code&gt; are Elements, &lt;code&gt;shopping-cart&lt;/code&gt; and &lt;code&gt;special-offer&lt;/code&gt; are Modifiers. While approach is great, it sounds a bit weird to call &lt;code&gt;container&lt;/code&gt; a Block and &lt;code&gt;content&lt;/code&gt; an Element. When someone mentions BEM as an approach for selectors naming, I like to translate it to &lt;strong&gt;GRM&lt;/strong&gt; - Group, Role, Modifier. Lets read it again: &lt;code&gt;container&lt;/code&gt; is a Group, &lt;code&gt;content&lt;/code&gt; and &lt;code&gt;title&lt;/code&gt; define Roles within a Group, &lt;code&gt;shopping-cart&lt;/code&gt; and &lt;code&gt;special-offer&lt;/code&gt; are Modifiers.&lt;/p&gt;&lt;h2&gt;To extend or not to extend?&lt;/h2&gt;&lt;p&gt;Though there is something that is not nice in the example above. Having duplicated classes feels redundant. Lets see what we can do about it. For html example above styles typically look similar to following:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.container {
+  border: 1px solid grey;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+  .container--shopping-cart {
+    border: 4px solid orange;
+    background-color: #eee;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If one use preprocessors we could illuminate a need for duplicated classes using extends. Here is how you can use it with SCSS:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot;&gt;.container {
+  border: 1px solid grey;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+  .container--shopping-cart {
+    @extend .container;
+    border: 4px solid orange;
+    background-color: #eee;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here is a generated result:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.container, .container--shopping-cart {
+  border: 1px solid grey;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+  .container--shopping-cart {
+    border: 4px solid orange;
+    background-color: #eee;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Looks nice, now we can use both &lt;code&gt;.container&lt;/code&gt; and &lt;code&gt;.container--shopping-cart&lt;/code&gt; independently and CSS result still looks good. However &lt;code&gt;@extend&lt;/code&gt; should be used carefully, as it might significantly increase the size of your CSS file or &lt;a href=&quot;http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/&quot;&gt;jumble specificity&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;So what can we do here to take advantage of behaviour which &lt;code&gt;@extend&lt;/code&gt; gives us, but without any risk? Here is a pure CSS solution:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot;&gt;.container, [class^=&amp;quot;container--&amp;quot;], [class*=&amp;quot; container--&amp;quot;] {
+  border: 1px solid grey;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+  .container--shopping-cart {
+    border: 4px solid orange;
+    background-color: #eee;
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; It is going to work if your BEM modifiers start with &lt;code&gt;%base%--&lt;/code&gt;. Pretty much the only time when you want to extend something is when you need to take base styles and modify them in a way. &lt;code&gt;[class^=&amp;quot;container--&amp;quot;]&lt;/code&gt; is taking care of a case when classname starts with selector, while &lt;code&gt;[class*=&amp;quot; container--&amp;quot;]&lt;/code&gt; takes care of cases when selector is in the middle or at the end of classname. I noticed that &lt;a href=&quot;https://icomoon.io/&quot;&gt;iconmoon&lt;/a&gt; icon font generator is using that approach too. So now html could be simplified to following:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div class=&amp;quot;container--shopping-cart&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;container__content--special-offer&amp;quot;&amp;gt;
+    &amp;lt;h2 class=&amp;quot;container__title&amp;quot;&amp;gt;Title&amp;lt;/h2&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Project organization tips&lt;/h2&gt;&lt;p&gt; &lt;a href=&quot;https://github.com/inuitcss/getting-started&quot;&gt;Inuit css&lt;/a&gt; is a great example of how css project could be organized. You don&amp;#x27;t have to use styles from inuit if you don&amp;#x27;t want to. As long as you follow the same &lt;em&gt;simple&lt;/em&gt; rules as outlined in getting started guide, your components will be reusable, while project will be scalable and maintainable. Note how files in inuit are namespaced, you&amp;#x27;ll get similar benefits as described in an article &lt;a href=&quot;http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/&quot;&gt;More Transparent UI Code with Namespaces&lt;/a&gt;, and you don&amp;#x27;t necessary have to prefix all your classnames with namespaces.&lt;/p&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Asynchronous programming with ES6 generators, promises and npm-co]]></title><description><![CDATA[This article explains what an npm  co  module is, how it works and how it can help you to write much cleaner and simpler asynchronous code…]]></description><link>http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</link><guid isPermaLink="false">http://webuniverse.io/asynchronous-programming-with-ES6-generators-promises-and-npm-co/</guid><pubDate>Tue, 03 Feb 2015 18:20:00 GMT</pubDate><content:encoded>&lt;div&gt;&lt;p&gt;This article explains what an npm &lt;code&gt;co&lt;/code&gt; module is, how it works and how it can help you to write much cleaner and simpler asynchronous code.&lt;/p&gt;&lt;h2&gt;The problem&lt;/h2&gt;&lt;p&gt;Writing asynchronous code could be very tricky, if you never did it before or didn&amp;#x27;t learn or develop good patterns to approach it. Asynchronous programming in javascript became popular with arrival of single page applications and node.js (where most of the operations happen asynchronously by default). Traditionally javascript was handling async operations using callbacks, and at least once every web developer faced a problem called &lt;a href=&quot;https://www.google.ca/search?q=callback+hell+definition&amp;amp;tbm=isch&quot;&gt;&lt;code&gt;callback hell&lt;/code&gt;&lt;/a&gt; or &lt;code&gt;pyramid of doom&lt;/code&gt;.&lt;/p&gt;&lt;h2&gt;Solutions&lt;/h2&gt;&lt;p&gt;A simple solution is to keep your code shallow, though error handling wouldn&amp;#x27;t be that simple. Another one, very well established solution is to use promises. Using ES6 generators we can simplify code for promises and continue writing code in a synchronous, easy to follow, manner, while keeping it asynchronous. If you&amp;#x27;re not familiar with how &lt;a href=&quot;#promises&quot;&gt;promises&lt;/a&gt; or &lt;a href=&quot;#generators&quot;&gt;generators&lt;/a&gt; are working, please do a quick research before you continue reading.&lt;/p&gt;&lt;h3&gt;co to the rescue&lt;/h3&gt;&lt;p&gt;co is a wrapper around promises and generators which allows to simplify asynchronous code a lot. Take a look at the example which shows how an async code could be written in a sync manner using co:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;co(function* getResults(){
+  //assume read and request perform asynchronous actions
+  var a = read(&amp;#x27;index.js&amp;#x27;, &amp;#x27;utf8&amp;#x27;);
+  var b = request(&amp;#x27;http://google.ca&amp;#x27;);
+
+  //when all operations will finish 
+  //res will have contents of index.js at [0]
+  //and response body from google at [1]
+  var res = yield [a, b];
+  //...code which does something with res
+}).catch(function (ex) {
+  //if an error was thrown from read or request functions
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here is what co will do for us:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Both read and request will execute in parallel on line 7 and when both of them finish - res array will hold results. It doesn&amp;#x27;t matter if request finishes before read - co will ensure that results are assigned to appropriate indexes.&lt;/li&gt;&lt;li&gt;On node.js you would have to check for errors in both callbacks for read and request functions, to ensure that your application does not exit in an unhandled state, but with co we can only worry about an end result and add a single error handler using &lt;code&gt;.catch&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;Code is rather short and easy to understand&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;So what exactly is happening? How does it work? To understand it better lets go over code of the main function in co and describe it. &lt;a href=&quot;https://github.com/tj/co/blob/48ca4dcfa6b6a7396aef57e8d78928cfffc814bc/index.js#L41&quot;&gt;Open&lt;/a&gt; code in new window so that you can put it side by side.&lt;/p&gt;&lt;p&gt;Let`s modify example just a little, in order to show how various scenarios will work in co:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//example.js
+co(function* getResults(){
+  //not really doing anything important,
+  //but will be useful to show how co works
+  try {
+    yield false;
+  } catch (ex) {
+    console.log(ex.message);
+  }
+
+  //assume read and request perform asynchronous actions
+  var a = read(&amp;#x27;index.js&amp;#x27;, &amp;#x27;utf8&amp;#x27;);
+  var b = request(&amp;#x27;http://google.ca&amp;#x27;);
+
+  //when all operations will finish
+  //res will have contents of index.js at [0]
+  //and response body from google at [1]
+  var res = yield [a, b];
+  //...code, which does something with res
+}).catch(function (ex) {
+  //if an error was thrown from read or request functions
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;First co saves context reference, in case you will ever want to use a context inside read or request functions:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:co
+var ctx = this;
+
+//Context binding example
+co.call(context, function* getResults() {/*&amp;#x27;this&amp;#x27; will point to context*/})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then it checks, if &lt;code&gt;gen&lt;/code&gt; is a function. If it is, then co needs to initialize a generator object by calling a function and it also ensure that &lt;code&gt;this&lt;/code&gt; has a proper context. If &lt;code&gt;gen&lt;/code&gt; is already a generator object, a statement will be skipped:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:co
+if (typeof gen === &amp;#x27;function&amp;#x27;) gen = gen.call(this);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then co returns a new Promise and runs &lt;code&gt;onFulfilled&lt;/code&gt; function with no arguments. Inside that function it will try to execute a generator code until a first &lt;code&gt;yield&lt;/code&gt; statement.&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:onFulfilled
+var ret;
+try {
+  ret = gen.next(res); //res is undefined
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In our case following code would execute inside &lt;code&gt;getResults&lt;/code&gt; generator:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//example.js
+try {
+  yield false;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If that code could throw an error - promise would be rejected with an error object and co would exit.&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:onFulfilled
+catch (e) {
+  return reject(e);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In our case generator returns an object with a &lt;code&gt;value&lt;/code&gt; property containing yielded value and this object is assigned to &lt;code&gt;ret&lt;/code&gt;. At that moment of time code would look like that:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:onFulfilled
+var ret;
+try {
+  ret = {value: false, done: false};
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then &lt;code&gt;onFulfilled&lt;/code&gt; will call &lt;code&gt;next(ret);&lt;/code&gt;. If &lt;code&gt;done&lt;/code&gt; would be true, co would resolve a promise with the value and exit from next:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; metastring=&quot;co/index.js:next&quot;&gt;if (ret.done) return resolve(ret.value);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Otherwise co attempts to convert &lt;code&gt;ret.value&lt;/code&gt; to a promise (we&amp;#x27;ll skip &lt;code&gt;toPromise&lt;/code&gt; for now). &lt;code&gt;.call&lt;/code&gt; is there to provide original context in case &lt;code&gt;ret.value&lt;/code&gt; is another &lt;a href=&quot;https://github.com/tj/co#yieldables&quot;&gt;yieldable&lt;/a&gt; value:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:next
+var value = toPromise.call(ctx, ret.value);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;On next line co checks if value is not falsy and if it is a promise, and if so, it adds appropriate handlers for promise fulfilment or rejection and exits from next. &lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:next
+if (value &amp;amp;&amp;amp; isPromise(value)) return value.then(onFulfilled, onRejected);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice how &lt;code&gt;onFulfilled&lt;/code&gt;, &lt;code&gt;onRejected&lt;/code&gt; and &lt;code&gt;next&lt;/code&gt; functions have references to &lt;code&gt;resolve&lt;/code&gt; and &lt;code&gt;reject&lt;/code&gt; callbacks from a new Promise, which was created at the beginning. If one of these functions calls &lt;code&gt;resolve&lt;/code&gt; or &lt;code&gt;reject&lt;/code&gt;, then top most promise will be settled. &lt;/p&gt;&lt;p&gt;In our case &lt;code&gt;ret.value&lt;/code&gt; in our case is &lt;code&gt;false&lt;/code&gt;, so next calls &lt;code&gt;onRejected&lt;/code&gt; handler, passes it a new TypeError and exits.&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:next
+return onRejected(new TypeError(&amp;#x27;You may only yield a function, promise, generator, array, or object, &amp;#x27;
+        + &amp;#x27;but the following object was passed: &amp;quot;&amp;#x27; + String(ret.value) + &amp;#x27;&amp;quot;&amp;#x27;));
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;onRejected&lt;/code&gt; is working quite similar to &lt;code&gt;onFulfilled&lt;/code&gt; function with the following difference - instead of running a code until next &lt;code&gt;yield&lt;/code&gt; statement, it tries to throw an error inside generator function &lt;em&gt;at the place where it stopped before&lt;/em&gt;:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:onRejected
+var ret;
+try {
+  ret = gen.throw(err);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That means it will replace &lt;code&gt;yield false&lt;/code&gt; with &lt;code&gt;throw err&lt;/code&gt; and example would look like this:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//example.js
+try {
+  throw err; //err is a TypeError
+} catch (ex) {
+  console.log(ex.message);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That behaviour is completely normal for generators and is described on MDN:
+{% blockquote MDN &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators&lt;/a&gt; %}
+You can force a generator to throw an exception by calling its throw() method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the yield that is currently suspended were instead a throw value statement.
+{% endblockquote %}
+At that moment execution flow will get back to example code and, because an error was handled with try-catch, it will be logged in console. Example will continue execution until it will either reach the end of generator or face a new &lt;code&gt;yield&lt;/code&gt;:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//example.js
+var a = read(&amp;#x27;index.js&amp;#x27;, &amp;#x27;utf8&amp;#x27;);
+var b = request(&amp;#x27;http://google.ca&amp;#x27;);
+var res = yield [a, b];
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So result of calling &lt;code&gt;gen.throw&lt;/code&gt; in &lt;code&gt;onRejected&lt;/code&gt; returns an array with a and b:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:onRejected
+var ret;
+try {
+  ret = {value: [a, b], done: false};
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Catch brunch is skipped but it would otherwise reject the promise. Finally, another &lt;code&gt;next&lt;/code&gt; call happens: it would skip immediate resolve, convert array to a promise created with Promise.all (check out &lt;code&gt;arrayToPromise&lt;/code&gt; function), which will be settled only when &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; promises are settled or one of them is rejected. Note how &lt;code&gt;arrayToPromise&lt;/code&gt; is making sure that Promise.all argument is an array of promises:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:arrayToPromise
+obj.map(toPromise, this)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;toPromise&lt;/code&gt; will first check if value is not falsy and if it is, it returns a value:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:toPromise
+if (!obj) return obj;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If value is a promise already, toPromise will return it:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:toPromise
+if (isPromise(obj)) return obj;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If value is a generator or a generator function, toPromise will recursively call co, pass it a context and an obj and as a result we will get a new promise:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:toPromise
+if (isGeneratorFunction(obj) || isGenerator(obj)) return co.call(this, obj);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If &lt;code&gt;obj&lt;/code&gt; is a function, toPromise will wrap it in a promise. First argument in a function is assumed to be an error object (node.js error handling pattern, so all node js callback APIs are covered):&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:toPromise
+if (&amp;#x27;function&amp;#x27; == typeof obj) return thunkToPromise.call(this, obj);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If &lt;code&gt;obj&lt;/code&gt; is an array or an object with &lt;a href=&quot;https://github.com/tj/co#yieldables&quot;&gt;yieldable&lt;/a&gt; properties, co will recursively convert them to promises:&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;//co/index.js:toPromise
+if (Array.isArray(obj)) return arrayToPromise.call(this, obj);
+if (isObject(obj)) return objectToPromise.call(this, obj);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So co ensures that &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; are converted to promises, and when both promises are fulfilled - Promise.all will ensure that results are assigned to appropriate indexes in an array. If one of them is rejected, then &lt;code&gt;.catch&lt;/code&gt; callback from the example will be able to handle an error (log it somewhere, or re-try once again). In either scenario a new Promise (one returned from co at the very beginning) will be settled, code will be executed asynchronously, and in the manner expected by developer, and will have all benefits of central place for error handling.&lt;/p&gt;&lt;p&gt;In a nutshell this is exactly what happens in co: generators and promises take care of asynchronous operations and error handling, while keeping your code clean and easy to follow. Similar logic will be hidden behind a native support of async programming with &lt;a href=&quot;https://www.youtube.com/watch?v=DqMFX91ToLw&quot;&gt;ES7 async-await&lt;/a&gt;. If you want to use co, generators and Promises in non ES6 environments, try out 6to5 transpiler (links below).&lt;/p&gt;&lt;p&gt;Thank you and please feel free to ask questions in the comments, follow us on &lt;a href=&quot;https://www.facebook.com/webuniverseio&quot;&gt;facebook&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/webuniverseio&quot;&gt;twitter&lt;/a&gt; pages, or subscribe to our &lt;a href=&quot;/rss.xml&quot;&gt;feed&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;Links&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;co - &lt;a href=&quot;https://github.com/tj/co&quot;&gt;https://github.com/tj/co&lt;/a&gt;  &lt;/li&gt;&lt;li&gt;shallow code - &lt;a href=&quot;http://exponential.io/blog/unnest-callbacks/&quot;&gt;http://exponential.io/blog/unnest-callbacks/&lt;/a&gt;&lt;/li&gt;&lt;li&gt;6to5 transpiler (babeljs) - &lt;a href=&quot;https://babeljs.io/docs/learn-es6/&quot;&gt;https://babeljs.io/docs/learn-es6/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Promises&lt;a name=&quot;promises&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;description - &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise&lt;/a&gt;&lt;/li&gt;&lt;li&gt;support - &lt;a href=&quot;http://kangax.github.io/compat-table/es6/#Promise&quot;&gt;http://kangax.github.io/compat-table/es6/#Promise&lt;/a&gt;&lt;/li&gt;&lt;li&gt;examples - &lt;a href=&quot;http://www.2ality.com/2014/09/es6-promises-foundations.html&quot;&gt;http://www.2ality.com/2014/09/es6-promises-foundations.html&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Generators&lt;a name=&quot;generators&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;description and examples - &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*&lt;/a&gt;&lt;/li&gt;&lt;li&gt;support - &lt;a href=&quot;http://kangax.github.io/compat-table/es6/#generators&quot;&gt;http://kangax.github.io/compat-table/es6/#generators&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;style&gt;
+  main h1[itemprop=&quot;name&quot;] {font-size: 1.72rem;}
+&lt;/style&gt;&lt;/div&gt;</content:encoded></item></channel></rss>

@@ -7,12 +7,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "start": "node server.js",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
-  "dependencies": {
+  "devDependencies":  {
     "@mdx-js/mdx": "^0.16.8",
     "@mdx-js/tag": "^0.16.8",
+    "express": "^4.16.4",
     "gatsby": "^2.0.104",
     "gatsby-mdx": "^0.3.5",
     "gatsby-plugin-feed": "^2.0.12",
