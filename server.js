@@ -11,6 +11,13 @@ var app = express();
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
+app.use((err, req, res, next) => {
+  if (err) {
+    console.error({err});
+  }
+  next();
+});
+
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
