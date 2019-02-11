@@ -1,0 +1,59 @@
+---
+title: 'Getting started with Reporting API, Network Error Logging & Report URI'
+image: "./image.jpg"
+imageSmall: "./imageSmall.jpg"
+copyright: Photo by rawpixel on Unsplash
+date: !!timestamp 2018-10-28 11:48:10
+overview: Quick look at Reporting API which is supported since Chrome M70, deprecation, intervention & crash reports, network error logging and Report URI dashboard.
+---
+This article briefly explains how to enable deprecation, intervention & crash reports as well as network error logging with new browser API. It is pretty much a TL;DR version of [scotthelme.co.uk](https://scotthelme.co.uk/introducing-the-reporting-api-nel-other-major-changes-to-report-uri/) article and reason for writing it in a first place is for me to understand this topic better. I hope you like this short version too and once interested you will subscribe to Scott's blog :\)
+## Reporting API
+Reporting API, which is currently in a status of [working draft](https://www.w3.org/TR/reporting/), allows applications to tell browsers to report things like deprecation warnings to a specified url. Currently Reporting API supports following reporting types:
+- Deprecation - reports soon to be deprecated api. For example `WebSQL is deprecated and will be removed in Chrome 97 around January 2020`.
+- Intervention - reports when browser blocks request due to security or performance reasons. `A request to play audio was blocked because it was not triggered by user activation (such as a click)`.
+- Crashes - reports browser crashes & when possible provides a reason. At the time of writing this only `out-of-memory crash` or `oom` reason was supported.
+
+### `Report-To` header
+In order to enable reporting api you need to set a response header like following:
+
+```
+Report-To: {
+ "group":"default",
+ "max_age":604800,
+ "endpoints":[{
+   "url":"https://endpoint/path"
+ }],
+ "include_subdomains":true
+}
+```
+
+For deprecation/intervention/crash report types you should use `default` for group name, so we can leave it alone. `max_age` tells browser to remember to send requests to specified endpoints for given time in seconds (in the example it is set to 7 days). You can specify multiple endpoints if you wish.
+
+## Network error logging
+Network error logging, which is also in a status of [working draft](https://www.w3.org/TR/network-error-logging/), allows to report issues with:
+ - dns `unreachable, name_not_resolved, ...`
+ - tcp `timed_out, refused, ...`
+ - tls `cert.name_invalid, cert.authority_invalid, ...`
+ - http `response.invalid, response.redirect_loop, ...`
+ - abandoned
+ - unknown
+
+Full list with descriptions can be found on the [specification page](https://www.w3.org/TR/network-error-logging/#dns-resolution-errors).
+
+### `NEL` header
+In order to enable network error logging you need to set a response header like following:
+
+```
+NEL: {
+  "report_to":"default",
+  "max_age":604800,
+  "include_subdomains":true
+}
+```
+
+As you can see there is no endpoints property. `Report-To` should be specified for this header, because `NEL` uses endpoints from it to report data.
+
+## Working with reports & `report-uri.com`
+You could build your own dashboard which handles reports for mentioned APIs. Sample report data structure is shown on previously mentioned specification pages. However there is a free to use service called [Report URI](https://report-uri.com/) which already handles these and other type of reports. It takes 5-10 minutes to set it up and as long as it is easy for you to add headers to your site, it should be very easy to start gathering data from Reporting & Network Error Logging APIs. It took it just about 30 minutes for me to add it to my site & I encourage you to do the same.
+
+Thanks for reading & have fun.

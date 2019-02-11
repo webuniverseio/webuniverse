@@ -1,0 +1,16 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  height: var(--footer-height);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.25;
+
+  @media (--footer-small) {
+    font-size: 14px;
+  }
+}

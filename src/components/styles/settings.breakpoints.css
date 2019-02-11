@@ -1,0 +1,6 @@
+@custom-media --page-small (max-width: 780.5px);
+@custom-media --page-small-min (min-width: 780.5px);
+@custom-media --page-small-plus (min-width: 781.5px);
+@custom-media --footer-small (max-width: 580px);
+@custom-media --navigation-small (max-width: 470px);
+@custom-media --navigation-small-plus (min-width: 471px);

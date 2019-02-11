@@ -1,0 +1,38 @@
+.post {
+	@media (--page-small-min) {
+		display: flex;
+		justify-content: space-between;
+
+		& > * {
+			width: 49%;
+		}
+	}
+}
+
+.title {
+	font-size: 20px;
+	line-height: 1.275;
+	display: inline;
+
+	@media (--page-small) {
+		& br {
+			display: none;
+		}
+	}
+	@media (--navigation-small) {
+		font-size: 17px;
+		line-height: 1.5;
+	}
+}
+
+.description {
+	text-align: right;
+
+	@media (--page-small) {
+		text-align: left;
+
+		& br {
+			display: none;
+		}
+	}
+}

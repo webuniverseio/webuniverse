@@ -1,0 +1,332 @@
+/*!
+                        ,,                                  ,,
+                       *MM                                  db
+                        MM
+`7M'    ,A    `MF.gP"Ya MM,dMMb.    `7MM  `7MM `7MMpMMMb. `7MM`7M'   `MF.gP"Ya`7Mb,od8,pP"Ybd .gP"Ya
+  VA   ,VAA   ,V,M'   YbMM    `Mb     MM    MM   MM    MM   MM  VA   ,V,M'   Yb MM' "'8I   `",M'   Yb
+   VA ,V  VA ,V 8M""""""MM     M8     MM    MM   MM    MM   MM   VA ,V 8M"""""" MM    `YMMMa.8M""""""
+    VVV    VVV  YM.    ,MM.   ,M9     MM    MM   MM    MM   MM    VVV  YM.    , MM    L.   I8YM.    ,
+     W      W    `Mbmmd'P^YbmdP'      `Mbod"YML.JMML  JMML.JMML.   W    `Mbmmd.JMML.  M9mmmP' `Mbmmd'
+*/
+
+/*
+- TABLE OF CONTENTS
+- Settings: Global variables, site-wide settings, config switches, etc.
+- Tools: Site-wide mixins and functions.
+- Generic: Low-specificity, far-reaching rulesets (e.g. resets).
+- Base: Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
+- Objects: Objects, abstractions, and design patterns (e.g. .media {}).
+- Components: Discrete, complete chunks of UI (e.g. .carousel {}). This is the one layer that inuitcss doesn’t get involved with.
+- Helpers: High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
+*/
+
+/*Settings:*/
+:root {
+  --page-content-side-padding: 25px;
+  --footer-height: 70px;
+  --line-color: #c7cacc;
+  --primary-color: #004adf;
+}
+
+/*Tools:*/
+/*Generic:*/
+/*Base:*/
+:focus {
+  outline: 1px dotted;
+}
+
+html {
+  font-size: 17px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body, textarea, input, select {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+input, select {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body:after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+
+  @media (--navigation-small) {
+    background: url(./images/samples/bg--small.jpg) no-repeat center center fixed;
+    background: url(./images/samples/bg--small.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
+    background-size: cover;
+    background-attachment: scroll; /*fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862*/
+  }
+  @media (--navigation-small-plus) {
+    background: url(./images/samples/bg--medium.jpg) no-repeat center center fixed;
+    background: url(./images/samples/bg--medium.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
+    background-size: cover;
+    background-attachment: scroll; /*fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862*/
+  }
+  @media (--page-small-plus) {
+    background: url(./images/samples/bg.jpg) no-repeat center center fixed;
+    background: url(./images/samples/bg.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
+    background-size: cover;
+    background-attachment: scroll; /*fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862*/
+  }
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:active {
+    outline: none !important;
+  }
+  & img {
+    border: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-weight: normal;
+
+  @nest :global(.wf-slabo27px-n4-active) & {
+    font-family: 'Slabo 27px', serif;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.41667;
+}
+h2 {
+  font-size: 30px;
+  line-height: 1.7;
+}
+h3 {
+  font-size: 24px;
+  line-height: 1.0625;
+}
+h4 {
+  font-size: 20px;
+  line-height: 1.275;
+}
+h5 {
+  font-size: 16px;
+  line-height: 1.59375;
+}
+h6 {
+  font-size: 14px;
+  line-height: 1.82143;
+}
+@media (--navigation-small) {
+  h1 {
+    font-size:29px;
+    line-height: 1.75862;
+  }
+  h2 {
+    font-size: 25px;
+    line-height: 1.02;
+  }
+  h3 {
+    font-size: 21px;
+    line-height: 1.21429;
+  }
+  h4 {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 1.59375;
+  }
+  h6 {
+    font-size: 14px;
+    line-height: 1.82143;
+  }
+}
+code {
+  padding: 2px;
+  background-color: #e0e0e0;
+}
+
+/*Objects:*/
+.a11y__element, .a11y__skip {
+   position:absolute;
+   left:-10000px;
+   top:auto;
+   width:1px;
+   height:1px;
+   overflow:hidden;
+}
+.a11y__skip {
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+}
+
+.list {
+  list-style-type: none;
+}
+.list__item {
+  margin-top: 1em;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+.list__item--hrDashes {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px dashed var(--line-color);
+  &:first-child {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+
+.content-entry {
+  line-height: 1.5;
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & p,
+  & ul,
+  & ol,
+  & table,
+  & header,
+  & blockquote {
+    margin: 1em 0 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  & h1 + ul,
+  & h2 + ul,
+  & h3 + ul,
+  & h4 + ul,
+  & h5 + ul,
+  & h6 + ul,
+  & h1 + ol,
+  & h2 + ol,
+  & h3 + ol,
+  & h4 + ol,
+  & h5 + ol,
+  & h6 + ol,
+  & h1 + h2,
+  & h2 + h3,
+  & p + ol,
+  & p + ul {
+    margin-top: 0.2em;
+  }
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    line-height: 1.2;
+  }
+  & small {
+    font-size: 0.85em;
+  }
+  & img {
+    max-width: 100%;
+  }
+  & ul,
+  & ol {
+    margin-left: 20px;
+  }
+  & li {
+    margin: 7px 0 0;
+  }
+  & table {
+    border-collapse: collapse;
+  }
+  & th,
+  & td {
+    border-width: 1px 0 0 1px;
+    border-style: dotted;
+    border-color: #000;
+    padding: 0.8em;
+  }
+  & td:first-child,
+  & th:first-child {
+    border-left: 0;
+  }
+  & tr:first-child td,
+  & tr:first-child th {
+    border-top: 0;
+  }
+}
+
+/*Components:*/
+.gsc-control-cse {
+  box-sizing: content-box;
+  & * {
+    box-sizing: content-box;
+  }
+  & table {
+    border-collapse: separate;
+  }
+}
+.gsc-completion-container {
+  color: #000;
+}
+.prism-code {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  overflow: auto;
+  border-right: 5px;
+}
+
+/*Helpers:*/
+.h-decorate-on-hover {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}

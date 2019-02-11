@@ -1,0 +1,27 @@
+.imageCopyright {
+  position: relative;
+  margin-top: -2em;
+  padding: 0 5px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.article {
+}
+.imageWrapper {
+  margin: auto;
+  display: table;
+
+  & img { /*fix for firefox bug https://bugzilla.mozilla.org/show_bug.cgi?id=975632*/
+    width: 100%;
+  }
+}
+.title {
+  font-weight: normal;
+
+  & br {
+    display: none;
+  }
+}
