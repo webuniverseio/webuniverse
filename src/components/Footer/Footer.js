@@ -15,6 +15,8 @@ export default () =>
   `}
   render={({site: {siteMetadata: {author}}}) =>
     <footer className={styles.footer} role="contentinfo">
+      Disclaimer: Any viewpoints and opinions expressed on this site do not, in any way, reflect those of my employer.<br/>
+      <br/>
       All content, unless otherwise indicated,{' '}
       <span className="nowrap">
 	      is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.

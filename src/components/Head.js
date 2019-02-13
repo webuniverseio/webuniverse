@@ -29,11 +29,11 @@ export default ({url = '', title, isPost, publishDate, description, image}) => {
         <link rel="dns-prefetch" href="//disqus.com"/>
         <link rel="dns-prefetch" href="//glitter-services.disqus.com"/>
         <link rel="dns-prefetch" href="//referrer.disqus.com"/>
-        <link rel="dns-prefetch" href="https://cse.google.com"/>
-        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-        <link rel="dns-prefetch" href="http://www.google.com"/>
-        <link rel="dns-prefetch" href="http://ajax.googleapis.com"/>
-        <link rel="dns-prefetch" href="http://fonts.googleapis.com"/>
+        <link rel="dns-prefetch" href="//cse.google.com"/>
+        <link rel="dns-prefetch" href="//www.google-analytics.com"/>
+        <link rel="dns-prefetch" href="//www.google.com"/>
+        <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
 
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:site" content="@webuniverseio"/>

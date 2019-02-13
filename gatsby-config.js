@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Web Universe`,
     description: `Technical blog about web development, javascript, css, html, accessibility and many other cool things.`,
-    siteUrl: `http://webuniverse.io`,
+    siteUrl: `https://webuniverse.io`,
     author: 'Sergey Zarouski',
     basePath: '/'
   },
