@@ -146,10 +146,10 @@ try {
   console.log(ex.message);
 }
 ```
-That behaviour is completely normal for generators and is described on MDN:
-{% blockquote MDN https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators %}
-You can force a generator to throw an exception by calling its throw() method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the yield that is currently suspended were instead a throw value statement.
-{% endblockquote %}
+That behaviour is completely normal for generators and is described on MDN (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators):
+
+> You can force a generator to throw an exception by calling its throw() method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the yield that is currently suspended were instead a throw value statement.
+
 At that moment execution flow will get back to example code and, because an error was handled with try-catch, it will be logged in console. Example will continue execution until it will either reach the end of generator or face a new `yield`:
 ```js
 //example.js
