@@ -8,6 +8,7 @@
     "build-gatsby": "gatsby build",
     "develop": "gatsby develop",
     "start": "node server.js",
+    "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },

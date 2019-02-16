@@ -15,7 +15,6 @@
 	margin-left: var(--wrapper-margin);
 	margin-right: var(--wrapper-margin);
 	max-width: var(--page-width);
-	height: 100%;
 }
 
 .layoutBase {
@@ -51,7 +50,6 @@
 .pageContentMain {
 	padding-top: 1em;
 	padding-bottom: 1em;
-	margin-bottom: var(--footer-height);
 	outline: 0;
 	overflow: hidden;
 }
