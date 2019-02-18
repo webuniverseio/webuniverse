@@ -1,0 +1,24 @@
+---
+title: Not found
+date: !!timestamp 2015-02-04 20:27:42
+image: "./image.jpg"
+imageSmall: "./imageSmall.jpg"
+overview: We're sorry, the page was lost in space.
+---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
+
+We're sorry, the page you're looking for was lost in a space. Please try using site search.

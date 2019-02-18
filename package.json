@@ -15,7 +15,7 @@
   "dependencies": {
     "express": "^4.16.4"
   },
-  "devDependencies":  {
+  "devDependencies": {
     "@mdx-js/mdx": "^0.16.8",
     "@mdx-js/tag": "^0.16.8",
     "gatsby": "^2.0.104",

@@ -1,0 +1,13 @@
+---
+title: Analyze and fix structured data
+date: !!timestamp 2019-02-16 18:10:00
+overview: Learn how to analyze and fix structured data on your site for better search engine optimization.
+type: post
+---
+import seo from "./lighthouse-seo.png";
+
+Recently I ported my blog from Hexo engine to Gatsby and as part of that migration I wanted to ensure that SEO is in the best state it can be. I added [structured data](https://schema.org) markup throughout all my site a while ago and wanted to make sure that after migration is done there are no errors. I took a note that I should verify that and moved on.
+
+Migration process took longer than I expected (1 week) and I couldn't find time to verify that structured data is still accurate. Finally I finished most important part of it and started to add small enhancements here and there. Following best practices I run audit on my site using [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and there was a note to verify that structured data is valid.
+
+<img src={seo} alt="Lighthouse audit shows 100 score for seo, but recommends to check structured data manually" />

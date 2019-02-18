@@ -1,16 +1,16 @@
 import React, {Fragment} from 'react';
-import Layout from "../components/Layout/Layout";
-import Date from "../components/Date/Date";
-import {graphql} from "gatsby";
-import MDXRenderer from "gatsby-mdx/mdx-renderer";
+import Layout from "../Layout/Layout";
+import DateComponent from "../Date/Date";
 import styles from "./Article.module.css";
 
 export default class Article extends React.PureComponent {
   componentDidMount() {
-    const {data: {mdx: {
-      fileAbsolutePath
-    }}} = this.props;
-    const isPost = fileAbsolutePath.includes('/posts/');
+    const {
+      pageContext: {
+        frontmatter: {type},
+      }
+    } = this.props;
+    const isPost = type === 'post';
 
     if (isPost) {
       if (!window.articleScriptsInitialized) {
@@ -33,13 +33,17 @@ export default class Article extends React.PureComponent {
     }
   }
   render() {
-    const {data: {mdx: {
-      fileAbsolutePath,
-      frontmatter: {title, image, imageSmall, copyright, date, dateFormatted, overview},
-      code: {body},
-      fields: {slug}
-    }}} = this.props;
-    const isPost = fileAbsolutePath.includes('/posts/');
+    const {
+      data: {mdx: {frontmatter: {image, imageSmall}}} = {mdx: {frontmatter: {image: null, imageSmall: null}}},
+      pageContext: {
+        frontmatter: {title, copyright, date, overview, type},
+      },
+      location: {pathname: slug},
+      children
+    } = this.props;
+    const dateFormatted = new Date(date).toLocaleDateString('en-US', {year: 'numeric', day: '2-digit', month: 'long'});
+    //const dateFormatted = date;
+    const isPost = type === 'post';
     const pageMeta = {
       type: 'Article',
       prop: 'articleBody'
@@ -66,41 +70,14 @@ export default class Article extends React.PureComponent {
           </div>}
           <h1 itemProp="name" className={styles.title}>{title}</h1>
           {isPost && <Fragment>
-            <Date {...{date, dateFormatted}} />
+            <DateComponent {...{date, dateFormatted}} />
             {/*TODO: typo??*/}
             <meta itemProp="datePublished" content={date}/>
           </Fragment>}
-          <MDXRenderer>{body}</MDXRenderer>
+          {children}
           {isPost && <div id="disqus_thread"/>}
         </article>
       </div>
-    </Layout>
+    </Layout>;
   }
 };
-
-export const query = graphql`
-  query($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      fileAbsolutePath
-      code {
-        body
-      }
-      frontmatter {
-        title
-        image {
-          publicURL
-        }
-        imageSmall {
-          publicURL
-        }
-        overview
-        copyright
-        date
-        dateFormatted: date(formatString: "DD MMMM, YYYY")
-      }
-      fields {
-        slug
-      }
-    }
-  }
-`;

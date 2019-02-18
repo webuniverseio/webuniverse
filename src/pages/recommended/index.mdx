@@ -6,6 +6,22 @@ image: "./image.jpg"
 imageSmall: "./imageSmall.jpg"
 isInTopBar: !!bool true
 ---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
+
 - http://www.2ality.com/ - Tons and tons of useful information about next version of javascript (ES6) and more
 - https://addyosmani.com/blog/ - Advanced level articles about javascript architecture and web performance
 - https://csswizardry.com/#section:articles - CSS may end up being a nightmare if you don't take care to structure it well. You'll find everything you need to know about CSS in that blog

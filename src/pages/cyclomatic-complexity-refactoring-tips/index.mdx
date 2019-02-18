@@ -4,7 +4,24 @@ date: !!timestamp 2015-10-23 00:00:00
 overview: Learn how to make your code much easier for reading and writing through management of cyclomatic complexity
 image: "./image.jpg"
 imageSmall: "./imageSmall.jpg"
+type: post
 ---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
+
 This article briefly explains what is cyclomatic complexity and gives practical tips about how to make your projects maintainable.
 ## Cyclomatic complexity
 In short cyclomatic complexity is a number which indicates how many execution scenarios there might be inside your code. Everyday developers read lots of code and during this process they try to imagine what the code is doing. The more execution scenarios they see in the code, the harder it is to keep track of what is going on. That leads to misunderstanding and therefore to hacks and buggy implementations. Conditional operators increase cyclomatic complexity, so it is a matter of keeping them under control. Following operators will increase cyclomatic complexity in javascript:

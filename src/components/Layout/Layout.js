@@ -1,7 +1,5 @@
 /*eslint no-unused-expressions: "off", eqeqeq: "off", no-sequences: "off"*/
-import React from "react";
-import {MDXProvider} from "@mdx-js/tag";
-import CodeBlock from '../CodeBlock';
+import React, {Fragment} from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import TopBar from "../TopBar/TopBar";
@@ -66,7 +64,7 @@ export default class Layout extends React.PureComponent {
 
   render() {
     const {children, url, isPost, publishDate, image, title, description} = this.props;
-    return <MDXProvider components={{code: CodeBlock}}>
+    return <Fragment>
       <Head {...{url, isPost, publishDate, image, title, description}} />
       <div itemScope itemType="http://schema.org/WebPage">
         <meta itemProp="typicalAgeRange" content="17-"/>
@@ -96,6 +94,6 @@ export default class Layout extends React.PureComponent {
           </div>
         </noscript>
       </div>
-    </MDXProvider>
+    </Fragment>
   }
 };

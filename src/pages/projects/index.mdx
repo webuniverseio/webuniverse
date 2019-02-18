@@ -6,6 +6,22 @@ image: "./image.jpg"
 imageSmall: "./imageSmall.jpg"
 isInTopBar: !!bool true
 ---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
+
 Quick overview of projects I've had a wonderful time working on...
 
 ## [SimpleInstaller](https://github.com/szarouski/SimpleInstaller)

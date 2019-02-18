@@ -5,7 +5,24 @@ imageSmall: "./imageSmall.jpg"
 copyright: Photo by rawpixel on Unsplash
 date: !!timestamp 2018-10-28 11:48:10
 overview: Quick look at Reporting API which is supported since Chrome M70, deprecation, intervention & crash reports, network error logging and Report URI dashboard.
+type: post
 ---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
+
 This article briefly explains how to enable deprecation, intervention & crash reports as well as network error logging with new browser API. It is pretty much a TL;DR version of [scotthelme.co.uk](https://scotthelme.co.uk/introducing-the-reporting-api-nel-other-major-changes-to-report-uri/) article and reason for writing it in a first place is for me to understand this topic better. I hope you like this short version too and once interested you will subscribe to Scott's blog :\)
 ## Reporting API
 Reporting API, which is currently in a status of [working draft](https://www.w3.org/TR/reporting/), allows applications to tell browsers to report things like deprecation warnings to a specified url. Currently Reporting API supports following reporting types:

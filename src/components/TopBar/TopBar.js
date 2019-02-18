@@ -7,33 +7,35 @@ export default () =>
   <StaticQuery
     query={graphql`
       query {
-        allMdx(
+        allSitePage(
           sort: {
             order: DESC,
-            fields: [frontmatter___date]
+            fields: [context___frontmatter___date]
           }
           filter: {
-            frontmatter: {
-              isInTopBar: {
-                eq: true
+            context: {
+              frontmatter: {
+                isInTopBar: {
+                  eq: true
+                }
               }
             }
           }
         ) {
           edges {
             node {
-              frontmatter {
-                title
+              context {
+                frontmatter {
+                  title
+                }
               }
-              fields {
-                slug
-              }
+              path
             }
           }
         }
       }
     `}
-    render={({allMdx: {edges: menuItems}}) => <div className={styles.topBar}>
+    render={({allSitePage: {edges: menuItems}}) => <div className={styles.topBar}>
       <nav className={styles.navigation} itemScope itemType="http://schema.org/SiteNavigationElement"
            role="navigation">
         <h2 className="a11y__element">Main navigation</h2>
@@ -41,7 +43,7 @@ export default () =>
         <SiteLink itemProp="url">
           <span itemProp="name">Home</span></SiteLink>{' '}
         <span className={styles.navigation__separator} />{' '}
-        {menuItems.map(({node: {frontmatter: {title}, fields: {slug: href}}}, x) => {
+        {menuItems.map(({node: {context: {frontmatter: {title}}, path: href}}, x) => {
           return <Fragment key={title}>
             <Link to={href} itemProp="url">
               <span itemProp="name">{title}</span></Link>{' '}

@@ -3,14 +3,14 @@ import {graphql} from 'gatsby';
 import Layout from "../components/Layout/Layout";
 import Post from "../components/Post/Post";
 
-export default ({data: {allMdx: {edges: posts}}}) => <Layout>
+export default ({data: {allSitePage: {edges: posts}}}) => <Layout>
   <section>
     <h2 className="a11y__element">Archive</h2>
     <div className="list" itemScope itemType="http://schema.org/Blog">
-      {posts.map(({node: {frontmatter: data, fields: {slug: href}}}) =>
-        <Post key={JSON.stringify(data)} {...data} {...{href}} className={'list__item--hrDashes'} />)}
+      {posts.map(({node: {id, context: {frontmatter: data}, path: href}}) =>
+        <Post key={id} {...data} {...{href}} className={'list__item--hrDashes'} />)}
       <div className="list__item--hrDashes" style={{textAlign: 'center'}}>
-        Subscribe to our <a href="/rss.xml">feed</a>, more useful articles will be published soon. Thank you.
+        Subscribe to my <a href="/rss.xml">feed</a>, more useful articles will be published soon. Thank you.
       </div>
     </div>
   </section>
@@ -18,28 +18,33 @@ export default ({data: {allMdx: {edges: posts}}}) => <Layout>
 
 export const query = graphql`
   query {
-    allMdx(
+    allSitePage(
       sort: {
         order: DESC,
-        fields: [frontmatter___date]
+        fields: [context___frontmatter___date]
       }
       filter: {
-        fileAbsolutePath: {
-          regex: "/.+/posts/.+/"
+        context: {
+          frontmatter: {
+            type: {
+              eq: "post"
+            }
+          }
         }
       }
     ) {
       edges {
         node {
-          frontmatter {
-            title
-            date
-            dateFormatted: date(formatString: "DD MMMM, YYYY")
-            overview
+          id
+          context {
+            frontmatter {
+              title
+              date
+              dateFormatted: date(formatString: "DD MMMM, YYYY")
+              overview
+            }
           }
-          fields {
-            slug
-          }
+          path
         }
       }
     }
