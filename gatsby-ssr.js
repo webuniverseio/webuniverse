@@ -1,6 +1,9 @@
-const React = require('react');
+import React from 'react';
+import CodeBlock from "./src/components/CodeBlock";
+import {MDXProvider} from "@mdx-js/tag";
+import Article from "./src/components/Article/Article";
 
-exports.onRenderBody = ({ setHeadComponents}) => {
+export const onRenderBody = ({ setHeadComponents}) => {
   setHeadComponents([
     <script key={'bugsnag'} defer src="//d2wy8f7a9ursnm.cloudfront.net/v5/bugsnag.min.js"/>,
     <script key={'bugsnag-inline'} dangerouslySetInnerHTML={{__html: `
@@ -13,3 +16,13 @@ exports.onRenderBody = ({ setHeadComponents}) => {
     `}} />
   ])
 };
+
+export const wrapPageElement =
+  ({element, props}) => props.location.pathname === "/" ?
+                        element :
+                        <Article {...props}>{element}</Article>;
+
+export const wrapRootElement =
+  ({ element }) => <MDXProvider components={{code: CodeBlock}}>
+    {element}
+  </MDXProvider>;
