@@ -14,14 +14,16 @@ export default ({url = '', title, isPost, publishDate, description, image}) => {
             siteUrl
             basePath
             description
+            defaultImageWithBasePath
           }
         }
       }
     `}
-    render={({site: {siteMetadata: {title: siteTitle, siteUrl, basePath, description: siteDescription}}}) => {
+    render={({site: {siteMetadata: {title: siteTitle, siteUrl, basePath,
+        defaultImageWithBasePath, description: siteDescription}}}) => {
       title = title ? `${title} | ${siteTitle}` : siteTitle;
       description = description ? description.replace(/<\/?[^>]+(>|$)/g, "") : siteDescription;
-      image = image || `${basePath}favicon-192x192.png`;
+      image = image || defaultImageWithBasePath;
       return <Helmet>
         <meta httpEquiv="x-dns-prefetch-control" content="on"/>
         <link rel="dns-prefetch" href="//webuniverse.disqus.com"/>

@@ -4,7 +4,8 @@ module.exports = {
     description: `Technical blog about web development, javascript, css, html, accessibility and many other cool things.`,
     siteUrl: `https://webuniverse.io`,
     author: 'Sergey Zarouski',
-    basePath: '/'
+    basePath: '/',
+    defaultImageWithBasePath: '/favicon-192x192.png'
   },
   plugins: [
     `gatsby-plugin-postcss`,
