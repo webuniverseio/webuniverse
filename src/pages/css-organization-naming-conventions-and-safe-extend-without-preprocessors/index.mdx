@@ -4,7 +4,24 @@ date: !!timestamp 2015-03-14 14:37:31
 overview: Opinion about how to organize clean and maintainable CSS structure, note about naming conventions, and how one can extend selectors without preprocessors
 image: "./image.jpg"
 imageSmall: "./imageSmall.jpg"
+type: post
 ---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
+
 Maintainability of CSS project highly depends on developer's choices, on how a project was originally planned. Due to CSS cascading nature, it is easy to end up in a situation when you try to fix or add one thing, which breaks something else. In worst case scenario the issue will remain unnoticed and end up going to production. It is especially hard to work on poorly organized css in a large team (a case where large team has access to CSS files is [not too common](https://css-tricks.com/poll-wrapup-the-number-of-people-touching-css/), but is still valid).
 
 ## BEM (or better GRM)

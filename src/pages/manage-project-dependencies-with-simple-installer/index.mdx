@@ -4,8 +4,24 @@ date: !!timestamp 2015-04-05 10:52:22
 overview: Download and/or install programs in similar manner to chocolatey or similar installation managers.
 image: "./image.png"
 imageSmall: "./imageSmall.png"
+type: post
 ---
 import img from "./simple-installer.gif";
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
 
 In this article you're going to learn about a program installation manager similar to [chocolatey](https://chocolatey.org/) or `apt-get`, which is running on node.js. It is called [`SimpleInstaller`](https://github.com/szarouski/SimpleInstaller) and it can also work as a downloader and a task runner. We're going to look at a few simple usage examples and then we're going to see how SimpleInstaller can be integrated into project setup workflow, to bring new members of the team up to speed.
 

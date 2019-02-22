@@ -4,7 +4,8 @@ module.exports = {
     description: `Technical blog about web development, javascript, css, html, accessibility and many other cool things.`,
     siteUrl: `https://webuniverse.io`,
     author: 'Sergey Zarouski',
-    basePath: '/'
+    basePath: '/',
+    defaultImageWithBasePath: '/favicon-192x192.png'
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -13,8 +14,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
     {
@@ -25,42 +26,52 @@ module.exports = {
          */
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
+            serialize: ({ query: { site, allSitePage } }) => {
+              return allSitePage.edges.map(edge => {
+                const url = site.siteMetadata.siteUrl + edge.node.path;
                 return {
-                  ...edge.node.frontmatter,
-                  description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
+                  title: edge.node.context.frontmatter.title,
+                  date: edge.node.context.frontmatter.date,
+                  description: edge.node.context.frontmatter.overview,
+                  url,
+                  guid: url,
+                  custom_elements: [{ "content:encoded": [
+                      '<div>',
+                      `<p>${edge.node.context.frontmatter.overview}</p>`,
+                      `<p><a href="${url}">Go to site to learn about this.</a></p>`,
+                      '</div>'
+                    ].join('') }]
                 };
               });
             },
             query: `
             {
-              allMdx(
+              allSitePage(
                 limit: 1000
                 sort: {
                   order: DESC,
-                  fields: [frontmatter___date]
+                  fields: [context___frontmatter___date]
                 }
                 filter: {
-                  fileAbsolutePath: {
-                    regex: "/.+/posts/.+/"
+                  context: {
+                    frontmatter: {
+                      type: {
+                        eq: "post"
+                      }
+                    }
                   }
                 }
               ) {
                 edges {
                   node {
-                    frontmatter {
-                      title
-                      date
+                    context {
+                      frontmatter {
+                        title
+                        date
+                        overview
+                      }
                     }
-                    fields {
-                      slug
-                    }
-                    excerpt
-                    html
+                    path
                   }
                 }
               }

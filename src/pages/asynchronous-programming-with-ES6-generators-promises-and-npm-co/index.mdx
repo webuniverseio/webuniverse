@@ -4,7 +4,23 @@ date: !!timestamp 2015-02-03 18:20:00
 overview: Simplify your code by writing<br> an asynchronous code in a synchronous manner
 image: "./image.jpg"
 imageSmall: "./imageSmall.jpg"
+type: post
 ---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
 
 This article explains what an npm `co` module is, how it works and how it can help you to write much cleaner and simpler asynchronous code.
 ## The problem
@@ -21,7 +37,7 @@ co(function* getResults(){
   var a = read('index.js', 'utf8');
   var b = request('http://google.ca');
 
-  //when all operations will finish 
+  //when all operations will finish
   //res will have contents of index.js at [0]
   //and response body from google at [1]
   var res = yield [a, b];
@@ -115,12 +131,12 @@ Otherwise co attempts to convert `ret.value` to a promise (we'll skip `toPromise
 //co/index.js:next
 var value = toPromise.call(ctx, ret.value);
 ```
-On next line co checks if value is not falsy and if it is a promise, and if so, it adds appropriate handlers for promise fulfilment or rejection and exits from next. 
+On next line co checks if value is not falsy and if it is a promise, and if so, it adds appropriate handlers for promise fulfilment or rejection and exits from next.
 ```js
 //co/index.js:next
 if (value && isPromise(value)) return value.then(onFulfilled, onRejected);
 ```
-Notice how `onFulfilled`, `onRejected` and `next` functions have references to `resolve` and `reject` callbacks from a new Promise, which was created at the beginning. If one of these functions calls `resolve` or `reject`, then top most promise will be settled. 
+Notice how `onFulfilled`, `onRejected` and `next` functions have references to `resolve` and `reject` callbacks from a new Promise, which was created at the beginning. If one of these functions calls `resolve` or `reject`, then top most promise will be settled.
 
 In our case `ret.value` in our case is `false`, so next calls `onRejected` handler, passes it a new TypeError and exits.
 ```js
@@ -200,10 +216,10 @@ So co ensures that `a` and `b` are converted to promises, and when both promises
 
 In a nutshell this is exactly what happens in co: generators and promises take care of asynchronous operations and error handling, while keeping your code clean and easy to follow. Similar logic will be hidden behind a native support of async programming with [ES7 async-await](https://www.youtube.com/watch?v=DqMFX91ToLw). If you want to use co, generators and Promises in non ES6 environments, try out 6to5 transpiler (links below).
 
-Thank you and please feel free to ask questions in the comments, follow us on [facebook](https://www.facebook.com/webuniverseio) and [twitter](https://twitter.com/webuniverseio) pages, or subscribe to our [feed](/rss.xml).
+Thank you and please feel free to ask questions in the comments, follow us on [facebook](https://www.facebook.com/webuniverseio) and [twitter](https://twitter.com/webuniverseio) pages, or subscribe to my [feed](/rss.xml).
 
 ## Links
-* co - https://github.com/tj/co  
+* co - https://github.com/tj/co
 * shallow code - http://exponential.io/blog/unnest-callbacks/
 * 6to5 transpiler (babeljs) - https://babeljs.io/docs/learn-es6/
 
