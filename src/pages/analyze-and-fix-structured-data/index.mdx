@@ -8,25 +8,29 @@ import seo from "./lighthouse-seo.png";
 import issues from "./issues.png";
 import lessIssues from "./less-issues.png";
 
-Recently I ported my blog from Hexo engine to Gatsby and as part of that migration I wanted to ensure that SEO is in the best state it can be. I added [structured data](https://schema.org) markup throughout all my site a while ago and wanted to make sure that once migration is done there are no errors. I took a note that I should verify that and moved on.
+Recently I ported my blog from Hexo engine to Gatsby and as part of that migration I wanted to ensure that SEO is in the best state it can be. I added [structured data](https://schema.org) markup throughout all my site a while ago and wanted to make sure that once migration is done - there are no errors. I took a note that I should verify this and moved on.
 
-Migration process took longer than I expected (2 weeks) and I couldn't find time to verify if structure is still accurate. Finally I finished most important part of migration and started to add small enhancements here and there. Following best practices I run audit on my site using [Lighthouse](https://developers.google.com/web/tools/lighthouse/):
+Migration process took longer than I expected (2 weeks) and I couldn't find time to verify if structure is still accurate. Finally, I finished most important part of migration and started to add small enhancements here and there. Following best practices, I run audit on my site using [Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
 <div style={{textAlign: 'center'}}>
     <img src={seo}
         alt="Lighthouse audit shows 100 score for seo, but recommends to check structured data manually" />
 </div>
 
-Even though SEO score is 100, there is a note that I should verify a couple things manually and one of them is structured data. One of the links is pointing to https://search.google.com/structured-data/testing-tool/, which is very useful for finding things I missed during migration.
+Even though SEO score is 100, there was a note that I should verify a couple things manually and one of them is structured data. One of the links was pointing to https://search.google.com/structured-data/testing-tool/, which is very useful for finding things I missed during migration.
+
+## Structured data tool results
 
 <div style={{textAlign: 'center'}}>
     <img src={issues}
         alt="Issues that structured data tool found with my blog" />
 </div>
 
-It would be great if a bit more information were provided about how issues can be fixed. A link to a section that gives more insight about missed/incorrect attributes would also be useful. But it is already great to know that something is wrong, so I can do my own research.
+It would be great if a bit more information were provided about how issues can be fixed. A link to a section that gives more insights about missed/incorrect attributes would also be useful. But it is already great to know that something is wrong, so I can do my own research.
 
-On https://schema.org/docs/full.html you can get a full list of types. I found [BlogPosting](https://schema.org/BlogPosting) type and there is a link to author, but unfortunately there are no examples of how it should be specified. On my site Blog type is also nested under WebPage type, and in markup I had author type specified, so you would think that it could be inherited, but if linter complains there must be a reason. Most likely idea was that since each blog posting could be written by different people, you should specify author explicitly for each field. In my case this is not to convenient, but also not the end of the world. I didn't want to surface this redundant information to screen readers by adding this info and putting it off screen, so I end up using meta tags for things that should not be visible. For things that are already presented I used `itemprop` attributes:
+## Examples from schema.org & improvements
+
+On https://schema.org/docs/full.html you can get a full list of types. I found [`BlogPosting`](https://schema.org/BlogPosting) type and there is a link to information about `author`, but unfortunately there are no examples of how it should be specified. On my site home page, `Blog` type is nested under section with `WebPage` type, which has `author` type specified, so you would think that it could be inherited, but if linter complains there must be a reason. Most likely idea was that since each blog posting could be written by different people, you should specify author explicitly for each field. In my case this is not too convenient, but also not the end of the world. I didn't want to surface this redundant information to screen readers by adding this info and putting it off screen, so I used meta tags for things that should not be visible. For things that are already presented I used `itemprop` attributes:
 
 ```html
 <meta itemprop="author" content="Sergey" />
@@ -36,62 +40,65 @@ On https://schema.org/docs/full.html you can get a full list of types. I found [
 <meta itemprop="mainEntityOfPage" content="https://path-to-blog-root"/>
 ```
 
-Linter says that image field should be required. This doesn't make much sense - why can't I have postings without images (I actually do have some like that!). So in this case I'm falling back to a default image even though it is not really surfaced anywhere, but if that will make google search tool happier, I can do that.
+Another weird thing was that linter marked image field as required. This doesn't make much sense to me - why can't I have posts without images (I do have some like that!)? So, in this case I'm falling back to a default image even though it is not really surfaced anywhere, but if that will make google search tool happier, I can do that.
 
-New results after those improvements looks like following:
+New results after those improvements look better:
 
 <div style={{textAlign: 'center'}}>
     <img src={lessIssues}
         alt="Issues number reduced, but author data looks weird" />
 </div>
 
-We can see that number of issues reduced, but there is something weird about author & publisher fields. They are both marked as Thing type (which is a parent type for Person, but this is still weird) and there is also that issue *The attribute publisher.itemtype has an invalid value*. It felt that problem was due to Thing type, but after change to Person like below *publisher.itemtype* error still didn't go away.
+We can see that number of issues reduced, but there is something weird about author & publisher fields. They are both marked as `Thing` type (which is a parent type for `Person`, but this is still weird) and there is also that issue *The attribute publisher.itemtype has an invalid value*. It felt that problem was due to `Thing` type, but after change to `Person` like below *publisher.itemtype* error still didn't go away.
 
 ```html
-<div itemProp="author" itemScope itemType="http://schema.org/Person">
-    <meta itemProp="name" content={author} />
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content={author} />
 </div>
-<div itemProp="publisher" itemScope itemType="http://schema.org/Person">
-    <meta itemProp="name" content={author} />
+<div itemprop="publisher" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content={author} />
 </div>
 ```
-I found another Google document that says that publisher should be of Organization type - https://developers.google.com/search/docs/data-types/article. It is a bit annoying as schema.org says that publisher type can be either Person or Organization - https://schema.org/publisher. But hey we use google tool and there is a little different thinking of how things should be structured. Following change improved things:
+I found another Google document that says that publisher should be of `Organization` type - https://developers.google.com/search/docs/data-types/article. It is a bit annoying as schema.org says that `publisher` type can be either `Person` or `Organization` - https://schema.org/publisher. I guess google has different thoughts about how things should be structured. Following change improved things:
 ```html
-<div itemProp="author" itemScope itemType="http://schema.org/Person">
-    <meta itemProp="name" content="Sergey" />
+<div itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Sergey" />
 </div>
-<div itemProp="publisher" itemScope itemType="http://schema.org/Organization">
-    <meta itemProp="name" content="Web Universe" />
+<div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Web Universe" />
 </div>
 ```
 But now there was a new error: *A value for the logo field is required.* And after that one there was another one about *logo.url* field. So final working result end up looking something like following:
 
 ```html
-<div itemProp="blogPost" itemScope itemType="http://schema.org/BlogPosting">
+<div itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     <div>
-      <meta itemProp="image" content="image"/>
-      <div itemProp="author" itemScope itemType="http://schema.org/Person">
-        <meta itemProp="name" content="author" />
+      <meta itemprop="image" content="image"/>
+      <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="author" />
       </div>
-      <div itemProp="publisher" itemScope itemType="http://schema.org/Organization">
-        <meta itemProp="name" content="siteTitle" />
-        <div itemProp="logo" itemScope itemType="https://schema.org/ImageObject">
-          <meta itemProp="url" content="siteLogo" />
+      <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="siteTitle" />
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="siteLogo" />
         </div>
       </div>
-      <meta itemProp="mainEntityOfPage" content="siteUrl"/>
-      <h3 itemProp="headline">
-        {title}
+      <meta itemprop="mainEntityOfPage" content="siteUrl"/>
+      <h3 itemprop="headline">
+        ...
       </h3>
-      <time dateTime="date" itemProp="datePublished">
-          {dateFormatted}
+      <time datetime="date" itemprop="datePublished">
+          ...
         </time>
     </div>
-    <div itemProp="description articleBody">...</div>
+    <div itemprop="description articleBody">...</div>
 </div>
 ```
-I'm not too happy about end result - there are a lot of empty divs and meta tags that I thought are not necessary because I thought that if information exists somewhere on the page - search engine will be smart enough to process it properly and inherit some types. My **takeaway** for this work is that I had a lot of assumptions and it is good that such a tool exist that can help you to really find how your data is structured and what you can do to help it be recognized better.
 
-Do you use this tool for your site? If no do you take other steps to ensure that data is represented correctly to search engine?
+## Takeaway - don't assume search will understand data structure on its own
+
+I'm not too happy about end result - there are a lot of empty divs and meta tags that I thought are not necessary because I thought that if information exists somewhere on the page - search engine will be smart enough to process it properly and inherit some types. My **takeaway** for this work is that I had a lot of assumptions and it is good that such a tool exists that can help you to really find how your data is structured and what you can do to help it be recognized better.
+
+Do you use this tool for your site? If no, do you take other steps to ensure that data is represented correctly to search engine?
 
 Thank you for reading! =)
