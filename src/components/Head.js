@@ -4,7 +4,7 @@ import {graphql, StaticQuery} from "gatsby";
 import "../styles/normalize.css";
 import "../styles/global.css";
 
-export default ({url = '', title, isPost, publishDate, description, image}) => {
+export default ({url = '', title, isPost, isHome = false, publishDate, description, image}) => {
   return <StaticQuery
     query={graphql`
       query {
@@ -56,6 +56,7 @@ export default ({url = '', title, isPost, publishDate, description, image}) => {
         <meta name="format-detection" content="telephone=no"/>
         <title>{title}</title>
         {url && <link rel="canonical" href={`${siteUrl}${url}`}/>}
+        {isHome && <link rel="canonical" href={`${siteUrl}`}/>}
         <link rel="apple-touch-icon" sizes="57x57" href={`${basePath}apple-touch-icon-57x57.png`}/>
         <link rel="apple-touch-icon" sizes="114x114" href={`${basePath}apple-touch-icon-114x114.png`}/>
         <link rel="apple-touch-icon" sizes="72x72" href={`${basePath}apple-touch-icon-72x72.png`}/>
