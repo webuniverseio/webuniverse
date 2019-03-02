@@ -1,0 +1,67 @@
+---
+title: Relative urls in structured data
+date: !!timestamp 2019-03-02 12:00:00
+overview: Small research around using relative urls in structured data
+type: post
+---
+import imageWithValidatorDomain from './path-has-validator-domain.png';
+import imageWithCorrectDomain from './path-has-correct-domain.png';
+import imagePathError from './image-path-error.png';
+import Link from '../../components/Link.js';
+
+In <Link to="analyze-and-fix-structured-data/">previous article</Link> about structured data, I was writing about process of validating and fixing it on my site. There are a lot of things that are not obvious and lack examples of how you should write structured data, but I think google validator can certainly provide some help with this. I also discovered that there is another tool which can help you to add markup or generate JSON-LD using visual editor - [Structured Data Markup Helper](https://www.google.com/webmasters/markup-helper/u/0/). This tool can help to get started, but don't expect much as it is quite basic.
+
+One of the questions I had after validating my site is whether I should use relative urls for structured data. The question popped up because validator was appending `https://search.google.com` in front of relative path, so for following markup
+```html
+<!--...other markup...-->
+<a itemProp="url" href="/about"><span itemProp="name">Sergey Zarouski</span></a>
+<!--...-->
+``` 
+validator was showing that url value is `https://search.google.com/about`
+
+<div style={{textAlign: 'center'}}>
+    <img src={imageWithValidatorDomain}
+        alt="Validator shows wrong domain" />
+</div>
+
+## Should we use absolute urls for structured data?
+If I would specify absolute url in markup it would definitely help validator to show correct url. At the same time it would create more work for me as I need to generate different urls for different environments which is not a hard thing to do for dynamic content, but not as trivial for static site. I don't want to build site multiple times for different environments - I want to build it once and let server decide how domain/base path should look like. At this moment it is also not clear that using relative paths is bad. 
+
+So I searched for following `google structured data should urls be absolute` and here are first 4 links I got:
+- [Structured data markups - Will Relative URLs Work Fine?](https://productforums.google.com/forum/#!topic/webmasters/fhXH3rz63I4)
+- [Using Absolute vs. Relative URLs in Schema images](https://productforums.google.com/forum/#!topic/webmasters/3x1txIIioBc)
+- [Semantics of relative URLs in schema.org Breadcrumbs in JSON-LD](https://stackoverflow.com/questions/38434422/semantics-of-relative-urls-in-schema-org-breadcrumbs-in-json-ld)
+- [Absolute or relative local URL in Schema.org JSON-LD?](https://webmasters.stackexchange.com/questions/99537/absolute-or-relative-local-url-in-schema-org-json-ld)
+
+There are people who are like me and are not certain about whether relative urls can be used. Other people say you will be fine with relative urls, but give you no evidence. Some end up using absolute urls "just in case". So very confusing.
+
+## Relative urls for structured data is ok
+Since I didn't want to deal with extra scope of adding absolute urls for structured data I just went ahead with relative urls for a quick test. I deployed changes to my site and went through it with validator again, but this time instead of pasting markup I was validating via url: [https://search.google.com/structured-data/...](https://search.google.com/structured-data/testing-tool/#url=https%3A%2F%2Fwebuniverse.io%2Frecommended%2F). And I could see a difference:
+
+<div style={{textAlign: 'center'}}>
+    <img src={imageWithCorrectDomain}
+        alt="Validator shows correct domain" />
+</div>
+
+Url is showing correct domain. So that explains it, if you paste markup directly into validator and there is a relative path - validator doesn't know which domain it belongs to and just appends its own domain. Once you deploy changes and test with real url you'll see that validator will append correct domain, so you can definitely use relative urls in structured data.
+
+## Relative paths in images?
+Unfortunately this is not true for image path for Article type. Markup like following
+```html
+<meta itemProp="image" content="/static/image-e5e22a494454ad4844372905f91d1ac5.jpg" />
+```
+resulted in validator error - `The value provided for image must be a valid URL.`
+
+<div style={{textAlign: 'center'}}>
+    <img src={imagePathError}
+        alt="relative path results in validator error" />
+</div>
+
+And it is true regardless of how you test - by pasting markup or via url. What is funny is that you don't get this error for AboutPage or ContactPage types... 
+
+At this point question is why image paths are treated differently from urls. I don't have answer to this question, but my workaround for image paths was to use meta tag which _is not visible_, so I could use absolute url with production domain there and not worry about other environments. You could also do that with JSON-LD.
+
+## Final thoughts
+Hopefully this gives you a bit more clarity into absolute vs relative urls with structured data. You can use them safely, but as long as validator is happy. In some cases you can use absolute urls which point to production, as long as there is no impact to functionality (you don't want to keep switching between your production and other environments by accident). I hope there will be improvements to structured data tool to make it easier to understand how it computes final urls from relative urls and there will be no errors when relative image paths are used.
+
+Thank you
