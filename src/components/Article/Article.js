@@ -3,6 +3,7 @@ import Layout from "../Layout/Layout";
 import DateComponent from "../Date/Date";
 import styles from "./Article.module.css";
 import SiteMetadata from "../SiteMetadata";
+import SchemaPublisher from "../SchemaPublisher";
 
 export default class Article extends React.PureComponent {
   componentDidMount() {
@@ -60,12 +61,16 @@ export default class Article extends React.PureComponent {
                    image={image && image.publicURL} title={title}
                    itemType={`http://schema.org/${pageMeta.type}`}
                    description={overview}>
-      {image ?
-       <meta itemProp={'image'} content={image.publicURL}/> :
-       <SiteMetadata>
-         {({defaultImageWithBasePath}) =>
-           <meta itemProp={'image'} content={defaultImageWithBasePath}/>}
-       </SiteMetadata>}
+      <SiteMetadata>
+        {({title, siteUrl, defaultImageWithBasePath}) => {
+          return <Fragment>
+            {image ?
+             <meta itemProp={'image'} content={siteUrl + image.publicURL}/> :
+             <meta itemProp={'image'} content={siteUrl + defaultImageWithBasePath}/>}
+            <SchemaPublisher siteTitle={title} siteLogo={siteUrl + defaultImageWithBasePath}/>
+          </Fragment>;
+        }}
+      </SiteMetadata>
       <div className={styles.article}
            id={`article-${slug.replace(/[^a-zA-Z0-9-]/g, '')}`}>
         <article className="content-entry" itemProp={pageMeta.prop}>
