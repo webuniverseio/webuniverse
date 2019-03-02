@@ -2,6 +2,8 @@ import React, {Fragment} from 'react';
 import Layout from "../Layout/Layout";
 import DateComponent from "../Date/Date";
 import styles from "./Article.module.css";
+import SiteMetadata from "../SiteMetadata";
+import SchemaPublisher from "../SchemaPublisher";
 
 export default class Article extends React.PureComponent {
   componentDidMount() {
@@ -57,8 +59,19 @@ export default class Article extends React.PureComponent {
     }
     return <Layout url={slug} isPost={isPost} publishDate={date}
                    image={image && image.publicURL} title={title}
+                   itemType={`http://schema.org/${pageMeta.type}`}
                    description={overview}>
-      <div className={styles.article} itemScope itemType={pageMeta.type}
+      <SiteMetadata>
+        {({title, siteUrl, defaultImageWithBasePath}) => {
+          return <Fragment>
+            {image ?
+             <meta itemProp={'image'} content={siteUrl + image.publicURL}/> :
+             <meta itemProp={'image'} content={siteUrl + defaultImageWithBasePath}/>}
+            <SchemaPublisher siteTitle={title} siteLogo={siteUrl + defaultImageWithBasePath}/>
+          </Fragment>;
+        }}
+      </SiteMetadata>
+      <div className={styles.article}
            id={`article-${slug.replace(/[^a-zA-Z0-9-]/g, '')}`}>
         <article className="content-entry" itemProp={pageMeta.prop}>
           {image && <div className={styles.imageWrapper}>
@@ -68,12 +81,12 @@ export default class Article extends React.PureComponent {
             </picture>
             {copyright && <span className={styles.imageCopyright}>&copy; {copyright}</span>}
           </div>}
-          <h1 itemProp="name" className={styles.title}>{title}</h1>
-          {isPost && <Fragment>
-            <DateComponent {...{date, dateFormatted}} />
-            {/*TODO: typo??*/}
-            <meta itemProp="datePublished" content={date}/>
-          </Fragment>}
+          <h1 itemProp="headline" className={styles.title}>{title}</h1>
+          {isPost ?
+           <Fragment>
+              <DateComponent {...{date, dateFormatted}} />
+            </Fragment> :
+           <meta itemProp="datePublished" content={date}/>}
           {children}
           {isPost && <div id="disqus_thread"/>}
         </article>

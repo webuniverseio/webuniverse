@@ -7,7 +7,7 @@ export default ({data:
   {allMdx: {edges: posts},
     site: {siteMetadata: {author, defaultImageWithBasePath, siteUrl, title: siteTitle}}}}) => {
   const siteLogo = siteUrl + defaultImageWithBasePath;
-  return <Layout>
+  return <Layout isHome>
     <section>
       <h2 className="a11y__element">Archive</h2>
       <div className="list" itemScope itemType="http://schema.org/Blog">
