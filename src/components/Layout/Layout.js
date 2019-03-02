@@ -63,10 +63,11 @@ export default class Layout extends React.PureComponent {
   }
 
   render() {
-    const {children, url, isPost, isHome, publishDate, image, title, description} = this.props;
+    const {children, url, isPost, isHome, publishDate, image,
+      title, description, itemType = 'http://schema.org/WebPage'} = this.props;
     return <Fragment>
       <Head {...{url, isPost, isHome, publishDate, image, title, description}} />
-      <div itemScope itemType="http://schema.org/WebPage">
+      <div itemScope itemType={itemType}>
         <meta itemProp="typicalAgeRange" content="17-"/>
         <div className={styles.wrapper}>
           <div className={styles.layoutBase}>

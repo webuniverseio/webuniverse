@@ -7,10 +7,15 @@ export default ({children}) =>
       query {
         site {
           siteMetadata {
+            author
             basePath
+            defaultImageWithBasePath
+            description
+            siteUrl
+            title
           }
         }
       }
     `}
-    render={({site: {siteMetadata: {basePath}}}) =>  children(basePath)}
+    render={({site: {siteMetadata}}) =>  children(siteMetadata)}
   />;
