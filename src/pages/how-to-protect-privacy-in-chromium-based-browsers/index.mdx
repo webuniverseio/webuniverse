@@ -1,0 +1,50 @@
+---
+title: How to protect your privacy in Chromium based browsers
+date: !!timestamp 2019-03-03 12:00:00
+overview: Learn how to increase confidence that your browser and installed extensions are not leaking your private data in Chromium based browsers. 
+type: post
+---
+First of all, let me start with a disclaimer: I'm not a security specialist - I'm an enthusiast, who likes to spend time on research and share findings, that I find useful, with others. Since security & privacy are sensitive topics you should decide on your **own** if information from this article is useful for **you**. Also note the date when this article was published as its contents might get out of date & following what it says can decrease your protection.
+
+Please note that scope of this article is protection inside browser. Article's target audience is developers, but parts of it might be useful for general public too.
+
+## TL;DR:
+- use different browsers for different activities
+- use Brave (if you use Chrome)
+- modify site access permissions for each extension
+- check extension code
+- use local extensions
+- avoid using bookmarklets
+
+## Use different browsers for different activities
+Many developers already use multiple browsers for development, but very likely one of the browsers you're using for development is your personal browser too. This means that experimental flags/settings that you change to test features apply to your personal browser too. Various development extensions might get access to pages you're viewing during off work hours and can do a lot of things to collect information about you. All extensions you're using might be coming from trusted sources, but what if one of them gets hacked? This is quite terrifying & a way to protect against that is to use different versions of browsers. I prefer to use Chromium based browsers and for development I use Chrome Canary, while for personal usage I prefer Brave. Every browser today has some sort of development version. It still requires a certain level of discipline, you need to ensure that you don't login into personal services in browser for development. My mental model is like following: if I need to login into something I ask myself - is it needed for development or for personal reasons? If it is needed for development - I create account or login into development account. If I need to login for personal reasons, I switch to Brave browser.
+
+## Use Brave
+I didn't get paid to promote Brave browser, but here are things that **I** like about it over Chrome browser which in my opinion help to reduce privacy concerns:
+- It has a built-in ad blocker, so I don't need to install it as an extension. I feel that it gives much better protection than famous AdBlock or Ghostery.
+- Its codebase is open source.
+- When you start typing in search bar, information is not being sent to default search engine unless you press enter and what you entered wasn't a url.
+- There are different privacy modes - usual private window or TOR private window.
+- In private mode you can choose to use a different search engine from your default engine.
+- It doesn't sync your browser with Google account when you login to one of the Google services.
+- This is minor and not everyone will agree with me, but I find modern browsers quite plain and to add diversity I used to install extension called Momentum which loads beautiful images from 500px for new tabs. Brave has that feature built-in, so I didn't have to install an extension and the less extensions I have, the better it is. 
+- I have trust in authority of Brendan Eich as a CEO (who also co-founded Mozilla and created JavaScript). I think Brave will stick to its promise of not treating customers as products.
+
+## Modify site access permissions for each extension you install
+Extensions are necessary to enhance browsing experience, but they might be asking too much when you install them. Until recently you only had a choice to either agree with permissions that extension was asking for during installation or not install an extension. Fortunately Chrome added an option to control site access permissions per extension. This gives you control to activate extensions on all sites, selected sites or on click. You can access these settings if you go to extension details page in chrome settings (`chrome://extensions`). Some extensions choose `selected sites` or `on click` option by default, but most of them fallback to `all sites`. I recommend to change extension settings every time you install a new one. Brave also has full support of Chrome extensions.
+
+## Check extension code
+It adds comfort to know that extension is not sending your private data to some service, right? We can check what extension is doing by looking at its source code. There are different ways to do that:
+- You might find extensions source code on github and that might be good enough to reduce some of the concerns
+- However extensions are not uploaded to chrome store from github, so there is always a chance that what you install is different from its source. When extension is installed, its code is unpacked into a specific folder on your computer. If you search for `Where does Chrome store extensions?` you'll find suggestions of specific location on your OS. Reviewing the code can help to understand what extension is truly doing.
+
+## Use local extensions
+It is also possible that when extension updates next time it will start collecting data about you (maybe on purpose, or maybe if it gets hacked). To avoid that you can move extension code to a different location on your computer and load it using `developer mode`. This will ensure that extension code will not change. Make sure that you review extension's code before doing that! :) You can also go extra mile and publish specific extension version on Chrome store. Either way downside of that approach is that extension might get out of date, but it really depends on what extension is doing.
+
+## Avoid using bookmarklets
+Very often bookmarklets are loading some external code that executes in the context of the page. There are two problems here - 1) you don't know when external code will change, 2) code that executes in the context of the page can do a lot more than what extensions can do so there is much more potential for harm. Unless you wrote bookmarklet yourself and it is not loading external code, I suggest you to avoid using them.
+
+## My setup
+I end up using Brave for personal browsing and I have only two extensions installed, both of which are local.
+
+Thank you for reading!
