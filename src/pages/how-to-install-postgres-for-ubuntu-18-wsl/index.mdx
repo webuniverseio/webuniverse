@@ -1,0 +1,28 @@
+---
+title: How to install Postgres on Ubuntu 18 (via WSL)
+date: !!timestamp 2019-06-02 12:00:00
+overview: Dry instructions for installing & running Postgres on Ubuntu 18 (via WSL) 
+type: post
+---
+After installing postgres on Ubuntu 18 (via WSL) using [official documentation](https://www.postgresql.org/download/linux/ubuntu/), I run into multiple issues. This article might help someone who also wants to install postgres on WSL (same problems might be happening on native Ubuntu version). First follow instructions in official documentation, then follow steps below.
+
+Change ownership of place where you'll be saving logs to `postgres` user:
+```bash
+sudo chown postgres /var/log/postgresql
+```
+Next create symlinks for postgres configuration, not sure why this is not happening by default, perhaps you should setup your own configs, but in my case I just wanted to get it running because I was just following an online course:
+```bash
+sudo ln -s /etc/postgresql/10/main/postgresql.conf  /var/lib/postgresql/10/main/postgresql.conf
+sudo ln -s /etc/postgresql/10/main/conf.d  /var/lib/postgresql/10/main/conf.d
+```
+Finally start server as postgres user:
+```bash
+sudo -u postgres /usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main -l /var/log/postgresql/logfile start
+```
+
+After that, in order to start working with Postgres from command line I used following command: 
+```bash
+sudo -u postgres psql postgres
+```
+
+Good luck :)
