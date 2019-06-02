@@ -24,6 +24,30 @@ query ($myComponentPath: String!) {
 
 Quick overview of projects I've had a wonderful time working on...
 
+## [array-to-object-helper](https://github.com/webuniverseio/array-to-object-helper#readme)
+Syntax sugar for destructuring arrays into objects.
+```js
+Promise.resolve([1,2,3,4,5,6,7,8])
+.then(([one, two, three, four, five, six, seven, eight]) => 
+  ({one, two, three, four, five, six, seven, eight}))
+```
+turns into
+```js
+Promise.resolve([1,2,3,4,5,6,7,8])
+.then(to`{one, two, three, four, five, six, seven, eight}`)
+```
+
+## [lerna-wizard](https://github.com/webuniverseio/lerna-wizard#readme)
+Command line wizard for lerna, which simplifies entry into using lerna because commands have clear descriptions.<br/>
+<div style={{textAlign: 'center', marginTop: '1em'}}>
+  <img src="https://raw.githubusercontent.com/szarouski/lerna-wizard/master/demo.gif" />
+</div>
+
+## [ssum](https://github.com/webuniverseio/ssum#readme)
+`ssum ~/downloads/file sha512`
+
+ssum is a command line tool for checksum generation with no dependencies - ideal for people who would like to make sure that checksum of downloaded files is matching checksum as listed on download site.
+
 ## [SimpleInstaller](https://github.com/webuniverseio/SimpleInstaller)
 Download and/or install programs in similar manner to chocolatey or similar installation managers.
 - crossplatform (tested on windows and debian)

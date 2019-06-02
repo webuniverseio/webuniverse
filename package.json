@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "webuniverse-blog",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "MIT",
+  "description": "Tech blog about web technologies and related topics.",
+  "version": "1.0.0",
+  "license": "CC BY 4.0",
   "scripts": {
     "build-gatsby": "gatsby build",
     "develop": "gatsby develop",

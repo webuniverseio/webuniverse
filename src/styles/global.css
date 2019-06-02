@@ -318,8 +318,9 @@ blockquote {
 .prism-code {
   margin-top: 1em;
   margin-bottom: 1em;
-  overflow: auto;
   border-right: 5px;
+  padding: 2px 5px;
+  overflow: auto;
 }
 
 /*Helpers:*/
