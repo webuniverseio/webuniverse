@@ -84,7 +84,9 @@ export default class Article extends React.PureComponent {
           <h1 itemProp="headline" className={styles.title}>{title}</h1>
           {isPost ?
            <Fragment>
-              <DateComponent {...{date, dateFormatted}} />
+              <div className={styles.datetime}>
+                <DateComponent {...{date, dateFormatted}} />
+              </div>
             </Fragment> :
            <meta itemProp="datePublished" content={date}/>}
           {children}
