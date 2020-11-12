@@ -6,6 +6,7 @@ image: "./image.jpg"
 imageSmall: "./imageSmall.jpg"
 isInTopBar: !!bool true
 ---
+import lernaWizardDemoImg from "./lerna-wizard-demo.gif";
 import {graphql} from "gatsby";
 export const query = graphql`
 query ($myComponentPath: String!) {
@@ -24,6 +25,10 @@ query ($myComponentPath: String!) {
 
 Quick overview of projects I've had a wonderful time working on...
 
+## [superagent-node-http-timings](https://github.com/webuniverseio/superagent-node-http-timings)
+
+This is a plugin for superagent package that allows to get http request timing breakdown when requests are initiated on node.js. This is useful for monitoring network quality between your server and service that you're calling via superagent.
+
 ## [array-to-object-helper](https://github.com/webuniverseio/array-to-object-helper#readme)
 Syntax sugar for destructuring arrays into objects.
 ```js
@@ -40,7 +45,7 @@ Promise.resolve([1,2,3,4,5,6,7,8])
 ## [lerna-wizard](https://github.com/webuniverseio/lerna-wizard#readme)
 Command line wizard for lerna, which simplifies entry into using lerna because commands have clear descriptions.<br/>
 <div style={{textAlign: 'center', marginTop: '1em'}}>
-  <img src="https://raw.githubusercontent.com/szarouski/lerna-wizard/master/demo.gif" />
+  <img src={lernaWizardDemoImg} alt="lerna wizard demo in terminal" />
 </div>
 
 ## [ssum](https://github.com/webuniverseio/ssum#readme)
