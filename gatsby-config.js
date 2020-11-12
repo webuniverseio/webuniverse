@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
+    //TODO update
     title: `Web Universe`,
     description: `Technical blog about web development, javascript, css, html, accessibility and many other cool things.`,
-    siteUrl: `https://webuniverse.io`,
+    siteUrl: `https://sergeyski.com`,
     author: 'Sergey Zarovskiy',
     basePath: '/',
     defaultImageWithBasePath: '/favicon-192x192.png'

@@ -20,8 +20,8 @@ app.use(function setCacheControl(req, res, next) {
 });
 
 app.use(function dontCrawlOnOrigin(req, res, next) {
-  if (/robots\.txt$/.test(url.parse(req.url).pathname) && req.header('host') !== 'webuniverse.io') {
-    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  if (/robots\.txt$/.test(url.parse(req.url).pathname) && req.header('host') !== 'sergeyski.com') {
+    res.setHeader('Cache-Control', 'public, max-age=86400');
     res.sendFile(__dirname + '/public/robots-origin.txt');
   } else {
     next();
