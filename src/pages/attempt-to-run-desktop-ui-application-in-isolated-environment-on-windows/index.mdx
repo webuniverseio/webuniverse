@@ -1,0 +1,21 @@
+---
+title: Attempt to run desktop UI application in isolated environment on Windows
+date: !!timestamp 2020-01-30 12:00:00
+overview: Options considered - Windows Sandbox, VM, WSL
+type: post
+---
+Did you ever find yourself in a situation where you want to experiment with a new GUI desktop program, but you don't fully trust it? Perhaps it brings some dependencies like Java (nothing is wrong with Java, but maybe I already have a different Java version installed), and you don't want to commit installing it just yet. Or maybe you don't want to risk it being malware or do things it should not do to your personal machine. 
+
+Below is summary of my recent experience (Windows specific):
+- You shouldn't use containers for such activities as they are not designed for running GUI applications
+- Windows Sandbox can be a good start, but it has limitations - you can't run multiple instances of sandbox, it is not friendly for restarts & will not persist state of your system
+- Virtual Machines require a lot of disk space, unless you work with setting them up on a daily basis, setup of various nuances will take a lot of time. You could use features like snapshots & run multiple instances, but if you need to toggle between a host and VMs often - it will be very annoying
+- WSL looks very promising - you can run multiple distro instances if you wish, you get persistent storage & with something like WSLG your experience will be more smooth, size is smaller than VMs
+
+So I tried all of those approaches, and I think I'll be using a combination of WSL and Sandboxes going forward, of course taking in count their limitations. VMs proved to be too heavy for my needs.
+
+Unfortunately due to another variable - VPN on host machine, I couldn't get very good experience in any environment. [WSL has a DNS issue](https://github.com/Microsoft/WSL/issues/1350) because of VPN, VMs has very similar issue & I observed some funkiness with Sandbox too. I don't want to give up on my privacy by turning off VPN & with some corporate VPNs it can also be a problem. If only my VPN could support split tunneling or there were a polished solution for testing GUI out of the box, but I guess that is a lot of different technologies that need integration, so it is what it is.
+
+If you know other ways to run GUI in isolated environments, please let me know!
+
+Thank you for reading!

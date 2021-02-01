@@ -1,0 +1,32 @@
+---
+title: My experience using WSL (Windows Subsystem for Linux)
+date: !!timestamp 2020-01-31 12:00:00
+overview: Purpose of WSL, issues, tips & tricks that I learned while working with it
+type: post
+---
+What is nice about using WSL is that you can get an isolated Linux environment similar to containers on your Windows machine, which unlocks a couple of opportunities:
+- With [WSLG](https://youtu.be/b2mnbyRgXkY?t=7975) you will be able to run Linux UI applications in such a manner that you'll not even be able to tell a difference between Windows UI application, and the one you launched through WSLG. You can even [do it today](https://techcommunity.microsoft.com/t5/windows-dev-appconsult/running-wsl-gui-apps-on-windows-10/ba-p/1493242), but, based on the video, I think experience will be much better. Here is an example of how to [run code editor from WSL](https://www.tomaszmik.us/2020/01/26/intellij-on-wsl/) to overcome various performance & UX issues when working with containers (note, same example can be used for other UI apps)
+- In comparison to VMs, WSL distributions are smaller & much faster to start working with. It doesn't feel as annoying to toggle between multiple operating systems. Microsoft picked Ubuntu as an OS of choice for promoting Linux through Windows, and if you look at hyper-v support of LTS Ubuntu version compared to WSL support, you'll see that focus certainly shifted in favor of WSL
+- In comparison to containers, WSL doesn't force you to have a single service to be running per a distro. It gives you persistent file system that you can easily access from Windows out of the box. You can keep using familiar Windows environment, shortcuts, code editors that are integrated with WSL, while still working with Linux based environment. However, it doesn't mean that WSL is a replacement for containers for cases when you want even smaller & isolated environments (or have a need for it, for example you don't want to mess your npm dependencies in one project by forgetting to switch to a specific version of node, because you were working on another project). It is not uncommon to see WSL used side by side with containers (Docker's integration with WSL2)
+
+It may sound like WSL is awesome, but truth is that is has its problems. Below you can find a list of problems I run into, and some workaround to get cope with them:
+- [WSL2 can consume a lot of memory](https://github.com/microsoft/WSL/issues/4166). You can set limit for it in config file
+- [File system performance issues](https://github.com/microsoft/WSL/issues/4197). Workaround is to work only specifically with linux filesystem by taking advantage of editors that support WSL filesystem or use WSL UI applications
+- [VPN running on host machine](https://github.com/Microsoft/WSL/issues/1350) may cause dns issues. Solution is to generate `/etc/resolv.conf` file that uses the same DNS as your host machine
+- Once I run into a problem where [WSL was failing to start](https://github.com/microsoft/WSL/issues/4364). I had to stop Docker Desktop and Docker Desktop Service to get WSL back to running state
+- In case Docker restart takes a lot of time after you restarted WSL via `Restart-Service LxssManager` - it is best to quit, then start Docker
+- It is a bit annoying that you can't run multiple instances of the same distro out of the box. For example Ubuntu is the best distro to start working with as it comes with a lot of tools preinstalled (while on Debian you need to install even basic commands like `curl`, `wget` yourself), but it is easy to only install first instance of Ubuntu. If you want to install more than one instance you need to copy some files around, run more commands than you would expect
+
+## Security
+TL;DR from https://securityboulevard.com/2020/09/running-sensitive-apps-in-wsl-safe-safe-safe/:
+- WSL is a Windows utility that allows users to run Linux applications under Windows
+- Any standard (non-admin) Windows process has full access rights to all the files that make up the WSL machine 
+- If a malicious program runs as this standard process, it can steal sensitive static data (e.g., SSH keys) by simply copying them from the WSL file system
+- By modifying the programs in the WSL file system, our malicious program can also capture sensitive dynamic data (e.g., usernames, passwords, passphrases)
+- The WSL design allows the activation of Windows processes by programs running inside the Linux machine. Therefore, a standard (non-root) Linux program can completely take over the Linux machine 
+- WSL 2, designed as a “lightweight Utility VM”, has markedly diminished the attack surfaces of WSL, but is still vulnerable to the security weakness described here
+- Bottom line: Running sensitive applications inside WSL is significantly less secure than running the equivalent applications in a standalone Windows or Linux Desktop system
+
+I'll not cover security workarounds you can apply, but there are definitely some options ;)
+
+Thank you for reading!
