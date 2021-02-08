@@ -1,0 +1,13 @@
+---
+title: Using Fiddler inside Windows Sandbox for http(s) traffic
+date: !!timestamp 2020-02-07 12:00:00
+overview: Capture browser traffic even though Windows Sandbox doesn't allow changing system proxy
+type: post
+---
+Fiddler is a proxy for Windows which allows monitoring & debugging network traffic. In order to debug https traffic with Fiddler you need to allow it to install a custom certificate that allows to decrypt incoming traffic for inspection and encrypt it again (with the custom cert) when it is sent back to the client.
+
+If you for whatever reason don't want to do that on your current machine, but really need to do network debugging, you're likely going to try Windows Sandbox. And discover that Fiddler doesn't capture traffic out of the box because sandbox doesn't allow changing system proxy.
+
+Fortunately it is fairly [easy to find a browser extension](https://duckduckgo.com/?q=browser+proxy+extension) which allows to proxy traffic from a browser through Fiddler, all you need to do is to specify `localhost:8888` (or whatever port you configured in Fiddler), and you're back in business. If you inspect sensitive traffic, please make sure you trust extension that you install.
+
+Thank you for reading!
