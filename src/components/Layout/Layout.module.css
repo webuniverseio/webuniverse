@@ -1,9 +1,9 @@
 :root {
-	--page-width: 884px;
+	--page-width: 1200px;
 	--page-side-margin: 15px;
 	--wrapper-margin: auto;
 }
-@media (max-width: /*--page-width + --page-side-margin * 2*/914px) {
+@media (max-width: /*--page-width + --page-side-margin * 2*/1230px) {
 	:root {
 		--wrapper-margin: var(--page-side-margin);
 	}
