@@ -18,9 +18,6 @@ export default ({data:
             {...{href, author, siteUrl, siteTitle, siteLogo}}
             image={siteUrl + (data.image ? data.image.publicURL : defaultImageWithBasePath)}
             className={'list__item--hrDashes'}/>)}
-        <div className="list__item--hrDashes" style={{textAlign: 'center'}}>
-          Subscribe to my <a href="/rss.xml">feed</a>, more useful articles will be published soon. Thank you.
-        </div>
       </div>
     </section>
   </Layout>;
