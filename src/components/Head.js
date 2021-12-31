@@ -34,8 +34,9 @@ export default ({url = '', title, isPost, isHome = false, publishDate, descripti
         <link rel="dns-prefetch" href="//cse.google.com"/>
         <link rel="dns-prefetch" href="//www.google-analytics.com"/>
         <link rel="dns-prefetch" href="//www.google.com"/>
-        <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
-        <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet" />
 
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:site" content="@webuniverseio"/>

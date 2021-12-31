@@ -10,23 +10,6 @@ export default class Layout extends React.PureComponent {
   componentDidMount() {
     if (!window.layoutScriptsInitialized) {
       window.layoutScriptsInitialized = true;
-      /*google fonts*/
-      window.WebFontConfig = {
-        google: {
-          families: ['Slabo+27px']
-        }
-      };
-
-      (function () {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-
       /*google search*/
       (function () {
         var cx = '014578715170147478038:jt5g2str_f0';

@@ -109,9 +109,6 @@
     letter-spacing: 1.15em;
     text-indent: 1.2em;
   }
-  @nest :global(.wf-slabo27px-n4-active) & {
-    font-family: "Times New Roman", Times, serif;
-  }
 }
 .logoUniverse {
   display: block;

@@ -47,7 +47,7 @@ html {
 }
 
 body, textarea, input, select {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: system-ui;
 }
 
 body, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dt, dd, ol, ul, li {
@@ -120,10 +120,7 @@ h5,
 h6 {
   color: var(--primary-color);
   font-weight: normal;
-
-  @nest :global(.wf-slabo27px-n4-active) & {
-    font-family: 'Slabo 27px', serif;
-  }
+  font-family: 'Slabo 27px', system-ui, serif;
 }
 
 h1 {

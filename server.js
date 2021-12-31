@@ -47,7 +47,6 @@ app.use(function setSecurityHeaders(req, res, next) {
       `default-src 'self'`,
       `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${[
         'd2wy8f7a9ursnm.cloudfront.net',
-        '*.googleapis.com',
         '*.google.com',
         '*.google-analytics.com',
         'disqus.com',

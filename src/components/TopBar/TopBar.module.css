@@ -24,6 +24,9 @@
 }
 
 .navigation {
+  position: relative;
+  font-family: 'Slabo 27px', system-ui, serif;
+
   & a {
     text-decoration: none;
 
@@ -39,11 +42,6 @@
   @media (--footer-small) {
     font-size: 14px;
     line-height: 1.82;
-  }
-  position: relative;
-
-  @nest :global(.wf-slabo27px-n4-active) & {
-    font-family: 'Slabo 27px', serif;
   }
 
   @nest .topBar & {
