@@ -54,7 +54,9 @@ export default () =>
       <div className={styles.search}>
         <section>
           <h3 className="a11y__element">Search panel</h3>
-          <div className="gcse-search" id={'gcse-search'} style={{height: '33px'}}/>
+          <div style={{height: '31px'}}>{/*this div helps to avoid jump during rendering*/}
+            <div className="gcse-search" id={'gcse-search'} />
+          </div>
         </section>
       </div>
     </div>}/>
