@@ -5,8 +5,7 @@ import styles from "./Header.module.css";
 export default () => <header className={styles.header} role="banner">
   <Link>
     <h1 className={styles.logo} itemProp="name">
-      Web
-      <span className={styles.logoUniverse}>Universe</span>
+      Sergeyski Blog
     </h1>
   </Link>
 </header>

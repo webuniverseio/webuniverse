@@ -36,15 +36,7 @@
 
 .pageContent {
 	position: relative;
-	border-radius: 16px;
 	display: table-cell;
-	background-color: white;
-	color: black;
-	box-shadow: 0 0 10px 0 #cff, inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.pageContentPadding {
-	padding: 0 var(--page-content-side-padding);
 }
 
 .pageContentMain {

@@ -22,7 +22,6 @@
 
 /*Settings:*/
 :root {
-  --page-content-side-padding: 25px;
   --content-font-size: 17px;
   --line-color: #c7cacc;
   --primary-color: #004adf;
@@ -66,33 +65,8 @@ html,
 body {
   height: 100%;
 }
-
-body:after {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: '';
-
-  @media (--navigation-small) {
-    background: url(./images/samples/bg--small.jpg) no-repeat center center fixed;
-    background: url(./images/samples/bg--small.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
-    background-size: cover;
-    background-attachment: scroll; /*fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862*/
-  }
-  @media (--navigation-small-plus) {
-    background: url(./images/samples/bg--medium.jpg) no-repeat center center fixed;
-    background: url(./images/samples/bg--medium.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
-    background-size: cover;
-    background-attachment: scroll; /*fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862*/
-  }
-  @media (--page-small-plus) {
-    background: url(./images/samples/bg.jpg) no-repeat center center fixed;
-    background: url(./images/samples/bg.jpg) no-repeat center center fixed, radial-gradient(ellipse at center, #513580 0%,#0d0627 100%);
-    background-size: cover;
-    background-attachment: scroll; /*fix for iOS stretching background https://css-tricks.com/forums/topic/full-page-backgrounds-on-ios-background-size-cover/page/2/#post-129862*/
-  }
+body {
+  background-color: aliceblue;
 }
 
 a {
@@ -334,4 +308,10 @@ blockquote {
 
 .nowrap {
   white-space: nowrap;
+}
+
+/*Google search*/
+#gcse-search .gsc-control-cse {
+  background-color: transparent !important;
+  border-color: transparent !important;
 }

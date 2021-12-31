@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    //TODO update
-    title: `Web Universe`,
-    description: `Technical blog about web development, javascript, css, html, accessibility and many other cool things.`,
+    title: `Sergeyski`,
+    description: `Personal blog about web development, javascript, react, css, html, accessibility and other relevant topics`,
     siteUrl: `https://sergeyski.com`,
     author: 'Sergey Zarovskiy',
     basePath: '/',

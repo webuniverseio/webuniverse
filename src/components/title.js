@@ -3,5 +3,5 @@ import { Helmet } from "react-helmet";
 
 export default () => <Helmet>
   <meta charSet="utf-8" />
-  <title>Web Universe</title>
+  <title>Sergeyski</title>
 </Helmet>;

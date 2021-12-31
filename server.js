@@ -21,7 +21,7 @@ app.use(function setCacheControl(req, res, next) {
 
 app.use(function dontCrawlOnOrigin(req, res, next) {
   if (/robots\.txt$/.test(url.parse(req.url).pathname) &&
-    !['sergeyski.com', 'webuniverse.io'].includes(req.header('host'))) {
+    !['sergeyski.com'].includes(req.header('host'))) {
     res.setHeader('Cache-Control', 'public, max-age=86400');
     res.sendFile(__dirname + '/public/robots-origin.txt');
   } else {

@@ -1,7 +1,7 @@
 {
-  "name": "webuniverse-blog",
+  "name": "sergeyski-blog",
   "private": true,
-  "description": "Tech blog about web technologies and related topics.",
+  "description": "Personal blog about web development related topics",
   "version": "1.0.0",
   "license": "CC BY 4.0",
   "scripts": {

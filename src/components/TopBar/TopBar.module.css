@@ -1,12 +1,11 @@
 .topBar {
-  margin: 0 var(--page-content-side-padding);
   border-bottom: 1px solid var(--line-color);
-  padding-top: 20px;
   padding-bottom: 10px;
 
   @media (--page-small-min) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   & :global(.gsc-control-cse) {
