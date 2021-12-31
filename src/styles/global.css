@@ -23,6 +23,7 @@
 /*Settings:*/
 :root {
   --page-content-side-padding: 25px;
+  --content-font-size: 17px;
   --line-color: #c7cacc;
   --primary-color: #004adf;
 }
@@ -35,7 +36,8 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: var(--content-font-size);
+  font-size: clamp(var(--content-font-size), calc(.8rem + .25vw), 20px);
   line-height: 1.5;
   box-sizing: border-box;
 }

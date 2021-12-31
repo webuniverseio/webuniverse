@@ -1,4 +1,5 @@
 .datetime {
 	font-style: italic;
+	font-size: var(--content-font-size);
 	white-space: nowrap;
 }

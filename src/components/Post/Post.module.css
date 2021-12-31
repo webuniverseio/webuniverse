@@ -27,6 +27,7 @@
 
 .description {
 	text-align: right;
+	font-size: var(--content-font-size);
 
 	@media (--page-small) {
 		text-align: left;
