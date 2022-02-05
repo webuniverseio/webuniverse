@@ -1,15 +1,9 @@
-// server.js
-// where your node app starts
-
-// init project
 var express = require('express');
 var app = express();
 var url = require('url');
 
-// we've started you off with Express,
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
 function isStaticFile(req) {
-  return /\.(css|js|jpg|png|gif)$/.test(url.parse(req.url).pathname);
+  return /\.(css|js|jpg|png|gif|svg|json)$/.test(url.parse(req.url).pathname);
 }
 
 app.use(function setCacheControl(req, res, next) {
@@ -19,7 +13,7 @@ app.use(function setCacheControl(req, res, next) {
   next();
 });
 
-app.use(function dontCrawlOnOrigin(req, res, next) {
+/*app.use(function dontCrawlOnNonRootOrigin(req, res, next) {
   if (/robots\.txt$/.test(url.parse(req.url).pathname) &&
     !['sergeyski.com'].includes(req.header('host'))) {
     res.setHeader('Cache-Control', 'public, max-age=86400');
@@ -27,7 +21,7 @@ app.use(function dontCrawlOnOrigin(req, res, next) {
   } else {
     next();
   }
-});
+});*/
 
 app.use(function setSecurityHeaders(req, res, next) {
   res.removeHeader('x-powered-by');
@@ -68,7 +62,7 @@ app.use(function setSecurityHeaders(req, res, next) {
 app.use(express.static('public', {
   setHeaders(res, path) {
     if (express.static.mime.lookup(path) === 'text/html') {
-      res.setHeader('Cache-Control', 'public, max-age=300')
+      res.setHeader('Cache-Control', `public, max-age=${1000 * 60 * 15}`)
     }
   }
 }));
