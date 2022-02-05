@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: `https://sergeyski.com`,
     author: 'Sergey Zarovskiy',
     basePath: '/',
-    defaultImageWithBasePath: '/favicon-192x192.png'
+    defaultImageWithBasePath: '/logo.png'
   },
   plugins: [
     `gatsby-plugin-postcss`,

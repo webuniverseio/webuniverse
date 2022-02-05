@@ -58,22 +58,15 @@ export default ({url = '', title, isPost, isHome = false, publishDate, descripti
         <title>{title}</title>
         {url && <link rel="canonical" href={`${siteUrl}${url}`}/>}
         {isHome && <link rel="canonical" href={`${siteUrl}`}/>}
-        <link rel="apple-touch-icon" sizes="57x57" href={`${basePath}apple-touch-icon-57x57.png`}/>
-        <link rel="apple-touch-icon" sizes="114x114" href={`${basePath}apple-touch-icon-114x114.png`}/>
-        <link rel="apple-touch-icon" sizes="72x72" href={`${basePath}apple-touch-icon-72x72.png`}/>
-        <link rel="apple-touch-icon" sizes="144x144" href={`${basePath}apple-touch-icon-144x144.png`}/>
-        <link rel="apple-touch-icon" sizes="60x60" href={`${basePath}apple-touch-icon-60x60.png`}/>
-        <link rel="apple-touch-icon" sizes="120x120" href={`${basePath}apple-touch-icon-120x120.png`}/>
-        <link rel="apple-touch-icon" sizes="76x76" href={`${basePath}apple-touch-icon-76x76.png`}/>
-        <link rel="apple-touch-icon" sizes="152x152" href={`${basePath}apple-touch-icon-152x152.png`}/>
-        <link rel="apple-touch-icon" sizes="180x180" href={`${basePath}apple-touch-icon-180x180.png`}/>
-        <link rel="icon" type="image/png" href={`${basePath}favicon-192x192.png`} sizes="192x192"/>
-        <link rel="icon" type="image/png" href={`${basePath}favicon-160x160.png`} sizes="160x160"/>
-        <link rel="icon" type="image/png" href={`${basePath}favicon-96x96.png`} sizes="96x96"/>
-        <link rel="icon" type="image/png" href={`${basePath}favicon-16x16.png`} sizes="16x16"/>
-        <link rel="icon" type="image/png" href={`${basePath}favicon-32x32.png`} sizes="32x32"/>
-        <meta name="msapplication-TileColor" content="#2b5797"/>
-        <meta name="msapplication-TileImage" content={`${basePath}mstile-144x144.png`}/>
+
+        <link rel="apple-touch-icon" sizes="180x180" href={`${basePath}apple-touch-icon.png?v=2`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${basePath}favicon-32x32.png?v=2`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${basePath}favicon-16x16.png?v=2`} />
+        <link rel="manifest" href={`${basePath}site.webmanifest?v=2`} />
+        <link rel="mask-icon" href={`${basePath}safari-pinned-tab.svg?v=2`} color="#2d89ef" />
+        <link rel="shortcut icon" href={`${basePath}favicon.ico?v=2`} />
+        <meta name="msapplication-TileColor" content="#f0f8ff" />
+        <meta name="theme-color" content="#f0f8ff" />
       </Helmet>;
     }}
   />;
