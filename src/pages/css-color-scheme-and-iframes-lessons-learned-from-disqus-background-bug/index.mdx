@@ -1,0 +1,72 @@
+---
+title: CSS color-scheme and iframes, lessons learned from Disqus background bug
+date: !!timestamp 2022-02-19 14:00:00
+overview: While experimenting with color-scheme, I learned about an interesting way to set iframe transparency while fixing Disqus appearance
+image: "./image.jpg"
+imageSmall: "./imageSmall.jpg"
+type: post
+---
+import {graphql} from "gatsby";
+export const query = graphql`
+query ($myComponentPath: String!) {
+    mdx(fileAbsolutePath: {eq: $myComponentPath}) {
+        frontmatter {
+            image {
+                publicURL
+            }
+            imageSmall {
+                publicURL
+            }
+        }
+    }
+}
+`;
+
+I heard about `color-scheme: light dark;` a couple of times now and decided it is time to give it a try for my blog.
+
+Since my website was light out of the box I didn't notice any difference in light mode. In dark mode, I saw that text color changed to white, but background remained in `aliceblue`. Similar issue happened with search input, where once you start typing - you don't see the text, because background color was set to white. Primary color for links and headers didn't change at all.
+
+In order to adjust background color and a few things which were not looking great in dark mode I had to set following overrides to style variables:
+
+```css
+:root {
+  --primary-color: #004adf;
+  --body-bg: aliceblue;
+  --text-color: black;
+  --formatted-content: #e0e0e0;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #fd8700; /*I had to change this due to not very good contrast between blue and black*/
+    --body-bg: black;
+    --text-color: white;
+    --formatted-content: #333;
+  }
+}
+```
+
+Everything looked pretty good except for Disqus comments section, which still had white background, but also no visible text (white text on white bg). I first thought that Disqus has a problem understanding what theme it should pick, even if it had `auto` setting. But according to [help article](https://help.disqus.com/en/articles/1717201-disqus-appearance-customizations#how-is-the-color-scheme-determined) this is how it picks dark theme:
+
+> The light scheme is loaded when the text color Disqus inherits from your site has >= 50% gray contrast: between color: #000000; and color: #787878;. The dark scheme is loaded in all other instances.
+
+With that + fact that body had `dark` class + white text I could tell that Disqus is rendering as it should, but how can I remove white background from the iframe?
+
+I found the answer on [stack-overflow](https://stackoverflow.com/a/65313819/4446128) (yey!), you need to add following styles for iframe specifically:
+
+```css
+@media (prefers-color-scheme: dark) {
+  iframe[src*="disqus.com"] {
+    color-scheme: light;
+  }
+}
+```
+
+This looks a bit counterintuitive right? In dark scheme we set iframe scheme to light... Reason why our fix works is described in this [thread](https://github.com/w3c/csswg-drafts/issues/4772):
+
+> If the color scheme of an iframe differs from embedding document iframe gets an opaque canvas bg appropriate to its color scheme
+
+If Disqus set `color-scheme: light dark;` style for html tag for the iframe which it renders, it would allow us to avoid the problem.
+
+Once Disqus fixes the problem, I'll still get a dark theme for the iframe even with my override, but I noticed that background color for the iframe will become slightly darker than on my blog. I can live with that and fix it when it is time. But I guess we can learn something from Disqus example about how to set color-scheme in case you provide widgets for other sites.

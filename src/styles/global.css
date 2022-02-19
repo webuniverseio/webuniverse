@@ -36,9 +36,9 @@
     --primary-color: #fd8700;
     --body-bg: black;
     --text-color: white;
-    --formatted-content: #555;
+    --formatted-content: #333;
   }
-  iframe {
+  iframe[src*="disqus.com"] {
     color-scheme: light;
   }
 }
@@ -83,7 +83,7 @@ body {
 }
 body {
   background-color: var(--body-bg);
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
 a {
