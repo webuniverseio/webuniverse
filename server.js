@@ -62,7 +62,7 @@ app.use(function setSecurityHeaders(req, res, next) {
 app.use(express.static('public', {
   setHeaders(res, path) {
     if (express.static.mime.lookup(path) === 'text/html') {
-      res.setHeader('Cache-Control', `public, max-age=${1000 * 60 * 15}`)
+      res.setHeader('Cache-Control', `public, max-age=${60 * 15}`)
     }
   }
 }));
