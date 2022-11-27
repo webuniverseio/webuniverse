@@ -13,7 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18 <19"
   },
   "dependencies": {
     "express": "^4.16.4"
