@@ -8,9 +8,12 @@
     "build-gatsby": "gatsby build",
     "develop": "gatsby develop",
     "start": "node server.js",
-    "heroku-postbuild": "gatsby build",
+    "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "express": "^4.16.4"
